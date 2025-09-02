@@ -12,177 +12,731 @@
 
 
 
+<div id="loader">
+    <div class="spinner"></div>
+</div>
+
+<div id="content" style="display:none;"></div>
+
     <!-- Sticky Header -->
-   <header class="header">
+<header class="header">
   <div class="container">
     <div class="nav-wrapper">
-      <!-- Logo -->
       <div class="logo">
         <img src="assets/images/stackly_logo_transparent.png" alt="logo" style="height: 40px; width: 80px;">
       </div>
 
-      <!-- Navigation -->
       <nav class="navigation">
-  <ul class="nav-menu" id="navMenu">
-    <li class="nav-item dropdown">
-      <a href="#" class="nav-link">Home <i class="fas fa-chevron-down"></i></a>
-      <ul class="dropdown-menu">
-        <li><a href="index.html">Home 1</a></li>
-        <li><a href="home2.html">Home 2</a></li>
-      </ul>
-    </li>
-    <li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
-    <li class="nav-item dropdown">
-      <a href="#" class="nav-link">Services <i class="fas fa-chevron-down"></i></a>
-      <ul class="dropdown-menu">
-        <li><a href="services.html">All Services</a></li>
-        <li><a href="service1.html">AI Development</a></li>
-        <li><a href="service2.html">Machine Learning</a></li>
-        <li><a href="service3.html">Data Analytics</a></li>
-        <li><a href="service4.html">Automation</a></li>
-        <li><a href="service5.html">AI Consulting</a></li>
-        <li><a href="service6.html">AI Integration</a></li>
-      </ul>
-    </li>
-    <li class="nav-item dropdown">
-      <a href="#" class="nav-link">Blog <i class="fas fa-chevron-down"></i></a>
-      <ul class="dropdown-menu">
-        <li><a href="blog.html">All Posts</a></li>
-        <li><a href="blog1.html">AI Trends 2024</a></li>
-        <li><a href="blog2.html">Future of ML</a></li>
-        <li><a href="blog3.html">AI in Business</a></li>
-      </ul>
-    </li>
-    <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
-    <!-- Login/Logout Link -->
-    <li class="nav-item"><a href="index.html" class="nav-link" id="authLink">Login</a></li>
-  </ul>
-  <!-- Hamburger for mobile navigation -->
-  <div class="hamburger" id="hamburger" aria-label="Open menu" tabindex="0">
-  <ul class="hamburger-menu" id="hamburgerMenu" style="display:none;">
-    <li><a href="index.html">Home 1</a></li>
-    <li><a href="home2.html">Home 2</a></li>
-    <li><a href="about.html">About</a></li>
-    <li>
-      <span>Services</span>
-      <ul>
-        <li><a href="services.html">All Services</a></li>
-        <li><a href="service1.html">AI Development</a></li>
-        <li><a href="service2.html">Machine Learning</a></li>
-        <li><a href="service3.html">Data Analytics</a></li>
-        <li><a href="service4.html">Automation</a></li>
-        <li><a href="service5.html">AI Consulting</a></li>
-        <li><a href="service6.html">AI Integration</a></li>
-      </ul>
-    </li>
-    <li>
-      <span>Blog</span>
-      <ul>
-        <li><a href="blog.html">All Posts</a></li>
-        <li><a href="blog1.html">AI Trends 2024</a></li>
-        <li><a href="blog2.html">Future of ML</a></li>
-        <li><a href="blog3.html">AI in Business</a></li>
-      </ul>
-    </li>
-    <li><a href="contact.html">Contact</a></li>
-    <li><a href="index.html" id="authLink">Login</a></li>
-  </ul>
-  <span></span>
-  <span></span>
-  <span></span>
-</div>
-</nav>
+        <ul class="nav-menu" id="navMenu">
+          <li class="nav-item dropdown">
+            <a href="#" class="nav-link" ><span data-i18n="home">Home</span> <i class="fas fa-chevron-down"></i></a>
+            <ul class="dropdown-menu">
+              <li><a href="index.html"><span data-i18n="home1">Home 1</span></a></li>
+              <li><a href="home2.html"><span data-i18n="home2">Home 2</span></a></li>
+            </ul>
+          </li>
+          <li class="nav-item"><a href="about.html" class="nav-link"><span data-i18n="about">About</span></a></li>
+          <li class="nav-item dropdown">
+            <a href="#" class="nav-link"><span data-i18n="services">Services</span> <i class="fas fa-chevron-down"></i></a>
+            <ul class="dropdown-menu">
+              <li><a href="services.html"><span data-i18n="allServices">All Services</span></a></li>
+              <li><a href="service1.html"><span data-i18n="service1">AI Development</span></a></li>
+              <li><a href="service2.html"><span data-i18n="service2">Machine Learning</span></a></li>
+              <li><a href="service3.html"><span data-i18n="service3">Data Analytics</span></a></li>
+              <li><a href="service4.html"><span data-i18n="service4">Automation</span></a></li>
+              <li><a href="service5.html"><span data-i18n="service5">AI Consulting</span></a></li>
+              <li><a href="service6.html"><span data-i18n="service6">AI Integration</span></a></li>
+            </ul>
+          </li>
+          <li class="nav-item dropdown">
+            <a href="#" class="nav-link"><span data-i18n="blog">Blog</span> <i class="fas fa-chevron-down"></i></a>
+            <ul class="dropdown-menu">
+              <li><a href="blog.html"><span data-i18n="allPosts">All Posts</span></a></li>
+              <li><a href="blog1.html"><span data-i18n="blog1">AI Trends 2024</span></a></li>
+              <li><a href="blog2.html"><span data-i18n="blog2">Future of ML</span></a></li>
+              <li><a href="blog3.html"><span data-i18n="blog3">AI in Business</span></a></li>
+            </ul>
+          </li>
+          <li class="nav-item"><a href="contact.html" class="nav-link"><span data-i18n="contact">Contact</span></a></li>
+          
+        </ul>
+        <div class="hamburger" id="hamburger" aria-label="Open menu" tabindex="0">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </nav>
 
-  <!-- Toggle Button -->
-  <button id="toggleBtn" class="toggle-btn" title="Toggle Theme">
-    <i class="fas fa-moon"></i>
-  </button>
+      <div class="mobile-menu-wrapper">
+        <ul class="hamburger-menu" id="hamburgerMenu">
+          <li class="mobile-dropdown-parent">
+            <span><span data-i18n="home">Home</span> <i class="fas fa-chevron-down"></i></span>
+            <ul class="mobile-dropdown">
+              <li><a href="index.html"><span data-i18n="home1">Home 1</span></a></li>
+              <li><a href="home2.html"><span data-i18n="home2">Home 2</span></a></li>
+            </ul>
+          </li>
+          <li><a href="about.html"><span data-i18n="about">About</span></a></li>
+          <li class="mobile-dropdown-parent">
+            <span><span data-i18n="services">Services</span> <i class="fas fa-chevron-down"></i></span>
+            <ul class="mobile-dropdown">
+             <li><a href="services.html"><span data-i18n="allServices">All Services</span></a></li>
+              <li><a href="service1.html"><span data-i18n="service1">AI Development</span></a></li>
+              <li><a href="service2.html"><span data-i18n="service2">Machine Learning</span></a></li>
+              <li><a href="service3.html"><span data-i18n="service3">Data Analytics</span></a></li>
+              <li><a href="service4.html"><span data-i18n="service4">Automation</span></a></li>
+              <li><a href="service5.html"><span data-i18n="service5">AI Consulting</span></a></li>
+              <li><a href="service6.html"><span data-i18n="service6">AI Integration</span></a></li>
+            </ul>
+          </li>
+          <li class="mobile-dropdown-parent">
+            <span><span data-i18n="blog">Blog</span> <i class="fas fa-chevron-down"></i></span>
+            <ul class="mobile-dropdown">
+               <li><a href="blog.html"><span data-i18n="allPosts">All Posts</span></a></li>
+                <li><a href="blog1.html"><span data-i18n="blog1">AI Trends 2024</span></a></li>
+                <li><a href="blog2.html"><span data-i18n="blog2">Future of ML</span></a></li>
+                <li><a href="blog3.html"><span data-i18n="blog3">AI in Business</span></a></li>
+            </ul>
+          </li>
+          <li><a href="contact.html"><span data-i18n="contact">Contact</span></a></li>
+       
+        </ul>
+      </div>
 
-  <!-- Avatar Circle -->
-  <div class="avatar-circle" title="Profile">
+      <div class="lang-switcher">
+        <label for="langSelect">Language:</label>
+        <select id="langSelect" onchange="changeLanguage(this.value)">
+          <option value="en">English</option>
+          <option value="ar">Arabic</option>
+          <option value="he">Hebrew</option>
+        </select>
+      </div>
 
-  </div>
-</div>
+      <button id="toggleBtn" class="toggle-btn" title="Toggle Theme">
+        <i class="fas fa-moon"></i>
+      </button>
+
+      <div class="avatar-circle" title="Profile" id="avatarCircle">
+        <span id="avatarInitials"></span>
+      </div>
+      <div class="avatar-dropdown" id="avatarDropdown">
+        <ul>
+          <li><a href="index.html" id="logoutBtn"><span data-i18n="logout">Logout</span></a></li>
+        </ul>
+      </div>
+    </div>
   </div>
 </header>
 
-<!-- ✅ Script -->
+
+
+
+<!-- Section : 1 -->
+
+<!-- Section 1: Hero -->
+<section class="ai-hero-section">
+  <video autoplay muted loop playsinline class="ai-hero-bg-video">
+    <source src="https://videos.pexels.com/video-files/8463624/8463624-uhd_2560_1440_25fps.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+  <div class="ai-hero-overlay">
+    <div class="ai-hero-content">
+      <h1 class="ai-hero-title ai-glow animate-ai-slide-in" data-i18n="heroTitle">Empower Your Future with AI</h1>
+      <p class="ai-hero-paragraph animate-ai-fade-up" data-i18n="heroDesc">
+        Discover next-gen AI tools to boost productivity, automate workflows, and unlock innovation — all in one place.
+      </p>
+      <a href="services.html" class="btn btn-primary" data-i18n="heroBtn">Explore Tools</a>
+    </div>
+  </div>
+</section>
+
+<!-- Section 2: AI Solutions -->
+<section class="ai-section">
+    <h1 class="ai-heading" data-i18n="aiHeading">Transform Your Business with AI-Powered Solutions</h1>
+    <div class="ai-content">
+        <div class="ai-text">
+            <p data-i18n="aiPara1">
+                Welcome to Stackly, where cutting-edge artificial intelligence meets practical business solutions. 
+                We specialize in developing innovative AI tools that streamline operations, enhance productivity, 
+                and drive growth for businesses across all industries. Our comprehensive suite of services includes 
+                machine learning algorithms, data analytics platforms, intelligent automation systems, and custom 
+                AI development tailored to your specific needs.
+            </p>
+            <p data-i18n="aiPara2">
+                At Stackly, we believe that AI should be accessible, adaptable, and impactful for organizations of
+                all sizes. That’s why we combine advanced technology with intuitive design. Whether you’re looking
+                to automate routine processes, gain actionable insights from your data, or enhance customer engagement, 
+                our tools are designed to fit seamlessly into your workflow.
+            </p>
+            <div class="ai-buttons">
+                <a href="services.html" class="btn btn-primary" data-i18n="aiBtnExplore">Explore Services</a>
+                <a href="contact.html" class="btn btn-secondary" data-i18n="aiBtnGetStarted">Get Started</a>
+            </div>
+        </div>
+        <div class="ai-image">
+            <img src="https://images.unsplash.com/photo-1677442136019-21780ecad995?w=600&h=400&fit=crop&auto=format" alt="AI Solutions">
+        </div>
+    </div>
+</section>
+
+<!-- Section 3: Features -->
+<section class="features-section section-padding">
+  <div class="container">
+      <div class="section-header animate-fade-up">
+          <h2 data-i18n="featuresHeading">Why Choose Stackly for AI Solutions</h2>
+          <p class="text-justify" data-i18n="featuresPara" style="color: white;">
+              Our advanced AI technologies are designed to revolutionize how businesses operate,
+              making complex processes simple and efficient while maintaining the highest standards of accuracy and reliability.
+          </p>
+      </div>
+      <div class="features-grid">
+          <div class="feature-card animate-fade-up delay-1">
+              <div class="feature-icon"><i class="fas fa-brain"></i></div>
+              <h3 data-i18n="feature1Title">Advanced AI Algorithms</h3>
+              <p data-i18n="feature1Desc">Leverage state-of-the-art machine learning algorithms that adapt and evolve with your business needs, providing intelligent solutions that continuously improve performance and deliver exceptional results across all operational aspects.</p>
+          </div>
+          <div class="feature-card animate-fade-up delay-2">
+              <div class="feature-icon"><i class="fas fa-chart-line"></i></div>
+              <h3 data-i18n="feature2Title">Data-Driven Insights</h3>
+              <p data-i18n="feature2Desc">Transform raw data into actionable intelligence through our sophisticated analytics platforms that identify patterns, predict trends, and provide strategic recommendations to optimize decision-making processes and business outcomes.</p>
+          </div>
+          <div class="feature-card animate-fade-up delay-3">
+              <div class="feature-icon"><i class="fas fa-cogs"></i></div>
+              <h3 data-i18n="feature3Title">Seamless Integration</h3>
+              <p data-i18n="feature3Desc">Our AI solutions integrate effortlessly with existing systems and workflows, ensuring minimal disruption during implementation while maximizing efficiency and maintaining operational continuity throughout your organization.</p>
+          </div>
+      </div>
+  </div>
+</section>
+
+<!-- Section 4: Services Overview -->
+<section class="services-overview section-padding">
+    <h2 data-i18n="servicesHeading" class="animate-fade-up heading-title">Comprehensive AI Services Portfolio</h2>
+    <div class="content-layout">
+        <div class="content-image animate-slide-right">
+            <img src="https://images.pexels.com/photos/9028877/pexels-photo-9028877.jpeg" alt="AI Services">
+        </div>
+        <div class="content-text">
+            <p data-i18n="servicesPara">
+                Our extensive range of AI services covers every aspect of intelligent technology implementation, 
+                from initial consultation and strategy development to deployment and ongoing optimization. 
+                We work closely with clients to understand their unique challenges and develop customized 
+                solutions that deliver measurable results.
+            </p>
+            <ul class="service-list" data-i18n="servicesList">
+                <li>Custom AI Development & Implementation</li>
+                <li>Machine Learning Model Training</li>
+                <li>Intelligent Process Automation</li>
+                <li>Predictive Analytics Solutions</li>
+                <li>Natural Language Processing</li>
+                <li>Computer Vision Applications</li>
+            </ul>
+            <a href="services.html" class="btn btn-primary" data-i18n="servicesBtn">View All Services</a>
+        </div>
+    </div>
+</section>
+
+
+
+<!-- Section 5: Stats -->
+<section class="stats-section section-padding">
+  <div class="container">
+      <div class="stats-grid">
+          <div class="stat-item animate-count-up">
+              <div class="stat-number" data-count="500">0</div>
+              <div data-i18n="stat1Label">AI Projects Completed</div>
+          </div>
+          <div class="stat-item animate-count-up">
+              <div class="stat-number" data-count="250">0</div>
+              <div data-i18n="stat2Label">Satisfied Clients</div>
+          </div>
+          <div class="stat-item animate-count-up">
+              <div class="stat-number" data-count="99">0</div>
+              <div data-i18n="stat3Label">Success Rate %</div>
+          </div>
+          <div class="stat-item animate-count-up">
+              <div class="stat-number" data-count="24">0</div>
+              <div data-i18n="stat4Label">24/7 Support</div>
+          </div>
+      </div>
+  </div>
+</section>
+
+<!-- Section 6: Testimonials -->
+<section class="testimonials-section">
+    <h2 data-i18n="testimonialsHeading" class="animate-fade-up heading-title">What Our Clients Say</h2>
+    <div class="testimonials-wrapper">
+        <div class="left-content">
+            <img src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?w=1000&h=600&fit=crop&auto=format" alt="Client Testimonials">
+        </div>
+        <div class="right-content">
+            <p data-i18n="testimonialsPara">Our commitment to excellence is reflected in the success stories of our clients who have transformed their businesses through our innovative AI solutions.</p>
+            <div class="testimonial">
+                <blockquote data-i18n="testimonial1">"Stackly's AI solutions have revolutionized our operations, increasing efficiency by 300% and reducing costs significantly. Their team's expertise and dedication to understanding our specific needs made the entire process seamless and highly effective."</blockquote>
+                <cite>- Sarah Johnson, CEO, TechCorp Industries</cite>
+            </div>
+            <div class="testimonial">
+                <blockquote data-i18n="testimonial2">"The predictive analytics platform developed by Stackly has transformed how we make strategic decisions. The insights we gain from their AI tools have directly contributed to our 40% revenue growth over the past year."</blockquote>
+                <cite>- Michael Chen, CTO, DataDrive Solutions</cite>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+
+<!-- Section : 7 -->
+<section class="cta-section section-padding">
+    <div class="container">
+        <div class="cta-content animate-fade-up">
+            <h2 data-i18n="ctaHeading">Ready to Transform Your Business with AI?</h2>
+            <p data-i18n="ctaPara" class="text-justify" >
+                Join hundreds of successful companies that have already transformed their operations with our cutting-edge AI solutions. 
+                Our team of experts is ready to help you identify opportunities, develop strategies, and implement powerful AI tools 
+                that will drive your business forward in today's competitive landscape.
+            </p>
+            <div class="cta-buttons">
+                <a href="contact.html" class="btn btn-primary" data-i18n="ctaBtn1">Start Your AI Journey</a>
+                <a href="services.html" class="btn btn-secondary" data-i18n="ctaBtn2">Learn More</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Section 8: Contact Banner -->
+
+<section class="contact-banner section-padding">
+    <div class="container">
+        <div class="contact-banner-content">
+            <h2 data-i18n="contactHeading">Get In Touch With Our AI Experts</h2>
+            <p data-i18n="contactPara">Ready to discuss your AI project? Contact us today for a free consultation.</p>
+            <a href="contact.html" class="btn btn-primary" data-i18n="contactBtn">Contact Us</a>
+        </div>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer class="footer section-padding" style="background:#000000; color:#fff;">
+  <div class="container">
+    <div class="footer-content" style="display:flex; flex-wrap:wrap; gap:30px; justify-content:space-between;">
+
+      <!-- Logo & About -->
+      <div class="footer-section" style="flex:1 1 250px;">
+        <div class="logo">
+          <img src="assets/images/stackly_logo_transparent.png" alt="logo" style="height: 40px; width: 80px;">
+        </div>
+        <p data-i18n="footerAbout" style="margin-top:10px; text-align:justify;">
+          Leading AI solutions provider, helping businesses transform through intelligent technology and innovative automation systems.
+        </p>
+        <div class="social-links" style="margin-top:10px;">
+          <a href="https://www.facebook.com/" target="_blank"><i class="fab fa-facebook" style="margin-right:10px;"></i></a>
+          <a href="https://twitter.com/" target="_blank"><i class="fab fa-twitter" style="margin-right:10px;"></i></a>
+          <a href="https://www.linkedin.com/" target="_blank"><i class="fab fa-linkedin" style="margin-right:10px;"></i></a>
+          <a href="https://www.instagram.com/" target="_blank"><i class="fab fa-instagram"></i></a>
+        </div>
+      </div>
+
+      <!-- Quick Links -->
+      <div class="footer-section" style="flex:1 1 150px;">
+        <h4 data-i18n="footerQuickLinks">Quick Links</h4>
+        <ul style="list-style:none; padding:0; margin:0;">
+          <li><a href="home.html" data-i18n="linkHome">Home</a></li>
+          <li><a href="home2.html" data-i18n="linkHome2">Home 2</a></li>
+          <li><a href="about.html" data-i18n="linkAbout">About Us</a></li>
+          <li><a href="services.html" data-i18n="linkServices">Services</a></li>
+          <li><a href="blog.html" data-i18n="linkBlog">Blog</a></li>
+          <li><a href="contact.html" data-i18n="linkContact">Contact</a></li>
+        </ul>
+      </div>
+
+      <!-- Services -->
+      <div class="footer-section" style="flex:1 1 150px;">
+        <h4 data-i18n="footerServices">Services</h4>
+        <ul style="list-style:none; padding:0; margin:0;">
+          <li><a href="service1.html" data-i18n="service1">AI Development</a></li>
+          <li><a href="service2.html" data-i18n="service2">Machine Learning</a></li>
+          <li><a href="service3.html" data-i18n="service3">Data Analytics</a></li>
+          <li><a href="service4.html" data-i18n="service4">Automation</a></li>
+          <li><a href="service5.html" data-i18n="service5">AI Consulting</a></li>
+          <li><a href="service6.html" data-i18n="service6">AI Integration</a></li>
+        </ul>
+      </div>
+
+      <!-- Contact Info -->
+      <div class="footer-section" style="flex:1 1 200px;">
+        <h4 data-i18n="footerContact">Contact Info</h4>
+        <ul style="list-style:none; padding:0; margin:0;">
+          <li><i class="fas fa-envelope"></i> contact@stackly.ai</li>
+          <li><i class="fas fa-phone"></i> +1 (555) 123-4567</li>
+          <li><i class="fas fa-map-marker-alt"></i> 123 AI Innovation Drive</li>
+        </ul>
+      </div>
+
+    </div>
+
+    <!-- Bottom Bar -->
+    <div class="footer-bottom" style="text-align:center; margin-top:30px; font-size:14px;">
+      <p data-i18n="footerBottom">&copy; 2025 Stackly. All rights reserved.</p>
+    </div>
+  </div>
+</footer>
+
+
+<!-- Global JS at the end -->
 <script>
-  // Hamburger toggle for mobile
-const hamburger = document.getElementById("hamburger");
-const navMenu = document.getElementById("navMenu");
-const hamburgerMenu = document.getElementById("hamburgerMenu");
+const translations = {
+  en: {
+    home: "Home",
+    home1: "Home 1",
+    home2: "Home 2",
+    about: "About",
+    services: "Services",
+    allServices: "All Services",
+    service1: "AI Development",
+    service2: "Machine Learning",
+    service3: "Data Analytics",
+    service4: "Automation",
+    service5: "AI Consulting",
+    service6: "AI Integration",
+    blog: "Blog",
+    allPosts: "All Posts",
+    blog1: "AI Trends 2024",
+    blog2: "Future of ML",
+    blog3: "AI in Business",
+    contact: "Contact",
+    login: "Login",
+    logout: "Logout",
 
-// Show/hide menu on hamburger click
-hamburger.addEventListener("click", () => {
-  navMenu.classList.toggle("active");
-  hamburgerMenu.style.display = hamburgerMenu.style.display === "block" ? "none" : "block";
+    footerAbout: "Leading AI solutions provider, helping businesses transform through intelligent technology and innovative automation systems.",
+    footerQuickLinks: "Quick Links",
+    linkHome: "Home",
+    linkHome2: "Home 2",
+    linkAbout: "About Us",
+    linkServices: "Services",
+    linkBlog: "Blog",
+    linkContact: "Contact",
+    footerServices: "Services",
+    service1: "AI Development",
+    service2: "Machine Learning",
+    service3: "Data Analytics",
+    service4: "Automation",
+    service5: "AI Consulting",
+    service6: "AI Integration",
+    footerContact: "Contact Info",
+    footerBottom: "© 2025 Stackly. All rights reserved.",
+
+    heroTitle: "Empower Your Future with AI",
+    heroDesc: "Discover next-gen AI tools to boost productivity, automate workflows, and unlock innovation — all in one place.",
+    heroBtn: "Explore Tools",
+
+    aiHeading: "Transform Your Business with AI-Powered Solutions",
+    aiPara1: "Welcome to Stackly, where cutting-edge artificial intelligence meets practical business solutions. We specialize in developing innovative AI tools that streamline operations, enhance productivity, and drive growth for businesses across all industries. Our comprehensive suite of services includes machine learning algorithms, data analytics platforms, intelligent automation systems, and custom AI development tailored to your specific needs.",
+    aiPara2: "At Stackly, we believe that AI should be accessible, adaptable, and impactful for organizations of all sizes. That’s why we combine advanced technology with intuitive design. Whether you’re looking to automate routine processes, gain actionable insights from your data, or enhance customer engagement, our tools are designed to fit seamlessly into your workflow.",
+    aiBtnExplore: "Explore Services",
+    aiBtnGetStarted: "Get Started",
+
+    featuresHeading: "Why Choose Stackly for AI Solutions",
+    featuresPara: "Our advanced AI technologies are designed to revolutionize how businesses operate, making complex processes simple and efficient while maintaining the highest standards of accuracy and reliability.",
+    feature1Title: "Advanced AI Algorithms",
+    feature1Desc: "Leverage state-of-the-art machine learning algorithms that adapt and evolve with your business needs, providing intelligent solutions that continuously improve performance and deliver exceptional results across all operational aspects.",
+    feature2Title: "Data-Driven Insights",
+    feature2Desc: "Transform raw data into actionable intelligence through our sophisticated analytics platforms that identify patterns, predict trends, and provide strategic recommendations to optimize decision-making processes and business outcomes.",
+    feature3Title: "Seamless Integration",
+    feature3Desc: "Our AI solutions integrate effortlessly with existing systems and workflows, ensuring minimal disruption during implementation while maximizing efficiency and maintaining operational continuity throughout your organization.",
+
+    servicesHeading: "Comprehensive AI Services Portfolio",
+    servicesPara: "Our extensive range of AI services covers every aspect of intelligent technology implementation, from initial consultation and strategy development to deployment and ongoing optimization. We work closely with clients to understand their unique challenges and develop customized solutions that deliver measurable results.",
+    servicesList: "Custom AI Development & Implementation, Machine Learning Model Training, Intelligent Process Automation, Predictive Analytics Solutions, Natural Language Processing, Computer Vision Applications",
+    servicesBtn: "View All Services",
+
+    stat1Label: "AI Projects Completed",
+    stat2Label: "Satisfied Clients",
+    stat3Label: "Success Rate %",
+    stat4Label: "24/7 Support",
+
+    testimonialsHeading: "What Our Clients Say",
+    testimonialsPara: "Our commitment to excellence is reflected in the success stories of our clients who have transformed their businesses through our innovative AI solutions.",
+    testimonial1: "\"Stackly's AI solutions have revolutionized our operations, increasing efficiency by 300% and reducing costs significantly. Their team's expertise and dedication to understanding our specific needs made the entire process seamless and highly effective.\"",
+    testimonial2: "\"The predictive analytics platform developed by Stackly has transformed how we make strategic decisions. The insights we gain from their AI tools have directly contributed to our 40% revenue growth over the past year.\"",
+
+    ctaHeading: "Ready to Transform Your Business with AI?",
+    ctaPara: "Join hundreds of successful companies that have already transformed their operations with our cutting-edge AI solutions. Our team of experts is ready to help you identify opportunities, develop strategies, and implement powerful AI tools that will drive your business forward in today's competitive landscape.",
+    ctaBtn1: "Start Your AI Journey",
+    ctaBtn2: "Learn More",
+
+    contactHeading: "Get In Touch With Our AI Experts",
+    contactPara: "Ready to discuss your AI project? Contact us today for a free consultation.",
+    contactBtn: "Contact Us",
+
+    footerDesc: "Leading AI solutions provider, helping businesses transform through intelligent technology and innovative automation systems."
+  },
+
+  ar: {
+     home: "الصفحة الرئيسية",
+    home1: "الصفحة 1",
+    home2: "الصفحة 2",
+    about: "معلومات عنا",
+    services: "خدمات",
+    allServices: "جميع الخدمات",
+    service1: "تطوير الذكاء الاصطناعي",
+    service2: "تعلم الآلة",
+    service3: "تحليل البيانات",
+    service4: "الأتمتة",
+    service5: "استشارات الذكاء الاصطناعي",
+    service6: "دمج الذكاء الاصطناعي",
+    blog: "مدونة",
+    allPosts: "جميع المقالات",
+    blog1: "اتجاهات الذكاء الاصطناعي 2024",
+    blog2: "مستقبل تعلم الآلة",
+    blog3: "الذكاء الاصطناعي في الأعمال",
+    contact: "اتصل بنا",
+    login: "تسجيل الدخول",
+    logout: "تسجيل الخروج",
+
+    footerAbout: "مزود حلول الذكاء الاصطناعي الرائد، يساعد الشركات على التحول من خلال التكنولوجيا الذكية وأنظمة الأتمتة المبتكرة.",
+    footerQuickLinks: "روابط سريعة",
+    linkHome: "الصفحة الرئيسية",
+    linkHome2: "الصفحة 2",
+    linkAbout: "معلومات عنا",
+    linkServices: "خدمات",
+    linkBlog: "مدونة",
+    linkContact: "اتصل بنا",
+    footerServices: "خدمات",
+    service1: "تطوير الذكاء الاصطناعي",
+    service2: "تعلم الآلة",
+    service3: "تحليل البيانات",
+    service4: "الأتمتة",
+    service5: "استشارات الذكاء الاصطناعي",
+    service6: "دمج الذكاء الاصطناعي",
+    footerContact: "معلومات الاتصال",
+    footerBottom: "© 2025 Stackly. جميع الحقوق محفوظة.",
+
+    heroTitle: "عزز مستقبلك مع الذكاء الاصطناعي",
+    heroDesc: "اكتشف أدوات الذكاء الاصطناعي المتطورة لزيادة الإنتاجية وأتمتة سير العمل وفتح آفاق الابتكار — كل ذلك في مكان واحد.",
+    heroBtn: "استكشاف الأدوات",
+    aiHeading: "حوّل عملك بحلول مدعومة بالذكاء الاصطناعي",
+    aiPara1: "مرحبًا بك في Stackly، حيث يلتقي الذكاء الاصطناعي المتقدم بحلول الأعمال العملية. نحن متخصصون في تطوير أدوات ذكاء اصطناعي مبتكرة تُسهل العمليات، وتعزز الإنتاجية، وتدفع النمو للأعمال في جميع الصناعات. تشمل مجموعة خدماتنا الشاملة خوارزميات التعلم الآلي، ومنصات تحليل البيانات، وأنظمة الأتمتة الذكية، وتطوير ذكاء اصطناعي مخصص يلبي احتياجاتك الخاصة.",
+    aiPara2: "في Stackly، نؤمن بأن الذكاء الاصطناعي يجب أن يكون متاحًا، قابلًا للتكيف، وذو تأثير على المنظمات من جميع الأحجام. لهذا السبب نجمع بين التكنولوجيا المتقدمة والتصميم البديهي. سواء كنت تتطلع لأتمتة العمليات الروتينية، أو الحصول على رؤى عملية من بياناتك، أو تعزيز تفاعل العملاء، فإن أدواتنا مصممة لتتكامل بسلاسة في سير عملك.",
+    aiBtnExplore: "استكشاف الخدمات",
+    aiBtnGetStarted: "ابدأ الآن",
+    featuresHeading: "لماذا تختار Stackly لحلول الذكاء الاصطناعي",
+    featuresPara: "تم تصميم تقنياتنا المتقدمة للذكاء الاصطناعي لإحداث ثورة في طريقة عمل الشركات، مما يجعل العمليات المعقدة بسيطة وفعالة مع الحفاظ على أعلى معايير الدقة والموثوقية.",
+    feature1Title: "خوارزميات ذكاء اصطناعي متقدمة",
+    feature1Desc: "استفد من خوارزميات التعلم الآلي المتطورة التي تتكيف وتتطور مع احتياجات عملك، مما يوفر حلولًا ذكية تعمل على تحسين الأداء باستمرار وتقديم نتائج استثنائية عبر جميع الجوانب التشغيلية.",
+    feature2Title: "رؤى مستندة إلى البيانات",
+    feature2Desc: "حوّل البيانات الخام إلى معلومات قابلة للتنفيذ من خلال منصات التحليلات المتقدمة لدينا التي تحدد الأنماط، تتوقع الاتجاهات، وتوفر توصيات استراتيجية لتحسين عمليات اتخاذ القرار ونتائج الأعمال.",
+    feature3Title: "تكامل سلس",
+    feature3Desc: "تتكامل حلولنا للذكاء الاصطناعي بسهولة مع الأنظمة الحالية وسير العمل، مما يضمن الحد الأدنى من الانقطاع أثناء التنفيذ مع زيادة الكفاءة والحفاظ على استمرارية العمليات في جميع أنحاء مؤسستك.",
+    servicesHeading: "محفظة خدمات الذكاء الاصطناعي الشاملة",
+    servicesPara: "تشمل مجموعة خدماتنا الشاملة كل جانب من جوانب تنفيذ التكنولوجيا الذكية، بدءًا من الاستشارة الأولية وتطوير الاستراتيجيات إلى النشر والتحسين المستمر.",
+    servicesList: "تطوير وتنفيذ الذكاء الاصطناعي المخصص, تدريب نماذج التعلم الآلي, أتمتة العمليات الذكية, حلول التحليلات التنبؤية, معالجة اللغة الطبيعية, تطبيقات الرؤية الحاسوبية",
+    servicesBtn: "عرض جميع الخدمات",
+    stat1Label: "المشاريع المكتملة للذكاء الاصطناعي",
+    stat2Label: "العملاء الراضون",
+    stat3Label: "نسبة النجاح %",
+    stat4Label: "دعم 24/7",
+    testimonialsHeading: "ماذا يقول عملاؤنا",
+    testimonialsPara: "يعكس التزامنا بالتميز قصص نجاح عملائنا الذين حولوا أعمالهم من خلال حلولنا المبتكرة للذكاء الاصطناعي.",
+    testimonial1: "\"لقد أحدثت حلول Stackly للذكاء الاصطناعي ثورة في عملياتنا، وزادت الكفاءة بنسبة 300٪ وخفضت التكاليف بشكل كبير. خبرة فريقهم وتفانيهم في فهم احتياجاتنا الخاصة جعل العملية بأكملها سلسة وفعالة للغاية.\"",
+    testimonial2: "\"لقد حوّل نظام التحليلات التنبؤية الذي طورته Stackly طريقة اتخاذنا للقرارات الاستراتيجية. الأفكار التي نحصل عليها من أدواتهم للذكاء الاصطناعي ساهمت مباشرة في نمو إيراداتنا بنسبة 40٪ خلال العام الماضي.\"",
+    ctaHeading: "هل أنت جاهز لتحويل عملك باستخدام الذكاء الاصطناعي؟",
+    ctaPara: "انضم إلى مئات الشركات الناجحة التي حولت عملياتها بالفعل باستخدام حلولنا المتطورة للذكاء الاصطناعي. فريق خبرائنا جاهز لمساعدتك في تحديد الفرص، تطوير الاستراتيجيات، وتنفيذ أدوات الذكاء الاصطناعي القوية لدفع عملك إلى الأمام.",
+    ctaBtn1: "ابدأ رحلتك مع الذكاء الاصطناعي",
+    ctaBtn2: "تعرف على المزيد",
+    contactHeading: "تواصل مع خبراء الذكاء الاصطناعي لدينا",
+    contactPara: "هل أنت جاهز لمناقشة مشروع الذكاء الاصطناعي الخاص بك؟ اتصل بنا اليوم للحصول على استشارة مجانية.",
+    contactBtn: "اتصل بنا",
+    footerDesc: "مزود حلول الذكاء الاصطناعي الرائد، يساعد الشركات على التحول من خلال التكنولوجيا الذكية وأنظمة الأتمتة المبتكرة."
+  },
+
+  he: {
+    
+     home: "בית",
+    home1: "דף 1",
+    home2: "דף 2",
+    about: "עלינו",
+    services: "שירותים",
+    allServices: "כל השירותים",
+    service1: "פיתוח בינה מלאכותית",
+    service2: "למידת מכונה",
+    service3: "ניתוח נתונים",
+    service4: "אוטומציה",
+    service5: "ייעוץ בינה מלאכותית",
+    service6: "אינטגרציית בינה מלאכותית",
+    blog: "בלוג",
+    allPosts: "כל הפוסטים",
+    blog1: "מגמות AI 2024",
+    blog2: "עתיד למידת מכונה",
+    blog3: "AI בעסקים",
+    contact: "צור קשר",
+    login: "התחברות",
+    logout: "התנתק",
+
+    footerAbout: "ספק מוביל של פתרונות בינה מלאכותית, המסייע לעסקים להפוך באמצעות טכנולוגיה חכמה ומערכות אוטומציה חדשניות.",
+    footerQuickLinks: "קישורים מהירים",
+    linkHome: "בית",
+    linkHome2: "דף 2",
+    linkAbout: "עלינו",
+    linkServices: "שירותים",
+    linkBlog: "בלוג",
+    linkContact: "צור קשר",
+    footerServices: "שירותים",
+    service1: "פיתוח בינה מלאכותית",
+    service2: "למידת מכונה",
+    service3: "ניתוח נתונים",
+    service4: "אוטומציה",
+    service5: "ייעוץ בינה מלאכותית",
+    service6: "אינטגרציית בינה מלאכותית",
+    footerContact: "פרטי התקשרות",
+    footerBottom: "© 2025 Stackly. כל הזכויות שמורות.",
+
+    heroTitle: "העצם את עתידך עם בינה מלאכותית",
+    heroDesc: "גלה כלים מתקדמים לבינה מלאכותית לשיפור פרודוקטיביות, אוטומציה של תהליכים וחדשנות — הכל במקום אחד.",
+    heroBtn: "גלה כלים",
+    aiHeading: "המר את העסק שלך עם פתרונות מבוססי בינה מלאכותית",
+    aiPara1: "ברוכים הבאים ל-Stackly, שם בינה מלאכותית מתקדמת פוגשת פתרונות עסקיים מעשיים. אנו מתמחים בפיתוח כלים חדשניים של בינה מלאכותית שמייעלים תהליכים, משפרים פרודוקטיביות ומניעים צמיחה לעסקים בכל התעשיות. חבילת השירותים המקיפה שלנו כוללת אלגוריתמים של למידת מכונה, פלטפורמות לניתוח נתונים, מערכות אוטומציה חכמות ופיתוח מותאם אישית של בינה מלאכותית לצרכים הספציפיים שלך.",
+    aiPara2: "ב-Stackly, אנו מאמינים כי בינה מלאכותית צריכה להיות נגישה, גמישה ומשפיעה על ארגונים בכל הגדלים. לכן אנו משלבים טכנולוגיה מתקדמת עם עיצוב אינטואיטיבי. בין אם אתה מחפש לאוטומט תהליכים שגרתיים, לקבל תובנות מעשיות מהנתונים שלך, או לשפר את מעורבות הלקוחות, הכלים שלנו תוכננו להשתלב בצורה חלקה בעבודה שלך.",
+    aiBtnExplore: "חקר שירותים",
+    aiBtnGetStarted: "התחל",
+    featuresHeading: "מדוע לבחור ב-Stackly לפתרונות בינה מלאכותית",
+    featuresPara: "הטכנולוגיות המתקדמות שלנו נועדו לחולל מהפכה באופן שבו עסקים פועלים, תוך פישוט תהליכים מורכבים והבטחת הסטנדרטים הגבוהים ביותר של דיוק ואמינות.",
+    feature1Title: "אלגוריתמים מתקדמים של בינה מלאכותית",
+    feature1Desc: "נצל אלגוריתמים מתקדמים של למידת מכונה המותאמים לצרכי העסק שלך, מספקים פתרונות חכמים שמשפרים את הביצועים ומספקים תוצאות יוצאות דופן בכל ההיבטים התפעוליים.",
+    feature2Title: "תובנות מונחות נתונים",
+    feature2Desc: "הפוך נתונים גולמיים למידע שימושי באמצעות פלטפורמות האנליטיקה המתקדמות שלנו שמזהות דפוסים, מנבאות מגמות ומספקות המלצות אסטרטגיות לשיפור תהליכי קבלת החלטות ותוצאות עסקיות.",
+    feature3Title: "אינטגרציה חלקה",
+    feature3Desc: "הפתרונות שלנו משתלבים בצורה חלקה עם מערכות וזרימות עבודה קיימות, ומבטיחים הפרעה מינימלית בזמן ההטמעה תוך מקסום היעילות ושמירה על רציפות התפעול בכל הארגון.",
+    servicesHeading: "תיק שירותי בינה מלאכותית מקיף",
+    servicesPara: "טווח השירותים שלנו מכסה כל היבט של יישום טכנולוגיה חכמה, מהתייעצות ראשונית ופיתוח אסטרטגיה ועד פריסה ואופטימיזציה שוטפת.",
+    servicesList: "פיתוח והטמעת בינה מלאכותית מותאמת, אימון מודלים של למידת מכונה, אוטומציה של תהליכים חכמים, פתרונות ניתוח חיזוי, עיבוד שפה טבעית, יישומי ראייה ממוחשבת",
+    servicesBtn: "צפה בכל השירותים",
+    stat1Label: "פרויקטים בוצעו",
+    stat2Label: "לקוחות מרוצים",
+    stat3Label: "אחוזי הצלחה",
+    stat4Label: "תמיכה 24/7",
+    testimonialsHeading: "מה הלקוחות שלנו אומרים",
+    testimonialsPara: "המחויבות שלנו למצוינות משתקפת בסיפורי ההצלחה של הלקוחות שלנו שעברו מהפכה בעסקיהם באמצעות פתרונות הבינה המלאכותית שלנו.",
+    testimonial1: "\"פתרונות הבינה המלאכותית של Stackly חוללו מהפכה בפעולות שלנו, הגדילו יעילות ב-300% והפחיתו עלויות משמעותית. המומחיות וההקדשה של הצוות להבנת הצרכים הספציפיים שלנו הפכו את התהליך כולו לחלק ויעיל מאוד.\"",
+    testimonial2: "\"פלטפורמת ניתוח התחזיות שפותחה על ידי Stackly שינתה את הדרך בה אנו מקבלים החלטות אסטרטגיות. התובנות שאנו מקבלים מהכלים של הבינה המלאכותית שלהם תרמו ישירות לצמיחת ההכנסות שלנו ב-40% בשנה האחרונה.\"",
+    ctaHeading: "מוכן לשדרג את העסק שלך עם בינה מלאכותית?",
+    ctaPara: "הצטרף למאות חברות מצליחות שכבר שינו את פעילותן באמצעות פתרונות הבינה המלאכותית המתקדמים שלנו. הצוות שלנו מוכן לעזור לך לזהות הזדמנויות, לפתח אסטרטגיות ולהטמיע כלים רבי עוצמה שידחפו את העסק שלך קדימה.",
+    ctaBtn1: "התחל את מסע הבינה המלאכותית שלך",
+    ctaBtn2: "למד עוד",
+    contactHeading: "צור קשר עם המומחים שלנו לבינה מלאכותית",
+    contactPara: "מוכן לדון בפרויקט הבינה המלאכותית שלך? פנה אלינו היום לייעוץ חינם.",
+    contactBtn: "צור קשר",
+    footerDesc: "ספק מוביל של פתרונות בינה מלאכותית, המסייע לחברות להשתנות באמצעות טכנולוגיה חכמה ומערכות אוטומציה חדשניות."
+  }
+};
+
+// Change Language Function
+function changeLanguage(lang) {
+  document.documentElement.setAttribute("dir", (lang === "ar" || lang === "he") ? "rtl" : "ltr");
+  document.documentElement.setAttribute("lang", lang);
+
+  document.querySelectorAll("[data-i18n]").forEach(el => {
+    const key = el.getAttribute("data-i18n");
+    const translation = translations[lang][key];
+    if (translation) {
+      el.textContent = translation;
+    }
+  });
+}
+
+// Language Selector Event
+document.getElementById("langSelect").addEventListener("change", e => {
+  changeLanguage(e.target.value);
 });
+</script>
 
-// Dropdown toggle logic for mobile and desktop
-document.querySelectorAll('.nav-item.dropdown > .nav-link').forEach(link => {
-  link.addEventListener('click', function(e) {
-    e.preventDefault();
-    // Close other dropdowns
-    document.querySelectorAll('.dropdown-menu').forEach(menu => {
-      if (menu !== this.nextElementSibling) {
-        menu.classList.remove('active');
+ <!-- Header -->
+<script>
+  // Mobile menu setup
+  const hamburger = document.getElementById("hamburger");
+  const hamburgerMenu = document.getElementById("hamburgerMenu");
+
+  // Show/hide mobile menu on hamburger click
+  hamburger.addEventListener("click", () => {
+    hamburger.classList.toggle("active");
+    hamburgerMenu.classList.toggle("active");
+  });
+
+  // Toggle dropdowns for mobile menu
+  document.querySelectorAll('.mobile-dropdown-parent > span').forEach(link => {
+    link.addEventListener('click', function() {
+      const parentLi = this.parentElement;
+      const dropdown = parentLi.querySelector('.mobile-dropdown');
+      dropdown.classList.toggle('active');
+    });
+  });
+
+  // Desktop dropdown toggle logic
+  document.querySelectorAll('.nav-item.dropdown > .nav-link').forEach(link => {
+    link.addEventListener('click', function(e) {
+      e.preventDefault();
+      document.querySelectorAll('.dropdown-menu').forEach(menu => {
+        if (menu !== this.nextElementSibling) {
+          menu.classList.remove('active');
+        }
+      });
+      const dropdownMenu = this.nextElementSibling;
+      if (dropdownMenu) {
+        dropdownMenu.classList.toggle('active');
       }
     });
-    // Toggle current dropdown
-    const dropdownMenu = this.nextElementSibling;
-    if (dropdownMenu) {
-      dropdownMenu.classList.toggle('active');
-    }
   });
-});
 
-// Redirect on dropdown menu item click
-document.querySelectorAll('.dropdown-menu a').forEach(link => {
-  link.addEventListener('click', function(e) {
-    const href = this.getAttribute('href');
-    if (href && href !== "#") {
-      window.location.href = href;
-      navMenu.classList.remove('active');
-      // Close all dropdowns
-      document.querySelectorAll('.dropdown-menu').forEach(menu => menu.classList.remove('active'));
-    }
+  // Redirect on desktop dropdown menu item click
+  document.querySelectorAll('.dropdown-menu a').forEach(link => {
+    link.addEventListener('click', function(e) {
+      const href = this.getAttribute('href');
+      if (href && href !== "#") {
+        window.location.href = href;
+        document.querySelectorAll('.dropdown-menu').forEach(menu => menu.classList.remove('active'));
+      }
+    });
   });
-});
 
-// Redirect on normal nav link click
-document.querySelectorAll('.nav-menu > .nav-item:not(.dropdown) .nav-link').forEach(link => {
-  link.addEventListener('click', function(e) {
-    const href = this.getAttribute('href');
-    if (href && href !== "#") {
-      window.location.href = href;
-      navMenu.classList.remove('active');
-      // Close all dropdowns
-      document.querySelectorAll('.dropdown-menu').forEach(menu => menu.classList.remove('active'));
-    }
+  // Redirect on normal nav link click
+  document.querySelectorAll('.nav-menu > .nav-item:not(.dropdown) .nav-link').forEach(link => {
+    link.addEventListener('click', function(e) {
+      const href = this.getAttribute('href');
+      if (href && href !== "#") {
+        window.location.href = href;
+      }
+    });
   });
-});
 
-  // Auth link toggle
-  const authLink = document.getElementById("authLink");
-  if(localStorage.getItem("isLoggedIn") === "true"){
-    authLink.innerText = "Logout";
-    authLink.href = "#";
-    authLink.onclick = () => {
-      localStorage.removeItem("isLoggedIn");
-      localStorage.removeItem("currentUser");
-      window.location.href = "index.html";
-    };
-  } else {
-    authLink.innerText = "Login";
-    authLink.href = "index.html";
+  // Auth link toggle for desktop and mobile
+  function setupAuthLinks() {
+    const isLoggedIn = localStorage.getItem("isLoggedIn") === "true";
+    const authLinks = [document.getElementById("authLink"), document.getElementById("mobileAuthLink")];
+
+    authLinks.forEach(link => {
+      if (!link) return;
+      if (isLoggedIn) {
+        link.innerText = "Logout";
+        link.href = "#";
+        link.onclick = (e) => {
+          e.preventDefault();
+          localStorage.removeItem("isLoggedIn");
+          localStorage.removeItem("currentUser");
+          window.location.href = "index.html";
+        };
+      } else {
+        link.innerText = "Login";
+        link.href = "index.html";
+        link.onclick = null;
+      }
+    });
   }
+  setupAuthLinks();
 
   // Theme toggle
   const toggleBtn = document.getElementById('toggleBtn');
   let darkMode = localStorage.getItem('darkMode') === 'true';
 
-  // Apply initial theme
   function applyTheme() {
     if (darkMode) {
       document.body.classList.add('dark-mode');
@@ -198,166 +752,248 @@ document.querySelectorAll('.nav-menu > .nav-item:not(.dropdown) .nav-link').forE
     localStorage.setItem('darkMode', darkMode);
     applyTheme();
   });
-
-  // Call once to apply the theme on initial load
   applyTheme();
 
-  // Avatar initials
-const avatarCircle = document.querySelector('.avatar-circle');
-const currentUserEmail = localStorage.getItem("currentUser");
-const users = JSON.parse(localStorage.getItem("users")) || {};
-if (currentUserEmail && users[currentUserEmail]) {
-  const firstName = users[currentUserEmail].firstName || "";
-  const lastName = users[currentUserEmail].lastName || "";
-  const initials = (firstName[0] || "").toUpperCase() + (lastName[0] || "").toUpperCase();
-  avatarCircle.innerHTML = `<span style="
-    font-size: 1.2rem;
-    font-weight: bold;
-    color: #23272f;
-    background: transparent;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    height: 100%;
-  ">${initials}</span>`;
-} else {
-  avatarCircle.innerHTML = `<span style="
-    font-size: 1.2rem;
-    font-weight: bold;
-    color: #23272f;
-    background: transparent;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    height: 100%;
-  ">?</span>`;
-}
+  // Avatar initials logic
+  const avatarCircle = document.getElementById('avatarCircle');
+  const avatarInitials = document.getElementById('avatarInitials');
+  const avatarDropdown = document.getElementById('avatarDropdown');
+  const logoutBtn = document.getElementById('logoutBtn');
+  const currentUserEmail = localStorage.getItem("currentUser");
+  const users = JSON.parse(localStorage.getItem("users")) || {};
 
+  if (currentUserEmail && users[currentUserEmail]) {
+    const firstName = users[currentUserEmail].firstName || "";
+    const lastName = users[currentUserEmail].lastName || "";
+    const initials = (firstName[0] || "").toUpperCase() + (lastName[0] || "").toUpperCase();
+    avatarInitials.textContent = initials;
+  } else {
+    avatarInitials.textContent = "?";
+  }
 
+  // Show/hide avatar dropdown on click
+  avatarCircle.addEventListener('click', function(e) {
+    e.stopPropagation();
+    avatarDropdown.style.display = avatarDropdown.style.display === "block" ? "none" : "block";
+  });
+
+  document.addEventListener('click', function(e) {
+    if (!avatarCircle.contains(e.target) && !avatarDropdown.contains(e.target)) {
+      avatarDropdown.style.display = "none";
+    }
+  });
+
+  // Logout action
+  logoutBtn.addEventListener('click', function(e) {
+    e.preventDefault();
+    localStorage.removeItem("isLoggedIn");
+    localStorage.removeItem("currentUser");
+    window.location.href = "index.html";
+  });
 </script>
 
-<!-- ✅ CSS for hamburger -->
 <style>
+  /* Base styles for hamburger icon */
   .hamburger {
     display: none;
     flex-direction: column;
+    justify-content: space-between;
+    width: 24px;
+    height: 18px;
     cursor: pointer;
+    z-index: 1000;
   }
+
   .hamburger span {
-    height: 3px;
-    width: 25px;
-    background: #333;
-    margin: 4px 0;
-    border-radius: 5px;
+    display: block;
+    width: 100%;
+    height: 2px;
+    background-color: #333;
+    transition: all 0.3s ease-in-out;
   }
+
+  .dark-mode .hamburger span {
+    background-color: #fff;
+  }
+
+  /* Hamburger menu animation */
+  .hamburger.active span:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+  }
+
+  .hamburger.active span:nth-child(2) {
+    opacity: 0;
+  }
+
+  .hamburger.active span:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -5px);
+  }
+
+  /* Hide navigation on mobile */
   @media (max-width: 768px) {
     .nav-menu {
       display: none;
-      flex-direction: column;
-      background: #fff;
-      position: absolute;
-      top: 70px;
-      right: 20px;
-      width: 200px;
-      padding: 10px;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.2);
-    }
-    .nav-menu.active {
-      display: flex;
     }
     .hamburger {
       display: flex;
     }
-    .nav-item {
-      margin: 10px 0;
-    }
+  }
+
+  /* Styles for the mobile hamburger menu */
+  .mobile-menu-wrapper {
+    position: relative;
+  }
+
+  .hamburger-menu {
+    display: none;
+    flex-direction: column;
+    background: #23272f;
+    color: #fff;
+    position: absolute;
+    top: 50px;
+    right: 0;
+    width: 220px;
+    border-radius: 8px;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.18);
+    padding: 20px 0;
+    z-index: 9999;
+    list-style: none;
+  }
+
+  .hamburger-menu.active {
+    display: flex;
+  }
+
+  .hamburger-menu li {
+    padding: 10px 24px;
+    border-bottom: 1px solid #333;
+  }
+
+  .hamburger-menu li:last-child {
+    border-bottom: none;
+  }
+
+  .hamburger-menu a,
+  .hamburger-menu span {
+    color: #00f7ff;
+    text-decoration: none;
+    font-size: 1.1rem;
+    display: block;
+    cursor: pointer;
+    font-weight: 500;
+  }
+
+  .hamburger-menu ul {
+    list-style: none;
+    padding-left: 20px;
+    margin-top: 5px;
+  }
+
+  .hamburger-menu li.mobile-dropdown-parent .mobile-dropdown {
+    display: none;
+  }
+
+  .hamburger-menu li.mobile-dropdown-parent .mobile-dropdown.active {
+    display: block;
   }
 
   .toggle-btn {
-  background: #fff;
-  border: none;
-  border-radius: 50%;
-  width: 38px;
-  height: 38px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-left: 16px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
-  cursor: pointer;
-  transition: background 0.2s;
-}
-.toggle-btn:hover {
-  background: #f0f0f0;
-}
-.avatar-circle {
-  width: 38px;
-  height: 38px;
-  border-radius: 50%;
-  overflow: hidden;
-  margin-left: 16px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: #eee;
-}
-.avatar-circle img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-@media (max-width: 768px) {
-  .toggle-btn, .avatar-circle {
-    margin-left: 8px;
-    width: 32px;
-    height: 32px;
+    background: #fff;
+    border: none;
+    border-radius: 50%;
+    width: 38px;
+    height: 38px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 16px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    cursor: pointer;
+    transition: background 0.2s;
   }
-}
 
-.hamburger-menu {
-  position: absolute;
-  top: 50px;
-  right: 0;
-  background: #23272f;
-  color: #fff;
-  width: 220px;
-  border-radius: 8px;
-  box-shadow: 0 2px 12px rgba(0,0,0,0.18);
-  padding: 20px 0;
-  z-index: 9999;
-  list-style: none;
-}
-.hamburger-menu li {
-  padding: 10px 24px;
-  border-bottom: 1px solid #333;
-}
-.hamburger-menu li:last-child {
-  border-bottom: none;
-}
-.hamburger-menu a, .hamburger-menu span {
-  color: #00f7ff;
-  text-decoration: none;
-  font-size: 1.1rem;
-  display: block;
-  cursor: pointer;
-}
-.hamburger-menu ul {
-  padding-left: 16px;
-  background: none;
-  border: none;
-}
-.hamburger-menu ul li {
-  padding: 6px 0;
-  border: none;
-}
-@media (min-width: 769px) {
-  .hamburger-menu {
-    display: none !important;
+  .toggle-btn:hover {
+    background: #f0f0f0;
   }
-}
+
+  .avatar-circle {
+    position: relative;
+    cursor: pointer;
+    z-index: 1001;
+    overflow: visible;
+  }
+
+  .avatar-circle {
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-left: 16px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #eee;
+    position: relative;
+    cursor: pointer;
+  }
+
+  .avatar-circle img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .avatar-dropdown {
+    display: none;
+    position: absolute;
+    top: 65px;
+    right: 140px;
+    background: #fff;
+    min-width: 100px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.18);
+    border-radius: 8px;
+    z-index: 1002;
+    padding: 4px 0;
+  }
+
+  .avatar-dropdown ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  .avatar-dropdown li {
+    padding: 6px 12px;
+  }
+
+  .avatar-dropdown a {
+    color: #23272f;
+    text-decoration: none;
+    font-size: 0.95rem;
+    display: block;
+    border-radius: 4px;
+    transition: background 0.2s;
+  }
+
+  .avatar-dropdown a:hover {
+    background: #f0f0f0;
+  }
+
+  @media (max-width: 768px) {
+    .toggle-btn,
+    .avatar-circle {
+      margin-left: 8px;
+      width: 32px;
+      height: 32px;
+    }
+  }
+
+  @media (min-width: 769px) {
+    .hamburger-menu {
+      display: none !important;
+    }
+  }
 </style>
 
 <!-- 🔷 Protest home page  -->
@@ -377,25 +1013,11 @@ if (currentUserEmail && users[currentUserEmail]) {
       window.location.href = "index.html"; // ✅ back to login
     }
   </script>
-<!-- 🔷 HERO SECTION START video_code  -->
 
-<!-- 🔷 HERO SECTION START -->
-<section class="ai-hero-section">
-  <video autoplay muted loop playsinline class="ai-hero-bg-video">
-    <source src="https://videos.pexels.com/video-files/8463624/8463624-uhd_2560_1440_25fps.mp4" type="video/mp4">
-    Your browser does not support the video tag.
-  </video>
 
-  <div class="ai-hero-overlay">
-    <div class="ai-hero-content">
-      <h1 class="ai-hero-title ai-glow animate-ai-slide-in">Empower Your Future with AI</h1>
-      <p class="ai-hero-paragraph animate-ai-fade-up">
-        Discover next-gen AI tools to boost productivity, automate workflows, and unlock innovation — all in one place.
-      </p>
-      <a href="services.html" class="btn btn-primary">Explore Tools</a>
-    </div>
-  </div>
-</section>
+
+
+<!-- Section : 1 -->
 
 <style>
   /* Hero Section */
@@ -516,36 +1138,10 @@ if (currentUserEmail && users[currentUserEmail]) {
     .ai-hero-paragraph { font-size: 0.9rem; }
   }
 </style>
-<!-- 🔷 HERO SECTION END -->
 
-<!-- Section-1: AI Solutions -->
-<section class="ai-section">
-    <h1 class="ai-heading">Transform Your Business with AI-Powered Solutions</h1>
-    <div class="ai-content">
-        <div class="ai-text">
-            <p>
-                Welcome to Stackly, where cutting-edge artificial intelligence meets practical business solutions. 
-                We specialize in developing innovative AI tools that streamline operations, enhance productivity, 
-                and drive growth for businesses across all industries. Our comprehensive suite of services includes 
-                machine learning algorithms, data analytics platforms, intelligent automation systems, and custom 
-                AI development tailored to your specific needs.
-            </p>
-            <p>
-                At Stackly, we believe that AI should be accessible, adaptable, and impactful for organizations of
-                all sizes. That’s why we combine advanced technology with intuitive design. Whether you’re looking
-                to automate routine processes, gain actionable insights from your data, or enhance customer engagement, 
-                our tools are designed to fit seamlessly into your workflow.
-            </p>
-            <div class="ai-buttons">
-                <a href="services.html" class="btn btn-primary">Explore Services</a>
-                <a href="contact.html" class="btn btn-secondary">Get Started</a>
-            </div>
-        </div>
-        <div class="ai-image">
-            <img src="https://images.unsplash.com/photo-1677442136019-21780ecad995?w=600&h=400&fit=crop&auto=format" alt="AI Solutions">
-        </div>
-    </div>
-</section>
+
+
+<!-- Section : 2 -->
 
 <style>
 .ai-section {
@@ -664,43 +1260,12 @@ if (currentUserEmail && users[currentUserEmail]) {
 }
 </style>
 
+<!-- Section : 3 -->
+    
+    
+    
 
-    <!-- Section 2: Features -->
-    <section class="features-section section-padding">
-        <div class="container">
-            <div class="section-header animate-fade-up">
-                <h2>Why Choose Stackly for AI Solutions</h2>
-                <p class="text-justify" style="font-size: 18px; color: white; text-align: center;">
-                    Our advanced AI technologies are designed to revolutionize how businesses operate,
-                    making complex processes simple and efficient while maintaining the highest standards of accuracy and reliability.</p>
-            </div>
-            <div class="features-grid">
-                <div class="feature-card animate-fade-up delay-1">
-                    <div class="feature-icon">
-                        <i class="fas fa-brain"></i>
-                    </div>
-                    <h3>Advanced AI Algorithms</h3>
-                    <p class="text-justify" style="font-size: 16px;">Leverage state-of-the-art machine learning algorithms that adapt and evolve with your business needs, providing intelligent solutions that continuously improve performance and deliver exceptional results across all operational aspects.</p>
-                </div>
-                <div class="feature-card animate-fade-up delay-2">
-                    <div class="feature-icon">
-                        <i class="fas fa-chart-line"></i>
-                    </div>
-                    <h3>Data-Driven Insights</h3>
-                    <p class="text-justify" style="font-size: 16px;">Transform raw data into actionable intelligence through our sophisticated analytics platforms that identify patterns, predict trends, and provide strategic recommendations to optimize decision-making processes and business outcomes.</p>
-                </div>
-                <div class="feature-card animate-fade-up delay-3">
-                    <div class="feature-icon">
-                        <i class="fas fa-cogs"></i>
-                    </div>
-                    <h3>Seamless Integration</h3>
-                    <p class="text-justify" style="font-size: 16px;">Our AI solutions integrate effortlessly with existing systems and workflows, ensuring minimal disruption during implementation while maximizing efficiency and maintaining operational continuity throughout your organization.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-    
-    
+<!-- Section : 3 -->
 <style>
 /* Features Section */
 .features-section {
@@ -830,32 +1395,9 @@ if (currentUserEmail && users[currentUserEmail]) {
 
  </style>
 
-<!-- Section 3: Services Overview -->
-<section class="services-overview section-padding">
-    <h2 class="animate-fade-up heading-title">Comprehensive AI Services Portfolio</h2>
-    <div class="content-layout">
-        <div class="content-image animate-slide-right">
-            <img src="https://images.pexels.com/photos/9028877/pexels-photo-9028877.jpeg" alt="AI Services">
-        </div>
-        <div class="content-text">
-            <p class="text-justify animate-fade-up delay-1">
-                Our extensive range of AI services covers every aspect of intelligent technology implementation, 
-                from initial consultation and strategy development to deployment and ongoing optimization. 
-                We work closely with clients to understand their unique challenges and develop customized 
-                solutions that deliver measurable results.
-            </p>
-            <ul class="service-list animate-fade-up delay-2">
-                <li><i class="fas fa-check"></i> Custom AI Development & Implementation</li>
-                <li><i class="fas fa-check"></i> Machine Learning Model Training</li>
-                <li><i class="fas fa-check"></i> Intelligent Process Automation</li>
-                <li><i class="fas fa-check"></i> Predictive Analytics Solutions</li>
-                <li><i class="fas fa-check"></i> Natural Language Processing</li>
-                <li><i class="fas fa-check"></i> Computer Vision Applications</li>
-            </ul>
-            <a href="services.html" class="btn btn-primary animate-fade-up delay-3">View All Services</a>
-        </div>
-    </div>
-</section>
+
+
+<!-- Section : 4 -->
 
 <style>
 .services-overview {
@@ -970,31 +1512,10 @@ if (currentUserEmail && users[currentUserEmail]) {
 }
 </style>
 
-<!-- Section 3: End -->
 
-<!-- Section 4: Statistics -->
-<section class="stats-section section-padding">
-    <div class="container">
-        <div class="stats-grid">
-            <div class="stat-item animate-count-up">
-                <div class="stat-number" data-count="500">0</div>
-                <div class="stat-label">AI Projects Completed</div>
-            </div>
-            <div class="stat-item animate-count-up">
-                <div class="stat-number" data-count="250">0</div>
-                <div class="stat-label">Satisfied Clients</div>
-            </div>
-            <div class="stat-item animate-count-up">
-                <div class="stat-number" data-count="99">0</div>
-                <div class="stat-label">Success Rate %</div>
-            </div>
-            <div class="stat-item animate-count-up">
-                <div class="stat-number" data-count="24">0</div>
-                <div class="stat-label">24/7 Support</div>
-            </div>
-        </div>
-    </div>
-</section>
+
+
+<!-- Section : 5 -->
 
 <style>
     .stats-section {
@@ -1058,39 +1579,9 @@ if (currentUserEmail && users[currentUserEmail]) {
 
 </style>
 
-<!-- Section 5: Testimonials -->
-<section class="testimonials-section">
-    <h2 class="animate-fade-up heading-title">What Our Clients Say</h2>
-    <div class="testimonials-wrapper">
-        
-        <!-- Left: Image + Paragraph -->
-        <div class="left-content">
-            <img src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?w=1000&h=600&fit=crop&auto=format" 
-                 alt="Client Testimonials">
-          
-        </div>
 
-        <!-- Right: Testimonial Cards -->
-        <div class="right-content">
-            <p>Our commitment to excellence is reflected in the success stories of our clients who have 
-                transformed their businesses through our innovative AI solutions. </p>
-            <div class="testimonial">
-                <blockquote>
-                    "Stackly's AI solutions have revolutionized our operations, increasing efficiency by 300% and reducing costs significantly. Their team's expertise and dedication to understanding our specific needs made the entire process seamless and highly effective."
-                </blockquote>
-                <cite>- Sarah Johnson, CEO, TechCorp Industries</cite>
-            </div>
 
-            <div class="testimonial">
-                <blockquote>
-                    "The predictive analytics platform developed by Stackly has transformed how we make strategic decisions. The insights we gain from their AI tools have directly contributed to our 40% revenue growth over the past year."
-                </blockquote>
-                <cite>- Michael Chen, CTO, DataDrive Solutions</cite>
-            </div>
-        </div>
-
-    </div>
-</section>
+<!-- Section : 6 -->
 
 <style>
     .testimonials-section {
@@ -1225,23 +1716,9 @@ if (currentUserEmail && users[currentUserEmail]) {
 </style>
 
 
-    <!-- Section 6: Call to Action -->
-<section class="cta-section section-padding">
-    <div class="container">
-        <div class="cta-content animate-fade-up">
-            <h2>Ready to Transform Your Business with AI?</h2>
-            <p class="text-justify">
-                Join hundreds of successful companies that have already transformed their operations with our cutting-edge AI solutions. 
-                Our team of experts is ready to help you identify opportunities, develop strategies, and implement powerful AI tools 
-                that will drive your business forward in today's competitive landscape.
-            </p>
-            <div class="cta-buttons">
-                <a href="contact.html" class="btn btn-primary">Start Your AI Journey</a>
-                <a href="services.html" class="btn btn-secondary">Learn More</a>
-            </div>
-        </div>
-    </div>
-</section>
+
+
+<!-- Section : 7 -->
 
 <style>
     .cta-section {
@@ -1357,17 +1834,9 @@ if (currentUserEmail && users[currentUserEmail]) {
 
 
    
-<!-- Section 7: Contact Banner -->
-<section class="contact-banner section-padding">
-    <div class="container">
-        <div class="contact-banner-content">
-            <h2>Get In Touch With Our AI Experts</h2>
-            <p>Ready to discuss your AI project? Contact us today for a free consultation.</p>
-            <a href="contact.html" class="btn btn-primary">Contact Us</a>
-        </div>
-    </div>
-</section>
 
+
+<!-- Section : 8 -->
 <style>
     .contact-banner {
         background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), 
@@ -1465,69 +1934,9 @@ if (currentUserEmail && users[currentUserEmail]) {
 
 
 
-    <!-- Footer -->
-     <footer class="footer">
-  <div class="container">
-    <div class="footer-content">
-      <!-- Logo & About -->
-      <div class="footer-section">
-        <div class="logo">
-          <img src="assets/images/stackly_logo_transparent.png" alt="logo" style="height: 40px; width: 80px;">
-        </div>
-        <p class="text-justify">
-          Leading AI solutions provider, helping businesses transform through intelligent technology and innovative automation systems.
-        </p>
-        <div class="social-links">
-          <a href="https://www.facebook.com/"><i class="fab fa-facebook"></i></a>
-          <a href="https://twitter.com/"><i class="fab fa-twitter"></i></a>
-          <a href="https://www.linkedin.com/"><i class="fab fa-linkedin"></i></a>
-          <a href="https://www.instagram.com/"><i class="fab fa-instagram"></i></a>
-        </div>
-      </div>
+    
 
-      <!-- Quick Links -->
-      <div class="footer-section" >
-        <h4>Quick Links</h4>
-        <ul>
-          <li><a href="home.html">Home</a></li>
-          <li><a href="home2.html">Home 2</a></li>
-          <li><a href="about.html">About Us</a></li>
-          <li><a href="services.html">Services</a></li>
-          <li><a href="blog.html">Blog</a></li>
-          <li><a href="contact.html">Contact</a></li>
-        </ul>
-      </div>
-
-      <!-- Services -->
-      <div class="footer-section">
-        <h4>Services</h4>
-        <ul>
-          <li><a href="service1.html">AI Development</a></li>
-          <li><a href="service2.html">Machine Learning</a></li>
-          <li><a href="service3.html">Data Analytics</a></li>
-          <li><a href="service4.html">Automation</a></li>
-          <li><a href="service5.html">AI Consulting</a></li>
-          <li><a href="service6.html">AI Integration</a></li>
-        </ul>
-      </div>
-
-      <!-- Contact Info -->
-      <div class="footer-section">
-        <h4>Contact Info</h4>
-        <ul>
-          <li><i class="fas fa-envelope"></i> contact@stackly.ai</li>
-          <li><i class="fas fa-phone"></i> +1 (555) 123-4567</li>
-          <li><i class="fas fa-map-marker-alt"></i> 123 AI Innovation Drive</li>
-        </ul>
-      </div>
-    </div>
-
-    <!-- Bottom Bar -->
-    <div class="footer-bottom">
-      <p>&copy; 2025 Stackly. All rights reserved.</p>
-    </div>
-  </div>
-</footer>
+<!-- Footer -->
 
 <style>
 .footer {
@@ -1610,7 +2019,10 @@ if (currentUserEmail && users[currentUserEmail]) {
 </style>
 
 
+
+</div>
     <script src="assets/js/script.js"></script>
+    
 </body>
 </html>
 

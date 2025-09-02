@@ -12,134 +12,641 @@
 
 
 
+<div id="loader">
+    <div class="spinner"></div>
+</div>
+
+<div id="content" style="display:none;"></div>
+
     <!-- Sticky Header -->
-   <header class="header">
+<header class="header">
   <div class="container">
     <div class="nav-wrapper">
-      <!-- Logo -->
       <div class="logo">
         <img src="assets/images/stackly_logo_transparent.png" alt="logo" style="height: 40px; width: 80px;">
       </div>
 
-      <!-- Navigation -->
       <nav class="navigation">
-    <ul class="nav-menu" id="navMenu">
-      <li class="nav-item dropdown">
-        <a href="#" class="nav-link">Home <i class="fas fa-chevron-down"></i></a>
-        <ul class="dropdown-menu">
-          <li><a href="index.html">Home 1</a></li>
-          <li><a href="home2.html">Home 2</a></li>
+        <ul class="nav-menu" id="navMenu">
+          <li class="nav-item dropdown">
+            <a href="#" class="nav-link" ><span data-i18n="home">Home</span> <i class="fas fa-chevron-down"></i></a>
+            <ul class="dropdown-menu">
+              <li><a href="index.html"><span data-i18n="home1">Home 1</span></a></li>
+              <li><a href="home2.html"><span data-i18n="home2">Home 2</span></a></li>
+            </ul>
+          </li>
+          <li class="nav-item"><a href="about.html" class="nav-link"><span data-i18n="about">About</span></a></li>
+          <li class="nav-item dropdown">
+            <a href="#" class="nav-link"><span data-i18n="services">Services</span> <i class="fas fa-chevron-down"></i></a>
+            <ul class="dropdown-menu">
+              <li><a href="services.html"><span data-i18n="all_services">All Services</span></a></li>
+              <li><a href="service1.html"><span data-i18n="ai_development">AI Development</span></a></li>
+              <li><a href="service2.html"><span data-i18n="machine_learning">Machine Learning</span></a></li>
+              <li><a href="service3.html"><span data-i18n="data_analytics">Data Analytics</span></a></li>
+              <li><a href="service4.html"><span data-i18n="automation">Automation</span></a></li>
+              <li><a href="service5.html"><span data-i18n="ai_consulting">AI Consulting</span></a></li>
+              <li><a href="service6.html"><span data-i18n="ai_integration">AI Integration</span></a></li>
+            </ul>
+          </li>
+          <li class="nav-item dropdown">
+            <a href="#" class="nav-link"><span data-i18n="blog">Blog</span> <i class="fas fa-chevron-down"></i></a>
+            <ul class="dropdown-menu">
+              <li><a href="blog.html"><span data-i18n="all_posts">All Posts</span></a></li>
+              <li><a href="blog1.html"><span data-i18n="ai_trends_2024">AI Trends 2024</span></a></li>
+              <li><a href="blog2.html"><span data-i18n="future_of_ml">Future of ML</span></a></li>
+              <li><a href="blog3.html"><span data-i18n="ai_in_business">AI in Business</span></a></li>
+            </ul>
+          </li>
+          <li class="nav-item"><a href="contact.html" class="nav-link"><span data-i18n="contact">Contact</span></a></li>
+          <li class="nav-item"><a href="index.html" class="nav-link" id="authLink"><span data-i18n="login">Login</span></a></li>
         </ul>
-      </li>
-      <li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
-      <li class="nav-item dropdown">
-        <a href="#" class="nav-link">Services <i class="fas fa-chevron-down"></i></a>
-        <ul class="dropdown-menu">
-          <li><a href="services.html">All Services</a></li>
-          <li><a href="service1.html">AI Development</a></li>
-          <li><a href="service2.html">Machine Learning</a></li>
-          <li><a href="service3.html">Data Analytics</a></li>
-          <li><a href="service4.html">Automation</a></li>
-          <li><a href="service5.html">AI Consulting</a></li>
-          <li><a href="service6.html">AI Integration</a></li>
+        <div class="hamburger" id="hamburger" aria-label="Open menu" tabindex="0">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </nav>
+
+      <div class="mobile-menu-wrapper">
+        <ul class="hamburger-menu" id="hamburgerMenu">
+          <li class="mobile-dropdown-parent">
+            <span><span data-i18n="home">Home</span> <i class="fas fa-chevron-down"></i></span>
+            <ul class="mobile-dropdown">
+              <li><a href="index.html"><span data-i18n="home1">Home 1</span></a></li>
+              <li><a href="home2.html"><span data-i18n="home2">Home 2</span></a></li>
+            </ul>
+          </li>
+          <li><a href="about.html"><span data-i18n="about">About</span></a></li>
+          <li class="mobile-dropdown-parent">
+            <span><span data-i18n="services">Services</span> <i class="fas fa-chevron-down"></i></span>
+            <ul class="mobile-dropdown">
+             <li><a href="services.html"><span data-i18n="allServices">All Services</span></a></li>
+              <li><a href="service1.html"><span data-i18n="service1">AI Development</span></a></li>
+              <li><a href="service2.html"><span data-i18n="service2">Machine Learning</span></a></li>
+              <li><a href="service3.html"><span data-i18n="service3">Data Analytics</span></a></li>
+              <li><a href="service4.html"><span data-i18n="service4">Automation</span></a></li>
+              <li><a href="service5.html"><span data-i18n="service5">AI Consulting</span></a></li>
+              <li><a href="service6.html"><span data-i18n="service6">AI Integration</span></a></li>
+            </ul>
+          </li>
+          <li class="mobile-dropdown-parent">
+            <span><span data-i18n="blog">Blog</span> <i class="fas fa-chevron-down"></i></span>
+            <ul class="mobile-dropdown">
+               <li><a href="blog.html"><span data-i18n="allPosts">All Posts</span></a></li>
+                <li><a href="blog1.html"><span data-i18n="blog1">AI Trends 2024</span></a></li>
+                <li><a href="blog2.html"><span data-i18n="blog2">Future of ML</span></a></li>
+                <li><a href="blog3.html"><span data-i18n="blog3">AI in Business</span></a></li>
+            </ul>
+          </li>
+          <li><a href="contact.html"><span data-i18n="contact">Contact</span></a></li>
+          <li><a href="index.html" id="mobileAuthLink"><span data-i18n="login">Login</span></a></li>
         </ul>
-      </li>
-      <li class="nav-item dropdown">
-        <a href="#" class="nav-link">Blog <i class="fas fa-chevron-down"></i></a>
-        <ul class="dropdown-menu">
-          <li><a href="blog.html">All Posts</a></li>
-          <li><a href="blog1.html">AI Trends 2024</a></li>
-          <li><a href="blog2.html">Future of ML</a></li>
-          <li><a href="blog3.html">AI in Business</a></li>
+      </div>
+
+      <div class="lang-switcher">
+        <label for="langSelect">Language:</label>
+        <select id="langSelect" onchange="changeLanguage(this.value)">
+          <option value="en">English</option>
+          <option value="ar">Arabic</option>
+          <option value="he">Hebrew</option>
+        </select>
+      </div>
+
+      <button id="toggleBtn" class="toggle-btn" title="Toggle Theme">
+        <i class="fas fa-moon"></i>
+      </button>
+
+      <div class="avatar-circle" title="Profile" id="avatarCircle">
+        <span id="avatarInitials"></span>
+      </div>
+      <div class="avatar-dropdown" id="avatarDropdown">
+        <ul>
+          <li><a href="index.html" id="logoutBtn"><span data-i18n="logout">Logout</span></a></li>
         </ul>
-      </li>
-      <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
-      <!-- Login/Logout Link -->
-      <li class="nav-item"><a href="index.html" class="nav-link" id="authLink">Login</a></li>
-    </ul>
-
-    <!-- Hamburger -->
-    <div class="hamburger" id="hamburger" aria-label="Open menu" tabindex="0">
-  <ul class="hamburger-menu" id="hamburgerMenu" style="display:none;">
-    <li><a href="index.html">Home 1</a></li>
-    <li><a href="home2.html">Home 2</a></li>
-    <li><a href="about.html">About</a></li>
-    <li>
-      <span>Services</span>
-      <ul>
-        <li><a href="services.html">All Services</a></li>
-        <li><a href="service1.html">AI Development</a></li>
-        <li><a href="service2.html">Machine Learning</a></li>
-        <li><a href="service3.html">Data Analytics</a></li>
-        <li><a href="service4.html">Automation</a></li>
-        <li><a href="service5.html">AI Consulting</a></li>
-        <li><a href="service6.html">AI Integration</a></li>
-      </ul>
-    </li>
-    <li>
-      <span>Blog</span>
-      <ul>
-        <li><a href="blog.html">All Posts</a></li>
-        <li><a href="blog1.html">AI Trends 2024</a></li>
-        <li><a href="blog2.html">Future of ML</a></li>
-        <li><a href="blog3.html">AI in Business</a></li>
-      </ul>
-    </li>
-    <li><a href="contact.html">Contact</a></li>
-    <li><a href="index.html" id="authLink">Login</a></li>
-  </ul>
-  <span></span>
-  <span></span>
-  <span></span>
-</div>
-  </nav>
-
-  <!-- Toggle Button -->
-  <button id="toggleBtn" class="toggle-btn" title="Toggle Theme">
-    <i class="fas fa-moon"></i>
-  </button>
-
-  <!-- Avatar Circle -->
-  <div class="avatar-circle" title="Profile">
-
-  </div>
-</div>
+      </div>
+    </div>
   </div>
 </header>
 
-<!-- ✅ Script -->
+<!-- Section : 1 -->
+<section class="ai-hero-section">
+  <video autoplay muted loop playsinline class="ai-hero-bg-video">
+    <source src="https://videos.pexels.com/video-files/6963744/6963744-hd_1920_1080_25fps.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+
+  <div class="ai-hero-overlay">
+    <div class="ai-hero-content">
+      <h1 class="ai-hero-title ai-glow animate-ai-slide-in" data-i18n="blog1_section1_title">AI Trends 2024</h1>
+    </div>
+  </div>
+</section>
+
+<!-- Section : 2 -->
+<section class="blog-intro">
+  <div class="container">
+    <h2 class="section-heading" data-i18n="blog1_section2_title">AI Trends 2024</h2>
+    <p class="section-subtext" style="text-align: justify;" data-i18n="blog1_section2_para">
+      Artificial Intelligence is rapidly transforming industries in 2024. Let’s explore the key trends shaping 
+      the future of innovation, automation, and responsible AI adoption across the globe. From generative AI creating new opportunities in content development, product design, and customer service, to autonomous agents streamlining operations in logistics, finance, and healthcare, businesses are leveraging AI to unlock unprecedented levels of efficiency. At the same time, organizations are increasingly focusing on explainability, security, and governance to ensure AI-driven decisions remain transparent, fair, and trustworthy.
+    </p>
+  </div>
+</section>
+
+<!-- Section : 3 -->
+<section class="blog-content">
+  <div class="container narrow">
+    <h2 class="section-heading" data-i18n="blog1_section3_title">AI in Focus</h2>
+    <p data-i18n="blog1_section3_para1">
+      Artificial Intelligence in 2024 is no longer a futuristic concept but a mainstream driver of 
+      innovation across industries. From generative AI tools enhancing creativity to natural language 
+      models transforming communication, businesses are rapidly adopting AI to stay competitive. The year 
+      is witnessing breakthroughs in explainable AI, ethical frameworks, and real-time decision systems 
+      that make AI more transparent and trustworthy. With governments and enterprises investing heavily in 
+      research, AI adoption is set to grow faster than ever before.
+    </p>
+
+    <p data-i18n="blog1_section3_para2">
+      One of the most defining trends is the integration of AI into everyday workflows. Industries such as 
+      healthcare, finance, and manufacturing are leveraging AI for predictive analytics, automation, and 
+      personalized services. Edge AI is also rising, allowing real-time intelligence on devices without 
+      relying solely on the cloud. As sustainability becomes a global priority, AI is being applied to 
+      optimize energy consumption and reduce waste, proving that 2024 is not just about smarter machines, 
+      but also about smarter, more responsible innovation.
+    </p>
+  </div>
+</section>
+
+<!-- Section : 4 -->
+<section class="ai-trends-2024">
+  <div class="container">
+    <h2 class="section-heading" data-i18n="blog1_section4_title">Key AI Trends in 2024</h2>
+    <div class="trends-grid">
+      <div class="trend-card">
+        <h3 data-i18n="blog1_section4_trend1_title">Generative AI Everywhere</h3>
+        <p data-i18n="blog1_section4_trend1_para">AI-powered content creation, from text and design to music and code, is becoming standard across industries.</p>
+      </div>
+      <div class="trend-card">
+        <h3 data-i18n="blog1_section4_trend2_title">Edge AI & Real-Time Processing</h3>
+        <p data-i18n="blog1_section4_trend2_para">AI models are running directly on devices, enabling faster decision-making without full cloud dependency.</p>
+      </div>
+      <div class="trend-card">
+        <h3 data-i18n="blog1_section4_trend3_title">AI for Sustainability</h3>
+        <p data-i18n="blog1_section4_trend3_para">From energy optimization to smart agriculture, AI is helping solve critical global challenges responsibly.</p>
+      </div>
+      <div class="trend-card">
+        <h3 data-i18n="blog1_section4_trend4_title">Responsible & Ethical AI</h3>
+        <p data-i18n="blog1_section4_trend4_para">Governments and companies are building frameworks for fairness, transparency, and data protection in AI systems.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Section : 5 -->
+<section class="blog-image-highlight">
+  <div class="container">
+    <img src="https://images.unsplash.com/photo-1677442136019-21780ecad995?w=1450" alt="AI Future" />
+    <p class="caption" data-i18n="blog1_section5_caption1">AI is driving the next wave of digital transformation in 2024</p>
+    <p class="caption" data-i18n="blog1_section5_caption2">
+      AI is driving the next wave of digital transformation in 2024, empowering businesses to harness automation, data intelligence, and advanced decision-making like never before. Organizations are adopting generative AI tools to accelerate product innovation, streamline operations, and enhance customer engagement, while industries from healthcare to finance are leveraging predictive models to unlock deeper insights and improve efficiency at scale.
+    </p>
+  </div>
+</section>
+
+<!-- Section : 6 -->
+<section class="ai-future">
+  <div class="container">
+    <div class="future-content">
+      <h2 data-i18n="blog1_section6_title">The Road Ahead for AI</h2>
+      <p style="text-align: justify;" data-i18n="blog1_section6_para1">
+        As AI technology continues to evolve, businesses and individuals alike must embrace 
+        adaptability. 2024 marks a turning point — where AI moves beyond experimental stages 
+        into real-world, large-scale applications that drive measurable impact. At the same time, the journey is not without challenges. Ethical considerations, regulatory frameworks, and the need for transparency will define how responsibly AI evolves. Global collaboration among governments, businesses, and researchers will play a pivotal role in ensuring AI is used as a force for good—balancing innovation with fairness, inclusivity, and trust. The road ahead for AI is not just about smarter machines, but about building a smarter, more sustainable future.
+      </p>
+      <p style="text-align: justify;" data-i18n="blog1_section6_para2">
+        Companies that strategically integrate AI into their workflows will not only gain a 
+        competitive edge but also shape the ethical and sustainable future of innovation. 
+        The key lies in balancing automation with human creativity — unlocking limitless 
+        opportunities for progress. The road ahead for AI is filled with opportunities that promise to reshape the way we work, live, and innovate. Emerging technologies such as generative AI, autonomous agents, and multimodal systems are pushing the boundaries of what machines can achieve—moving from task-based assistance to intelligent collaboration. As organizations continue to integrate AI into core business functions, the focus will increasingly shift toward scalability, resilience, and delivering measurable impact.
+      </p>
+    </div>
+    <div class="future-image">
+      <img src="https://images.unsplash.com/photo-1534723328310-e82dad3ee43f?w=1200&auto=format&fit=crop" 
+           alt="Future of AI" />
+    </div>
+  </div>
+</section>
+
+<!-- Section : 7 -->
+<section class="contact-banner section-padding">
+    <div class="container">
+        <div class="contact-banner-content">
+            <h2 data-i18n="blog1_section7_title">Get In Touch With Our AI Experts</h2>
+            <p data-i18n="blog1_section7_para">Ready to discuss your AI project? Contact us today for a free consultation.</p>
+            <a href="contact.html" class="btn btn-primary" data-i18n="blog1_section7_btn">Contact Us</a>
+        </div>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer class="footer section-padding" style="background:#000000; color:#fff;">
+  <div class="container">
+    <div class="footer-content" style="display:flex; flex-wrap:wrap; gap:30px; justify-content:space-between;">
+
+      <!-- Logo & About -->
+      <div class="footer-section" style="flex:1 1 250px;">
+        <div class="logo">
+          <img src="assets/images/stackly_logo_transparent.png" alt="logo" style="height: 40px; width: 80px;">
+        </div>
+        <p data-i18n="footerAbout" style="margin-top:10px; text-align:justify;">
+          Leading AI solutions provider, helping businesses transform through intelligent technology and innovative automation systems.
+        </p>
+        <div class="social-links" style="margin-top:10px;">
+          <a href="https://www.facebook.com/" target="_blank"><i class="fab fa-facebook" style="margin-right:10px;"></i></a>
+          <a href="https://twitter.com/" target="_blank"><i class="fab fa-twitter" style="margin-right:10px;"></i></a>
+          <a href="https://www.linkedin.com/" target="_blank"><i class="fab fa-linkedin" style="margin-right:10px;"></i></a>
+          <a href="https://www.instagram.com/" target="_blank"><i class="fab fa-instagram"></i></a>
+        </div>
+      </div>
+
+      <!-- Quick Links -->
+      <div class="footer-section" style="flex:1 1 150px;">
+        <h4 data-i18n="footerQuickLinks">Quick Links</h4>
+        <ul style="list-style:none; padding:0; margin:0;">
+          <li><a href="home.html" data-i18n="linkHome">Home</a></li>
+          <li><a href="home2.html" data-i18n="linkHome2">Home 2</a></li>
+          <li><a href="about.html" data-i18n="linkAbout">About Us</a></li>
+          <li><a href="services.html" data-i18n="linkServices">Services</a></li>
+          <li><a href="blog.html" data-i18n="linkBlog">Blog</a></li>
+          <li><a href="contact.html" data-i18n="linkContact">Contact</a></li>
+        </ul>
+      </div>
+
+      <!-- Services -->
+      <div class="footer-section" style="flex:1 1 150px;">
+        <h4 data-i18n="footerServices">Services</h4>
+        <ul style="list-style:none; padding:0; margin:0;">
+          <li><a href="service1.html" data-i18n="service1">AI Development</a></li>
+          <li><a href="service2.html" data-i18n="service2">Machine Learning</a></li>
+          <li><a href="service3.html" data-i18n="service3">Data Analytics</a></li>
+          <li><a href="service4.html" data-i18n="service4">Automation</a></li>
+          <li><a href="service5.html" data-i18n="service5">AI Consulting</a></li>
+          <li><a href="service6.html" data-i18n="service6">AI Integration</a></li>
+        </ul>
+      </div>
+
+      <!-- Contact Info -->
+      <div class="footer-section" style="flex:1 1 200px;">
+        <h4 data-i18n="footerContact">Contact Info</h4>
+        <ul style="list-style:none; padding:0; margin:0;">
+          <li><i class="fas fa-envelope"></i> contact@stackly.ai</li>
+          <li><i class="fas fa-phone"></i> +1 (555) 123-4567</li>
+          <li><i class="fas fa-map-marker-alt"></i> 123 AI Innovation Drive</li>
+        </ul>
+      </div>
+
+    </div>
+
+    <!-- Bottom Bar -->
+    <div class="footer-bottom" style="text-align:center; margin-top:30px; font-size:14px;">
+      <p data-i18n="footerBottom">&copy; 2025 Stackly. All rights reserved.</p>
+    </div>
+  </div>
+</footer>
+
+
 <script>
-  // Hamburger toggle
-const hamburger = document.getElementById("hamburger");
-const navMenu = document.getElementById("navMenu");
-const hamburgerMenu = document.getElementById("hamburgerMenu");
+// Translation dictionary
+const translations = {
+  en: {
+    home: "Home",
+    home1: "Home 1",
+    home2: "Home 2",
+    about: "About",
+    services: "Services",
+    allServices: "All Services",
+    service1: "AI Development",
+    service2: "Machine Learning",
+    service3: "Data Analytics",
+    service4: "Automation",
+    service5: "AI Consulting",
+    service6: "AI Integration",
+    blog: "Blog",
+    allPosts: "All Posts",
+    blog1: "AI Trends 2024",
+    blog2: "Future of ML",
+    blog3: "AI in Business",
+    contact: "Contact",
+    login: "Login",
+    logout: "Logout",
 
-// Show/hide menu on hamburger click
-hamburger.addEventListener("click", () => {
-  navMenu.classList.toggle("active");
-  hamburgerMenu.style.display = hamburgerMenu.style.display === "block" ? "none" : "block";
-});
+    footerAbout: "Leading AI solutions provider, helping businesses transform through intelligent technology and innovative automation systems.",
+    footerQuickLinks: "Quick Links",
+    linkHome: "Home",
+    linkHome2: "Home 2",
+    linkAbout: "About Us",
+    linkServices: "Services",
+    linkBlog: "Blog",
+    linkContact: "Contact",
+    footerServices: "Services",
+    service1: "AI Development",
+    service2: "Machine Learning",
+    service3: "Data Analytics",
+    service4: "Automation",
+    service5: "AI Consulting",
+    service6: "AI Integration",
+    footerContact: "Contact Info",
+    footerBottom: "© 2025 Stackly. All rights reserved",
+    
+    "blog1_section1_title": "AI Trends 2024",
 
-  // Auth link toggle
-  const authLink = document.getElementById("authLink");
-  if(localStorage.getItem("isLoggedIn") === "true"){
-    authLink.innerText = "Logout";
-    authLink.href = "#";
-    authLink.onclick = () => {
-      localStorage.removeItem("isLoggedIn");
-      localStorage.removeItem("currentUser");
-      window.location.href = "index.html";
-    };
-  } else {
-    authLink.innerText = "Login";
-    authLink.href = "index.html";
+    "blog1_section2_title": "AI Trends 2024",
+    "blog1_section2_para": "Artificial Intelligence is rapidly transforming industries in 2024. Let’s explore the key trends shaping the future of innovation, automation, and responsible AI adoption across the globe. From generative AI creating new opportunities in content development, product design, and customer service, to autonomous agents streamlining operations in logistics, finance, and healthcare, businesses are leveraging AI to unlock unprecedented levels of efficiency. At the same time, organizations are increasingly focusing on explainability, security, and governance to ensure AI-driven decisions remain transparent, fair, and trustworthy.",
+
+    "blog1_section3_title": "AI in Focus",
+    "blog1_section3_para1": "Artificial Intelligence in 2024 is no longer a futuristic concept but a mainstream driver of innovation across industries. From generative AI tools enhancing creativity to natural language models transforming communication, businesses are rapidly adopting AI to stay competitive. The year is witnessing breakthroughs in explainable AI, ethical frameworks, and real-time decision systems that make AI more transparent and trustworthy. With governments and enterprises investing heavily in research, AI adoption is set to grow faster than ever before.",
+    "blog1_section3_para2": "One of the most defining trends is the integration of AI into everyday workflows. Industries such as healthcare, finance, and manufacturing are leveraging AI for predictive analytics, automation, and personalized services. Edge AI is also rising, allowing real-time intelligence on devices without relying solely on the cloud. As sustainability becomes a global priority, AI is being applied to optimize energy consumption and reduce waste, proving that 2024 is not just about smarter machines, but also about smarter, more responsible innovation.",
+
+    "blog1_section4_title": "Key AI Trends in 2024",
+    "blog1_section4_trend1_title": "Generative AI Everywhere",
+    "blog1_section4_trend1_para": "AI-powered content creation, from text and design to music and code, is becoming standard across industries.",
+    "blog1_section4_trend2_title": "Edge AI & Real-Time Processing",
+    "blog1_section4_trend2_para": "AI models are running directly on devices, enabling faster decision-making without full cloud dependency.",
+    "blog1_section4_trend3_title": "AI for Sustainability",
+    "blog1_section4_trend3_para": "From energy optimization to smart agriculture, AI is helping solve critical global challenges responsibly.",
+    "blog1_section4_trend4_title": "Responsible & Ethical AI",
+    "blog1_section4_trend4_para": "Governments and companies are building frameworks for fairness, transparency, and data protection in AI systems.",
+
+    "blog1_section5_caption1": "AI is driving the next wave of digital transformation in 2024",
+    "blog1_section5_caption2": "AI is driving the next wave of digital transformation in 2024, empowering businesses to harness automation, data intelligence, and advanced decision-making like never before. Organizations are adopting generative AI tools to accelerate product innovation, streamline operations, and enhance customer engagement, while industries from healthcare to finance are leveraging predictive models to unlock deeper insights and improve efficiency at scale.",
+
+    "blog1_section6_title": "The Road Ahead for AI",
+    "blog1_section6_para1": "As AI technology continues to evolve, businesses and individuals alike must embrace adaptability. 2024 marks a turning point — where AI moves beyond experimental stages into real-world, large-scale applications that drive measurable impact. At the same time, the journey is not without challenges. Ethical considerations, regulatory frameworks, and the need for transparency will define how responsibly AI evolves. Global collaboration among governments, businesses, and researchers will play a pivotal role in ensuring AI is used as a force for good—balancing innovation with fairness, inclusivity, and trust. The road ahead for AI is not just about smarter machines, but about building a smarter, more sustainable future.",
+    "blog1_section6_para2": "Companies that strategically integrate AI into their workflows will not only gain a competitive edge but also shape the ethical and sustainable future of innovation. The key lies in balancing automation with human creativity — unlocking limitless opportunities for progress. The road ahead for AI is filled with opportunities that promise to reshape the way we work, live, and innovate. Emerging technologies such as generative AI, autonomous agents, and multimodal systems are pushing the boundaries of what machines can achieve—moving from task-based assistance to intelligent collaboration. As organizations continue to integrate AI into core business functions, the focus will increasingly shift toward scalability, resilience, and delivering measurable impact.",
+
+    "blog1_section7_title": "Get In Touch With Our AI Experts",
+    "blog1_section7_para": "Ready to discuss your AI project? Contact us today for a free consultation.",
+    "blog1_section7_btn": "Contact Us"
+       
+  },
+  ar: {
+    home: "الصفحة الرئيسية",
+    home1: "الصفحة 1",
+    home2: "الصفحة 2",
+    about: "معلومات عنا",
+    services: "خدمات",
+    allServices: "جميع الخدمات",
+    service1: "تطوير الذكاء الاصطناعي",
+    service2: "تعلم الآلة",
+    service3: "تحليل البيانات",
+    service4: "الأتمتة",
+    service5: "استشارات الذكاء الاصطناعي",
+    service6: "دمج الذكاء الاصطناعي",
+    blog: "مدونة",
+    allPosts: "جميع المقالات",
+    blog1: "اتجاهات الذكاء الاصطناعي 2024",
+    blog2: "مستقبل تعلم الآلة",
+    blog3: "الذكاء الاصطناعي في الأعمال",
+    contact: "اتصل بنا",
+    login: "تسجيل الدخول",
+    logout: "تسجيل الخروج",
+
+    footerAbout: "مزود حلول الذكاء الاصطناعي الرائد، يساعد الشركات على التحول من خلال التكنولوجيا الذكية وأنظمة الأتمتة المبتكرة.",
+    footerQuickLinks: "روابط سريعة",
+    linkHome: "الصفحة الرئيسية",
+    linkHome2: "الصفحة 2",
+    linkAbout: "معلومات عنا",
+    linkServices: "خدمات",
+    linkBlog: "مدونة",
+    linkContact: "اتصل بنا",
+    footerServices: "خدمات",
+    service1: "تطوير الذكاء الاصطناعي",
+    service2: "تعلم الآلة",
+    service3: "تحليل البيانات",
+    service4: "الأتمتة",
+    service5: "استشارات الذكاء الاصطناعي",
+    service6: "دمج الذكاء الاصطناعي",
+    footerContact: "معلومات الاتصال",
+    footerBottom: "© 2025 Stackly. جميع الحقوق محفوظة.",
+
+    "blog1_section1_title": "اتجاهات الذكاء الاصطناعي 2024",
+
+    "blog1_section2_title": "اتجاهات الذكاء الاصطناعي 2024",
+    "blog1_section2_para": "الذكاء الاصطناعي يغير الصناعات بسرعة في عام 2024. دعونا نستكشف الاتجاهات الرئيسية التي تشكل مستقبل الابتكار والأتمتة واعتماد الذكاء الاصطناعي المسؤول حول العالم. من الذكاء الاصطناعي التوليدي الذي يخلق فرصًا جديدة في تطوير المحتوى وتصميم المنتجات وخدمة العملاء، إلى الوكلاء المستقلين الذين يبسطون العمليات في اللوجستيات والتمويل والرعاية الصحية، تستفيد الشركات من الذكاء الاصطناعي لتحقيق مستويات غير مسبوقة من الكفاءة. في الوقت نفسه، تركز المؤسسات بشكل متزايد على القابلية للتفسير والأمان والحوكمة لضمان بقاء القرارات المعتمدة على الذكاء الاصطناعي شفافة وعادلة وجديرة بالثقة.",
+
+    "blog1_section3_title": "الذكاء الاصطناعي في التركيز",
+    "blog1_section3_para1": "لم يعد الذكاء الاصطناعي في عام 2024 مفهومًا مستقبليًا، بل أصبح محركًا رئيسيًا للابتكار عبر الصناعات. من أدوات الذكاء الاصطناعي التوليدي التي تعزز الإبداع إلى النماذج اللغوية الطبيعية التي تحول التواصل، تعتمد الشركات الذكاء الاصطناعي بسرعة للبقاء تنافسية. يشهد هذا العام اختراقات في الذكاء الاصطناعي القابل للتفسير والأطر الأخلاقية وأنظمة القرار في الوقت الفعلي التي تجعل الذكاء الاصطناعي أكثر شفافية وجديرًا بالثقة. مع استثمار الحكومات والشركات بكثافة في البحث، من المتوقع أن ينمو اعتماد الذكاء الاصطناعي بشكل أسرع من أي وقت مضى.",
+    "blog1_section3_para2": "أحد الاتجاهات الأكثر تحديدًا هو دمج الذكاء الاصطناعي في سير العمل اليومي. تستفيد الصناعات مثل الرعاية الصحية والتمويل والتصنيع من الذكاء الاصطناعي للتحليلات التنبؤية والأتمتة والخدمات المخصصة. كما يرتفع الذكاء الاصطناعي على الحافة، مما يسمح بالذكاء في الوقت الفعلي على الأجهزة دون الاعتماد فقط على السحابة. ومع تحول الاستدامة إلى أولوية عالمية، يتم تطبيق الذكاء الاصطناعي لتحسين استهلاك الطاقة وتقليل الهدر، مما يثبت أن عام 2024 لا يتعلق فقط بالآلات الأذكى، بل أيضًا بالابتكار الأذكى والأكثر مسؤولية.",
+
+    "blog1_section4_title": "الاتجاهات الرئيسية للذكاء الاصطناعي في 2024",
+    "blog1_section4_trend1_title": "الذكاء الاصطناعي التوليدي في كل مكان",
+    "blog1_section4_trend1_para": "أصبح إنشاء المحتوى المدعوم بالذكاء الاصطناعي، من النصوص والتصميم إلى الموسيقى والبرمجة، معيارًا في مختلف الصناعات.",
+    "blog1_section4_trend2_title": "الذكاء الاصطناعي على الحافة والمعالجة في الوقت الفعلي",
+    "blog1_section4_trend2_para": "تعمل نماذج الذكاء الاصطناعي مباشرة على الأجهزة، مما يتيح اتخاذ قرارات أسرع دون الاعتماد الكامل على السحابة.",
+    "blog1_section4_trend3_title": "الذكاء الاصطناعي من أجل الاستدامة",
+    "blog1_section4_trend3_para": "من تحسين استهلاك الطاقة إلى الزراعة الذكية، يساعد الذكاء الاصطناعي في حل التحديات العالمية الحرجة بمسؤولية.",
+    "blog1_section4_trend4_title": "الذكاء الاصطناعي المسؤول والأخلاقي",
+    "blog1_section4_trend4_para": "تبني الحكومات والشركات أطر عمل لتحقيق العدالة والشفافية وحماية البيانات في أنظمة الذكاء الاصطناعي.",
+
+    "blog1_section5_caption1": "يقود الذكاء الاصطناعي الموجة التالية من التحول الرقمي في 2024",
+    "blog1_section5_caption2": "يقود الذكاء الاصطناعي الموجة التالية من التحول الرقمي في عام 2024، مما يمكّن الشركات من الاستفادة من الأتمتة وذكاء البيانات واتخاذ القرارات المتقدمة بشكل لم يسبق له مثيل. تعتمد المؤسسات أدوات الذكاء الاصطناعي التوليدي لتسريع ابتكار المنتجات وتبسيط العمليات وتعزيز تفاعل العملاء، بينما تستفيد الصناعات من الرعاية الصحية إلى التمويل من النماذج التنبؤية لاستخلاص رؤى أعمق وتحسين الكفاءة على نطاق واسع.",
+
+    "blog1_section6_title": "الطريق إلى الأمام للذكاء الاصطناعي",
+    "blog1_section6_para1": "مع استمرار تطور تكنولوجيا الذكاء الاصطناعي، يجب على الشركات والأفراد على حد سواء تبني القدرة على التكيف. يمثل عام 2024 نقطة تحول — حيث ينتقل الذكاء الاصطناعي من المراحل التجريبية إلى التطبيقات الواقعية واسعة النطاق التي تحقق تأثيرًا ملموسًا. في الوقت نفسه، فإن الرحلة ليست بدون تحديات. ستحدد الاعتبارات الأخلاقية والأطر التنظيمية والحاجة إلى الشفافية مدى تطور الذكاء الاصطناعي بمسؤولية. سيلعب التعاون العالمي بين الحكومات والشركات والباحثين دورًا محوريًا في ضمان استخدام الذكاء الاصطناعي كقوة للخير — موازنة الابتكار مع العدالة والشمول والثقة. الطريق إلى الأمام للذكاء الاصطناعي لا يتعلق فقط بالآلات الأذكى، بل يتعلق ببناء مستقبل أذكى وأكثر استدامة.",
+    "blog1_section6_para2": "ستكسب الشركات التي تدمج الذكاء الاصطناعي استراتيجيًا في سير عملها ميزة تنافسية فحسب، بل ستشكل أيضًا المستقبل الأخلاقي والمستدام للابتكار. يكمن المفتاح في موازنة الأتمتة مع الإبداع البشري — مما يفتح فرصًا غير محدودة للتقدم. الطريق إلى الأمام للذكاء الاصطناعي مليء بالفرص التي تعد بإعادة تشكيل الطريقة التي نعمل ونعيش ونبتكر بها. تدفع التقنيات الناشئة مثل الذكاء الاصطناعي التوليدي والوكلاء المستقلين والأنظمة متعددة الوسائط حدود ما يمكن أن تحققه الآلات — من المساعدة المستندة إلى المهام إلى التعاون الذكي. ومع استمرار المؤسسات في دمج الذكاء الاصطناعي في وظائف الأعمال الأساسية، سيتحول التركيز بشكل متزايد نحو التوسع والمرونة وتقديم تأثير ملموس.",
+
+    "blog1_section7_title": "تواصل مع خبراء الذكاء الاصطناعي لدينا",
+    "blog1_section7_para": "هل أنت مستعد لمناقشة مشروع الذكاء الاصطناعي الخاص بك؟ اتصل بنا اليوم للحصول على استشارة مجانية.",
+    "blog1_section7_btn": "اتصل بنا",
+
+     },
+  he: {
+    home: "בית",
+    home1: "דף 1",
+    home2: "דף 2",
+    about: "עלינו",
+    services: "שירותים",
+    allServices: "כל השירותים",
+    service1: "פיתוח בינה מלאכותית",
+    service2: "למידת מכונה",
+    service3: "ניתוח נתונים",
+    service4: "אוטומציה",
+    service5: "ייעוץ בינה מלאכותית",
+    service6: "אינטגרציית בינה מלאכותית",
+    blog: "בלוג",
+    allPosts: "כל הפוסטים",
+    blog1: "מגמות AI 2024",
+    blog2: "עתיד למידת מכונה",
+    blog3: "AI בעסקים",
+    contact: "צור קשר",
+    login: "התחברות",
+    logout: "התנתק",
+
+    footerAbout: "ספק מוביל של פתרונות בינה מלאכותית, המסייע לעסקים להפוך באמצעות טכנולוגיה חכמה ומערכות אוטומציה חדשניות.",
+    footerQuickLinks: "קישורים מהירים",
+    linkHome: "בית",
+    linkHome2: "דף 2",
+    linkAbout: "עלינו",
+    linkServices: "שירותים",
+    linkBlog: "בלוג",
+    linkContact: "צור קשר",
+    footerServices: "שירותים",
+    service1: "פיתוח בינה מלאכותית",
+    service2: "למידת מכונה",
+    service3: "ניתוח נתונים",
+    service4: "אוטומציה",
+    service5: "ייעוץ בינה מלאכותית",
+    service6: "אינטגרציית בינה מלאכותית",
+    footerContact: "פרטי התקשרות",
+    footerBottom: "© 2025 Stackly. כל הזכויות שמורות.",
+
+    "blog1_section1_title": "מגמות בינה מלאכותית 2024",
+
+    "blog1_section2_title": "מגמות בינה מלאכותית 2024",
+    "blog1_section2_para": "הבינה המלאכותית משנה תעשיות במהירות בשנת 2024. בואו נחקור את המגמות המרכזיות שמעֲצבות את עתיד החדשנות, האוטומציה והאימוץ האחראי של AI ברחבי העולם. מהבינה המלאכותית הגנרטיבית שיוצרת הזדמנויות חדשות בפיתוח תוכן, עיצוב מוצרים ושירות לקוחות, ועד סוכנים אוטונומיים שמייעלים תהליכים בלוגיסטיקה, פיננסים ובריאות — עסקים מנצלים את ה-AI כדי להשיג רמות חסרות תקדים של יעילות. במקביל, ארגונים מתמקדים יותר ויותר בהסבריות, אבטחה וממשל כדי להבטיח שהחלטות מבוססות AI יישארו שקופות, הוגנות ואמינות.",
+
+    "blog1_section3_title": "בינה מלאכותית במוקד",
+    "blog1_section3_para1": "הבינה המלאכותית בשנת 2024 כבר איננה רעיון עתידני אלא מנוע מרכזי לחדשנות בתעשיות השונות. מכלי AI גנרטיביים המשפרים יצירתיות ועד למודלים של שפה טבעית שמעצבים מחדש את התקשורת — עסקים מאמצים את ה-AI בקצב מהיר כדי להישאר תחרותיים. השנה מתאפיינת בפריצות דרך בתחום ה-AI הניתן להסבר, מסגרות אתיות ומערכות קבלת החלטות בזמן אמת שהופכות את ה-AI לשקוף ואמין יותר. עם השקעות כבדות של ממשלות ועסקים במחקר, האימוץ של AI צפוי לגדול מהר יותר מאי פעם.",
+    "blog1_section3_para2": "אחת המגמות הבולטות ביותר היא שילוב ה-AI בשגרה היומיומית. תעשיות כמו בריאות, פיננסים וייצור מנצלות AI לניתוחים חזויים, אוטומציה ושירותים מותאמים אישית. גם AI בקצה עולה, ומאפשר תובנות בזמן אמת במכשירים עצמם מבלי להסתמך רק על הענן. עם הפיכת הקיימות לעדיפות עולמית, נעשה שימוש ב-AI לאופטימיזציה של צריכת אנרגיה ולהפחתת פסולת, מה שמוכיח ש-2024 היא לא רק על מכונות חכמות יותר אלא גם על חדשנות חכמה ואחראית יותר.",
+
+    "blog1_section4_title": "מגמות עיקריות בבינה מלאכותית 2024",
+    "blog1_section4_trend1_title": "בינה מלאכותית גנרטיבית בכל מקום",
+    "blog1_section4_trend1_para": "יצירת תוכן מבוססת AI — מטקסט ועיצוב ועד למוזיקה וקוד — הופכת לסטנדרט בתעשיות השונות.",
+    "blog1_section4_trend2_title": "AI בקצה ועיבוד בזמן אמת",
+    "blog1_section4_trend2_para": "מודלים של AI פועלים ישירות על מכשירים, ומאפשרים קבלת החלטות מהירה יותר ללא תלות מלאה בענן.",
+    "blog1_section4_trend3_title": "AI למען קיימות",
+    "blog1_section4_trend3_para": "מהתייעלות אנרגטית ועד לחקלאות חכמה — ה-AI מסייע בהתמודדות עם אתגרים גלובליים קריטיים באחריות.",
+    "blog1_section4_trend4_title": "AI אחראי ואתי",
+    "blog1_section4_trend4_para": "ממשלות ועסקים בונים מסגרות להבטחת הוגנות, שקיפות והגנה על נתונים במערכות AI.",
+
+    "blog1_section5_caption1": "הבינה המלאכותית מניעה את גל השינוי הדיגיטלי הבא בשנת 2024",
+    "blog1_section5_caption2": "הבינה המלאכותית מניעה את גל השינוי הדיגיטלי הבא בשנת 2024, ומאפשרת לעסקים לנצל אוטומציה, בינה מבוססת נתונים וקבלת החלטות מתקדמת כמו שלא היה מעולם. ארגונים מאמצים כלי AI גנרטיביים כדי להאיץ חדשנות במוצרים, לייעל תהליכים ולשפר את חוויית הלקוח, בעוד שתעשיות מהבריאות ועד לפיננסים מנצלות מודלים חזויים כדי לחשוף תובנות עמוקות יותר ולשפר את היעילות בקנה מידה רחב.",
+
+    "blog1_section6_title": "הדרך קדימה לבינה מלאכותית",
+    "blog1_section6_para1": "ככל שטכנולוגיית ה-AI ממשיכה להתפתח, עסקים ואנשים פרטיים חייבים לאמץ הסתגלות. שנת 2024 מסמנת נקודת מפנה — שבה ה-AI עובר משלב ניסיוני ליישומים מציאותיים בקנה מידה רחב שמייצרים השפעה מדידה. יחד עם זאת, הדרך אינה חפה מאתגרים. שיקולים אתיים, מסגרות רגולטוריות והצורך בשקיפות יקבעו עד כמה ה-AI יתפתח באופן אחראי. שיתוף פעולה גלובלי בין ממשלות, עסקים וחוקרים ישחק תפקיד מרכזי בהבטחת שימוש ב-AI ככוח לטובה — איזון בין חדשנות לצד הוגנות, הכללה ואמון. הדרך קדימה ל-AI איננה רק על מכונות חכמות יותר אלא על בניית עתיד חכם ובעל קיימות.",
+    "blog1_section6_para2": "חברות שישלבו AI באופן אסטרטגי בתהליכי העבודה שלהן לא רק שירכשו יתרון תחרותי, אלא גם יעצבו את העתיד האתי והבר קיימא של החדשנות. המפתח טמון באיזון בין אוטומציה ליצירתיות אנושית — פתיחת אפשרויות בלתי מוגבלות להתקדמות. הדרך קדימה ל-AI מלאה בהזדמנויות שמבטיחות לעצב מחדש את הדרך בה אנו עובדים, חיים ומחדשים. טכנולוגיות מתקדמות כמו AI גנרטיבי, סוכנים אוטונומיים ומערכות מולטימודליות מרחיבות את גבולות מה שמכונות יכולות להשיג — ממענה מבוסס משימות לשיתוף פעולה חכם. ככל שארגונים ימשיכו לשלב AI בפונקציות הליבה העסקיות שלהם, המיקוד יעבור בהדרגה להתרחבות, עמידות והפקת השפעה מדידה.",
+
+    "blog1_section7_title": "צרו קשר עם מומחי ה-AI שלנו",
+    "blog1_section7_para": "מוכנים לדון בפרויקט ה-AI שלכם? צרו איתנו קשר עוד היום לקבלת ייעוץ חינם.",
+    "blog1_section7_btn": "צור קשר",
+
+        
   }
+};
+
+// Function to change language
+function changeLanguage(lang) {
+  document.querySelectorAll("[data-i18n]").forEach(el => {
+    const key = el.getAttribute("data-i18n");
+    if(translations[lang] && translations[lang][key]) {
+      el.innerText = translations[lang][key];
+    }
+  });
+
+  // Handle RTL for Arabic & Hebrew
+  if(lang === "ar" || lang === "he") {
+    document.documentElement.dir = "rtl";
+  } else {
+    document.documentElement.dir = "ltr";
+  }
+}
+
+// Optional: automatically switch to selected language on page load
+document.addEventListener("DOMContentLoaded", () => {
+  const langSelect = document.getElementById("langSelect");
+  changeLanguage(langSelect.value);
+});
+</script>
+
+
+
+
+<script>
+  // Mobile menu setup
+  const hamburger = document.getElementById("hamburger");
+  const hamburgerMenu = document.getElementById("hamburgerMenu");
+
+  // Show/hide mobile menu on hamburger click
+  hamburger.addEventListener("click", () => {
+    hamburger.classList.toggle("active");
+    hamburgerMenu.classList.toggle("active");
+  });
+
+  // Toggle dropdowns for mobile menu
+  document.querySelectorAll('.mobile-dropdown-parent > span').forEach(link => {
+    link.addEventListener('click', function() {
+      const parentLi = this.parentElement;
+      const dropdown = parentLi.querySelector('.mobile-dropdown');
+      dropdown.classList.toggle('active');
+    });
+  });
+
+  // Desktop dropdown toggle logic
+  document.querySelectorAll('.nav-item.dropdown > .nav-link').forEach(link => {
+    link.addEventListener('click', function(e) {
+      e.preventDefault();
+      document.querySelectorAll('.dropdown-menu').forEach(menu => {
+        if (menu !== this.nextElementSibling) {
+          menu.classList.remove('active');
+        }
+      });
+      const dropdownMenu = this.nextElementSibling;
+      if (dropdownMenu) {
+        dropdownMenu.classList.toggle('active');
+      }
+    });
+  });
+
+  // Redirect on desktop dropdown menu item click
+  document.querySelectorAll('.dropdown-menu a').forEach(link => {
+    link.addEventListener('click', function(e) {
+      const href = this.getAttribute('href');
+      if (href && href !== "#") {
+        window.location.href = href;
+        document.querySelectorAll('.dropdown-menu').forEach(menu => menu.classList.remove('active'));
+      }
+    });
+  });
+
+  // Redirect on normal nav link click
+  document.querySelectorAll('.nav-menu > .nav-item:not(.dropdown) .nav-link').forEach(link => {
+    link.addEventListener('click', function(e) {
+      const href = this.getAttribute('href');
+      if (href && href !== "#") {
+        window.location.href = href;
+      }
+    });
+  });
+
+  // Auth link toggle for desktop and mobile
+  function setupAuthLinks() {
+    const isLoggedIn = localStorage.getItem("isLoggedIn") === "true";
+    const authLinks = [document.getElementById("authLink"), document.getElementById("mobileAuthLink")];
+
+    authLinks.forEach(link => {
+      if (!link) return;
+      if (isLoggedIn) {
+        link.innerText = "Logout";
+        link.href = "#";
+        link.onclick = (e) => {
+          e.preventDefault();
+          localStorage.removeItem("isLoggedIn");
+          localStorage.removeItem("currentUser");
+          window.location.href = "index.html";
+        };
+      } else {
+        link.innerText = "Login";
+        link.href = "index.html";
+        link.onclick = null;
+      }
+    });
+  }
+  setupAuthLinks();
 
   // Theme toggle
   const toggleBtn = document.getElementById('toggleBtn');
   let darkMode = localStorage.getItem('darkMode') === 'true';
 
-  // Apply initial theme
   function applyTheme() {
     if (darkMode) {
       document.body.classList.add('dark-mode');
@@ -155,124 +662,248 @@ hamburger.addEventListener("click", () => {
     localStorage.setItem('darkMode', darkMode);
     applyTheme();
   });
-
-  // Call once to apply the theme on initial load
   applyTheme();
 
-  // Avatar initials
-const avatarCircle = document.querySelector('.avatar-circle');
-const currentUserEmail = localStorage.getItem("currentUser");
-const users = JSON.parse(localStorage.getItem("users")) || {};
-if (currentUserEmail && users[currentUserEmail]) {
-  const firstName = users[currentUserEmail].firstName || "";
-  const lastName = users[currentUserEmail].lastName || "";
-  const initials = (firstName[0] || "").toUpperCase() + (lastName[0] || "").toUpperCase();
-  avatarCircle.innerHTML = `<span style="
-    font-size: 1.2rem;
-    font-weight: bold;
-    color: #23272f;
-    background: transparent;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    height: 100%;
-  ">${initials}</span>`;
-} else {
-  avatarCircle.innerHTML = `<span style="
-    font-size: 1.2rem;
-    font-weight: bold;
-    color: #23272f;
-    background: transparent;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    height: 100%;
-  ">?</span>`;
-}
+  // Avatar initials logic
+  const avatarCircle = document.getElementById('avatarCircle');
+  const avatarInitials = document.getElementById('avatarInitials');
+  const avatarDropdown = document.getElementById('avatarDropdown');
+  const logoutBtn = document.getElementById('logoutBtn');
+  const currentUserEmail = localStorage.getItem("currentUser");
+  const users = JSON.parse(localStorage.getItem("users")) || {};
 
+  if (currentUserEmail && users[currentUserEmail]) {
+    const firstName = users[currentUserEmail].firstName || "";
+    const lastName = users[currentUserEmail].lastName || "";
+    const initials = (firstName[0] || "").toUpperCase() + (lastName[0] || "").toUpperCase();
+    avatarInitials.textContent = initials;
+  } else {
+    avatarInitials.textContent = "?";
+  }
 
+  // Show/hide avatar dropdown on click
+  avatarCircle.addEventListener('click', function(e) {
+    e.stopPropagation();
+    avatarDropdown.style.display = avatarDropdown.style.display === "block" ? "none" : "block";
+  });
+
+  document.addEventListener('click', function(e) {
+    if (!avatarCircle.contains(e.target) && !avatarDropdown.contains(e.target)) {
+      avatarDropdown.style.display = "none";
+    }
+  });
+
+  // Logout action
+  logoutBtn.addEventListener('click', function(e) {
+    e.preventDefault();
+    localStorage.removeItem("isLoggedIn");
+    localStorage.removeItem("currentUser");
+    window.location.href = "index.html";
+  });
 </script>
 
-<!-- ✅ CSS for hamburger -->
 <style>
+  /* Base styles for hamburger icon */
   .hamburger {
     display: none;
     flex-direction: column;
+    justify-content: space-between;
+    width: 24px;
+    height: 18px;
     cursor: pointer;
+    z-index: 1000;
   }
+
   .hamburger span {
-    height: 3px;
-    width: 25px;
-    background: #333;
-    margin: 4px 0;
-    border-radius: 5px;
+    display: block;
+    width: 100%;
+    height: 2px;
+    background-color: #333;
+    transition: all 0.3s ease-in-out;
   }
+
+  .dark-mode .hamburger span {
+    background-color: #fff;
+  }
+
+  /* Hamburger menu animation */
+  .hamburger.active span:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+  }
+
+  .hamburger.active span:nth-child(2) {
+    opacity: 0;
+  }
+
+  .hamburger.active span:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -5px);
+  }
+
+  /* Hide navigation on mobile */
   @media (max-width: 768px) {
     .nav-menu {
       display: none;
-      flex-direction: column;
-      background: #fff;
-      position: absolute;
-      top: 70px;
-      right: 20px;
-      width: 200px;
-      padding: 10px;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.2);
-    }
-    .nav-menu.active {
-      display: flex;
     }
     .hamburger {
       display: flex;
     }
-    .nav-item {
-      margin: 10px 0;
-    }
+  }
+
+  /* Styles for the mobile hamburger menu */
+  .mobile-menu-wrapper {
+    position: relative;
+  }
+
+  .hamburger-menu {
+    display: none;
+    flex-direction: column;
+    background: #23272f;
+    color: #fff;
+    position: absolute;
+    top: 50px;
+    right: 0;
+    width: 220px;
+    border-radius: 8px;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.18);
+    padding: 20px 0;
+    z-index: 9999;
+    list-style: none;
+  }
+
+  .hamburger-menu.active {
+    display: flex;
+  }
+
+  .hamburger-menu li {
+    padding: 10px 24px;
+    border-bottom: 1px solid #333;
+  }
+
+  .hamburger-menu li:last-child {
+    border-bottom: none;
+  }
+
+  .hamburger-menu a,
+  .hamburger-menu span {
+    color: #00f7ff;
+    text-decoration: none;
+    font-size: 1.1rem;
+    display: block;
+    cursor: pointer;
+    font-weight: 500;
+  }
+
+  .hamburger-menu ul {
+    list-style: none;
+    padding-left: 20px;
+    margin-top: 5px;
+  }
+
+  .hamburger-menu li.mobile-dropdown-parent .mobile-dropdown {
+    display: none;
+  }
+
+  .hamburger-menu li.mobile-dropdown-parent .mobile-dropdown.active {
+    display: block;
   }
 
   .toggle-btn {
-  background: #fff;
-  border: none;
-  border-radius: 50%;
-  width: 38px;
-  height: 38px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-left: 16px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
-  cursor: pointer;
-  transition: background 0.2s;
-}
-.toggle-btn:hover {
-  background: #f0f0f0;
-}
-.avatar-circle {
-  width: 38px;
-  height: 38px;
-  border-radius: 50%;
-  overflow: hidden;
-  margin-left: 16px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: #eee;
-}
-.avatar-circle img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-@media (max-width: 768px) {
-  .toggle-btn, .avatar-circle {
-    margin-left: 8px;
-    width: 32px;
-    height: 32px;
+    background: #fff;
+    border: none;
+    border-radius: 50%;
+    width: 38px;
+    height: 38px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 16px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    cursor: pointer;
+    transition: background 0.2s;
   }
-}
+
+  .toggle-btn:hover {
+    background: #f0f0f0;
+  }
+
+  .avatar-circle {
+    position: relative;
+    cursor: pointer;
+    z-index: 1001;
+    overflow: visible;
+  }
+
+  .avatar-circle {
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-left: 16px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #eee;
+    position: relative;
+    cursor: pointer;
+  }
+
+  .avatar-circle img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .avatar-dropdown {
+    display: none;
+    position: absolute;
+    top: 65px;
+    right: 140px;
+    background: #fff;
+    min-width: 100px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.18);
+    border-radius: 8px;
+    z-index: 1002;
+    padding: 4px 0;
+  }
+
+  .avatar-dropdown ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  .avatar-dropdown li {
+    padding: 6px 12px;
+  }
+
+  .avatar-dropdown a {
+    color: #23272f;
+    text-decoration: none;
+    font-size: 0.95rem;
+    display: block;
+    border-radius: 4px;
+    transition: background 0.2s;
+  }
+
+  .avatar-dropdown a:hover {
+    background: #f0f0f0;
+  }
+
+  @media (max-width: 768px) {
+    .toggle-btn,
+    .avatar-circle {
+      margin-left: 8px;
+      width: 32px;
+      height: 32px;
+    }
+  }
+
+  @media (min-width: 769px) {
+    .hamburger-menu {
+      display: none !important;
+    }
+  }
 </style>
 
 <!-- 🔷 Protest home page  -->
@@ -295,22 +926,9 @@ if (currentUserEmail && users[currentUserEmail]) {
 
 
 
-    <!-- 🔷 HERO SECTION START video_code  -->
 
-<!-- 🔷 HERO SECTION START -->
-<section class="ai-hero-section">
-  <video autoplay muted loop playsinline class="ai-hero-bg-video">
-    <source src="https://videos.pexels.com/video-files/6963744/6963744-hd_1920_1080_25fps.mp4" type="video/mp4">
-    Your browser does not support the video tag.
-  </video>
+<!-- Section : 1 -->
 
-  <div class="ai-hero-overlay">
-    <div class="ai-hero-content">
-      <h1 class="ai-hero-title ai-glow animate-ai-slide-in"> AI Trends 2024</h1>
-      
-    </div>
-  </div>
-</section>
 
 <style>
   /* Hero Section */
@@ -439,100 +1057,6 @@ if (currentUserEmail && users[currentUserEmail]) {
 
 
 
-
-<!-- 🌟 Section 2: Intro -->
-<section class="blog-intro">
-  <div class="container">
-    <h2 class="section-heading">AI Trends 2024</h2>
-    <p class="section-subtext" style="text-align: justify;">
-      Artificial Intelligence is rapidly transforming industries in 2024. Let’s explore the key trends shaping 
-      the future of innovation, automation, and responsible AI adoption across the globe. From generative AI creating new opportunities in content development, product design, and customer service, to autonomous agents streamlining operations in logistics, finance, and healthcare, businesses are leveraging AI to unlock unprecedented levels of efficiency. At the same time, organizations are increasingly focusing on explainability, security, and governance to ensure AI-driven decisions remain transparent, fair, and trustworthy.
-    </p>
-  </div>
-</section>
-
-<!-- 🌟 Section 3: Main Content -->
-<section class="blog-content">
-  <div class="container narrow">
-    <h2 class="section-heading">AI in Focus</h2>
-    <p>
-      Artificial Intelligence in 2024 is no longer a futuristic concept but a mainstream driver of 
-      innovation across industries. From generative AI tools enhancing creativity to natural language 
-      models transforming communication, businesses are rapidly adopting AI to stay competitive. The year 
-      is witnessing breakthroughs in explainable AI, ethical frameworks, and real-time decision systems 
-      that make AI more transparent and trustworthy. With governments and enterprises investing heavily in 
-      research, AI adoption is set to grow faster than ever before.
-    </p>
-
-    <p>
-      One of the most defining trends is the integration of AI into everyday workflows. Industries such as 
-      healthcare, finance, and manufacturing are leveraging AI for predictive analytics, automation, and 
-      personalized services. Edge AI is also rising, allowing real-time intelligence on devices without 
-      relying solely on the cloud. As sustainability becomes a global priority, AI is being applied to 
-      optimize energy consumption and reduce waste, proving that 2024 is not just about smarter machines, 
-      but also about smarter, more responsible innovation.
-    </p>
-  </div>
-</section>
-
-<!-- 🌟 Section 4: Key AI Trends -->
-<section class="ai-trends-2024">
-  <div class="container">
-    <h2 class="section-heading">Key AI Trends in 2024</h2>
-    <div class="trends-grid">
-      <div class="trend-card">
-        <h3>🤖 Generative AI Everywhere</h3>
-        <p>AI-powered content creation, from text and design to music and code, is becoming standard across industries.</p>
-      </div>
-      <div class="trend-card">
-        <h3>⚡ Edge AI & Real-Time Processing</h3>
-        <p>AI models are running directly on devices, enabling faster decision-making without full cloud dependency.</p>
-      </div>
-      <div class="trend-card">
-        <h3>🌍 AI for Sustainability</h3>
-        <p>From energy optimization to smart agriculture, AI is helping solve critical global challenges responsibly.</p>
-      </div>
-      <div class="trend-card">
-        <h3>🛡️ Responsible & Ethical AI</h3>
-        <p>Governments and companies are building frameworks for fairness, transparency, and data protection in AI systems.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- 🌟 Section 5: Image Highlight -->
-<section class="blog-image-highlight">
-  <div class="container">
-    <img src="https://images.unsplash.com/photo-1677442136019-21780ecad995?w=1450" alt="AI Future" />
-    <p class="caption">AI is driving the next wave of digital transformation in 2024</p>
-    <p class="caption">AI is driving the next wave of digital transformation in 2024, empowering businesses to harness automation, data intelligence, and advanced decision-making like never before. Organizations are adopting generative AI tools to accelerate product innovation, streamline operations, and enhance customer engagement, while industries from healthcare to finance are leveraging predictive models to unlock deeper insights and improve efficiency at scale.</p>
-  </div>
-</section>
-
-<!-- 🌟 Section 6: The Future of AI -->
-<section class="ai-future">
-  <div class="container">
-    <div class="future-content">
-      <h2>The Road Ahead for AI</h2>
-      <p style="text-align: justify;">
-        As AI technology continues to evolve, businesses and individuals alike must embrace 
-        adaptability. 2024 marks a turning point — where AI moves beyond experimental stages 
-        into real-world, large-scale applications that drive measurable impact. At the same time, the journey is not without challenges. Ethical considerations, regulatory frameworks, and the need for transparency will define how responsibly AI evolves. Global collaboration among governments, businesses, and researchers will play a pivotal role in ensuring AI is used as a force for good—balancing innovation with fairness, inclusivity, and trust. The road ahead for AI is not just about smarter machines, but about building a smarter, more sustainable future.
-      </p>
-      <p style="text-align: justify;">
-        Companies that strategically integrate AI into their workflows will not only gain a 
-        competitive edge but also shape the ethical and sustainable future of innovation. 
-        The key lies in balancing automation with human creativity — unlocking limitless 
-        opportunities for progress. The road ahead for AI is filled with opportunities that promise to reshape the way we work, live, and innovate. Emerging technologies such as generative AI, autonomous agents, and multimodal systems are pushing the boundaries of what machines can achieve—moving from task-based assistance to intelligent collaboration. As organizations continue to integrate AI into core business functions, the focus will increasingly shift toward scalability, resilience, and delivering measurable impact.
-      
-    </div>
-    <div class="future-image">
-      <img src="https://images.unsplash.com/photo-1534723328310-e82dad3ee43f?w=1200&auto=format&fit=crop" 
-           alt="Future of AI" />
-    </div>
-  </div>
-</section>
-
 <style>
 /* 🌟 Future Section */
 .ai-future {
@@ -659,16 +1183,9 @@ section { width: 100%; padding: 50px 20px; }
 
 
    
-<!-- Section 7: Contact Banner -->
-<section class="contact-banner section-padding">
-    <div class="container">
-        <div class="contact-banner-content">
-            <h2>Get In Touch With Our AI Experts</h2>
-            <p>Ready to discuss your AI project? Contact us today for a free consultation.</p>
-            <a href="contact.html" class="btn btn-primary">Contact Us</a>
-        </div>
-    </div>
-</section>
+
+
+<!-- Section : 7 -->
 
 <style>
     .contact-banner {
@@ -764,70 +1281,7 @@ section { width: 100%; padding: 50px 20px; }
 
 
 
-    <!-- Footer -->
-     <footer class="footer">
-  <div class="container">
-    <div class="footer-content">
-      <!-- Logo & About -->
-      <div class="footer-section">
-        <div class="logo">
-          <img src="assets/images/stackly_logo_transparent.png" alt="logo" style="height: 40px; width: 80px;">
-        </div>
-        <p class="text-justify">
-          Leading AI solutions provider, helping businesses transform through intelligent technology and innovative automation systems.
-        </p>
-        <div class="social-links">
-          <a href="https://www.facebook.com/"><i class="fab fa-facebook"></i></a>
-          <a href="https://twitter.com/"><i class="fab fa-twitter"></i></a>
-          <a href="https://www.linkedin.com/"><i class="fab fa-linkedin"></i></a>
-          <a href="https://www.instagram.com/"><i class="fab fa-instagram"></i></a>
-        </div>
-      </div>
-
-      <!-- Quick Links -->
-      <div class="footer-section">
-        <h4>Quick Links</h4>
-        <ul>
-          <li><a href="home.html">Home</a></li>
-          <li><a href="home2.html">Home 2</a></li>
-          <li><a href="about.html">About Us</a></li>
-          <li><a href="services.html">Services</a></li>
-          <li><a href="blog.html">Blog</a></li>
-          <li><a href="contact.html">Contact</a></li>
-        </ul>
-      </div>
-
-      <!-- Services -->
-      <div class="footer-section">
-        <h4>Services</h4>
-        <ul>
-          <li><a href="service1.html">AI Development</a></li>
-          <li><a href="service2.html">Machine Learning</a></li>
-          <li><a href="service3.html">Data Analytics</a></li>
-          <li><a href="service4.html">Automation</a></li>
-          <li><a href="service5.html">AI Consulting</a></li>
-          <li><a href="service6.html">AI Integration</a></li>
-        </ul>
-      </div>
-
-      <!-- Contact Info -->
-      <div class="footer-section">
-        <h4>Contact Info</h4>
-        <ul>
-          <li><i class="fas fa-envelope"></i> contact@stackly.ai</li>
-          <li><i class="fas fa-phone"></i> +1 (555) 123-4567</li>
-          <li><i class="fas fa-map-marker-alt"></i> 123 AI Innovation Drive</li>
-        </ul>
-      </div>
-    </div>
-
-    <!-- Bottom Bar -->
-    <div class="footer-bottom">
-      <p>&copy; 2025 Stackly. All rights reserved.</p>
-    </div>
-  </div>
-</footer>
-
+   
 <style>
 .footer {
   background: #0a0a0a;

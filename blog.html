@@ -11,135 +11,704 @@
 
 
 
+  <div id="loader">
+    <div class="spinner"></div>
+</div>
+
+<div id="content" style="display:none;"></div>
 
     <!-- Sticky Header -->
-   <header class="header">
+<header class="header">
   <div class="container">
     <div class="nav-wrapper">
-      <!-- Logo -->
       <div class="logo">
         <img src="assets/images/stackly_logo_transparent.png" alt="logo" style="height: 40px; width: 80px;">
       </div>
 
-      <!-- Navigation -->
       <nav class="navigation">
-    <ul class="nav-menu" id="navMenu">
-      <li class="nav-item dropdown">
-        <a href="#" class="nav-link">Home <i class="fas fa-chevron-down"></i></a>
-        <ul class="dropdown-menu">
-          <li><a href="index.html">Home 1</a></li>
-          <li><a href="home2.html">Home 2</a></li>
+        <ul class="nav-menu" id="navMenu">
+          <li class="nav-item dropdown">
+            <a href="#" class="nav-link" ><span data-i18n="home">Home</span> <i class="fas fa-chevron-down"></i></a>
+            <ul class="dropdown-menu">
+              <li><a href="index.html"><span data-i18n="home1">Home 1</span></a></li>
+              <li><a href="home2.html"><span data-i18n="home2">Home 2</span></a></li>
+            </ul>
+          </li>
+          <li class="nav-item"><a href="about.html" class="nav-link"><span data-i18n="about">About</span></a></li>
+          <li class="nav-item dropdown">
+            <a href="#" class="nav-link"><span data-i18n="services">Services</span> <i class="fas fa-chevron-down"></i></a>
+            <ul class="dropdown-menu">
+              <li><a href="services.html"><span data-i18n="all_services">All Services</span></a></li>
+              <li><a href="service1.html"><span data-i18n="ai_development">AI Development</span></a></li>
+              <li><a href="service2.html"><span data-i18n="machine_learning">Machine Learning</span></a></li>
+              <li><a href="service3.html"><span data-i18n="data_analytics">Data Analytics</span></a></li>
+              <li><a href="service4.html"><span data-i18n="automation">Automation</span></a></li>
+              <li><a href="service5.html"><span data-i18n="ai_consulting">AI Consulting</span></a></li>
+              <li><a href="service6.html"><span data-i18n="ai_integration">AI Integration</span></a></li>
+            </ul>
+          </li>
+          <li class="nav-item dropdown">
+            <a href="#" class="nav-link"><span data-i18n="blog">Blog</span> <i class="fas fa-chevron-down"></i></a>
+            <ul class="dropdown-menu">
+              <li><a href="blog.html"><span data-i18n="all_posts">All Posts</span></a></li>
+              <li><a href="blog1.html"><span data-i18n="ai_trends_2024">AI Trends 2024</span></a></li>
+              <li><a href="blog2.html"><span data-i18n="future_of_ml">Future of ML</span></a></li>
+              <li><a href="blog3.html"><span data-i18n="ai_in_business">AI in Business</span></a></li>
+            </ul>
+          </li>
+          <li class="nav-item"><a href="contact.html" class="nav-link"><span data-i18n="contact">Contact</span></a></li>
+          <li class="nav-item"><a href="index.html" class="nav-link" id="authLink"><span data-i18n="login">Login</span></a></li>
         </ul>
-      </li>
-      <li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
-      <li class="nav-item dropdown">
-        <a href="#" class="nav-link">Services <i class="fas fa-chevron-down"></i></a>
-        <ul class="dropdown-menu">
-          <li><a href="services.html">All Services</a></li>
-          <li><a href="service1.html">AI Development</a></li>
-          <li><a href="service2.html">Machine Learning</a></li>
-          <li><a href="service3.html">Data Analytics</a></li>
-          <li><a href="service4.html">Automation</a></li>
-          <li><a href="service5.html">AI Consulting</a></li>
-          <li><a href="service6.html">AI Integration</a></li>
+        <div class="hamburger" id="hamburger" aria-label="Open menu" tabindex="0">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </nav>
+
+      <div class="mobile-menu-wrapper">
+        <ul class="hamburger-menu" id="hamburgerMenu">
+          <li class="mobile-dropdown-parent">
+            <span><span data-i18n="home">Home</span> <i class="fas fa-chevron-down"></i></span>
+            <ul class="mobile-dropdown">
+              <li><a href="index.html"><span data-i18n="home1">Home 1</span></a></li>
+              <li><a href="home2.html"><span data-i18n="home2">Home 2</span></a></li>
+            </ul>
+          </li>
+          <li><a href="about.html"><span data-i18n="about">About</span></a></li>
+          <li class="mobile-dropdown-parent">
+            <span><span data-i18n="services">Services</span> <i class="fas fa-chevron-down"></i></span>
+            <ul class="mobile-dropdown">
+             <li><a href="services.html"><span data-i18n="allServices">All Services</span></a></li>
+              <li><a href="service1.html"><span data-i18n="service1">AI Development</span></a></li>
+              <li><a href="service2.html"><span data-i18n="service2">Machine Learning</span></a></li>
+              <li><a href="service3.html"><span data-i18n="service3">Data Analytics</span></a></li>
+              <li><a href="service4.html"><span data-i18n="service4">Automation</span></a></li>
+              <li><a href="service5.html"><span data-i18n="service5">AI Consulting</span></a></li>
+              <li><a href="service6.html"><span data-i18n="service6">AI Integration</span></a></li>
+            </ul>
+          </li>
+          <li class="mobile-dropdown-parent">
+            <span><span data-i18n="blog">Blog</span> <i class="fas fa-chevron-down"></i></span>
+            <ul class="mobile-dropdown">
+               <li><a href="blog.html"><span data-i18n="allPosts">All Posts</span></a></li>
+                <li><a href="blog1.html"><span data-i18n="blog1">AI Trends 2024</span></a></li>
+                <li><a href="blog2.html"><span data-i18n="blog2">Future of ML</span></a></li>
+                <li><a href="blog3.html"><span data-i18n="blog3">AI in Business</span></a></li>
+            </ul>
+          </li>
+          <li><a href="contact.html"><span data-i18n="contact">Contact</span></a></li>
+          <li><a href="index.html" id="mobileAuthLink"><span data-i18n="login">Login</span></a></li>
         </ul>
-      </li>
-      <li class="nav-item dropdown">
-        <a href="#" class="nav-link">Blog <i class="fas fa-chevron-down"></i></a>
-        <ul class="dropdown-menu">
-          <li><a href="blog.html">All Posts</a></li>
-          <li><a href="blog1.html">AI Trends 2024</a></li>
-          <li><a href="blog2.html">Future of ML</a></li>
-          <li><a href="blog3.html">AI in Business</a></li>
+      </div>
+
+      <div class="lang-switcher">
+        <label for="langSelect">Language:</label>
+        <select id="langSelect" onchange="changeLanguage(this.value)">
+          <option value="en">English</option>
+          <option value="ar">Arabic</option>
+          <option value="he">Hebrew</option>
+        </select>
+      </div>
+
+      <button id="toggleBtn" class="toggle-btn" title="Toggle Theme">
+        <i class="fas fa-moon"></i>
+      </button>
+
+      <div class="avatar-circle" title="Profile" id="avatarCircle">
+        <span id="avatarInitials"></span>
+      </div>
+      <div class="avatar-dropdown" id="avatarDropdown">
+        <ul>
+          <li><a href="index.html" id="logoutBtn"><span data-i18n="logout">Logout</span></a></li>
         </ul>
-      </li>
-      <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
-      <!-- Login/Logout Link -->
-      <li class="nav-item"><a href="index.html" class="nav-link" id="authLink">Login</a></li>
-    </ul>
-
-    <!-- Hamburger -->
-    <div class="hamburger" id="hamburger" aria-label="Open menu" tabindex="0">
-  <ul class="hamburger-menu" id="hamburgerMenu" style="display:none;">
-    <li><a href="index.html">Home 1</a></li>
-    <li><a href="home2.html">Home 2</a></li>
-    <li><a href="about.html">About</a></li>
-    <li>
-      <span>Services</span>
-      <ul>
-        <li><a href="services.html">All Services</a></li>
-        <li><a href="service1.html">AI Development</a></li>
-        <li><a href="service2.html">Machine Learning</a></li>
-        <li><a href="service3.html">Data Analytics</a></li>
-        <li><a href="service4.html">Automation</a></li>
-        <li><a href="service5.html">AI Consulting</a></li>
-        <li><a href="service6.html">AI Integration</a></li>
-      </ul>
-    </li>
-    <li>
-      <span>Blog</span>
-      <ul>
-        <li><a href="blog.html">All Posts</a></li>
-        <li><a href="blog1.html">AI Trends 2024</a></li>
-        <li><a href="blog2.html">Future of ML</a></li>
-        <li><a href="blog3.html">AI in Business</a></li>
-      </ul>
-    </li>
-    <li><a href="contact.html">Contact</a></li>
-    <li><a href="index.html" id="authLink">Login</a></li>
-  </ul>
-  <span></span>
-  <span></span>
-  <span></span>
-</div>
-  </nav>
-
-  <!-- Toggle Button -->
-  <button id="toggleBtn" class="toggle-btn" title="Toggle Theme">
-    <i class="fas fa-moon"></i>
-  </button>
-
-  <!-- Avatar Circle -->
-  <div class="avatar-circle" title="Profile">
-
-  </div>
-</div>
+      </div>
+    </div>
   </div>
 </header>
 
-<!-- ✅ Script -->
+
+<!-- Section : 1 -->
+<section class="ai-hero-section">
+  <video autoplay muted loop playsinline class="ai-hero-bg-video">
+    <source src="https://videos.pexels.com/video-files/33402994/14218773_2560_1440_25fps.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+
+  <div class="ai-hero-overlay">
+    <div class="ai-hero-content">
+      <h1 class="ai-hero-title ai-glow animate-ai-slide-in" data-i18n="hero_title">Accelerate Your Journey with AI</h1>
+      <p class="ai-hero-paragraph animate-ai-fade-up" data-i18n="hero_subtitle">
+        Unlock smarter decisions and sustainable growth with AI.
+      </p>
+      <a href="services.html" class="btn btn-primary" data-i18n="hero_btn">Explore Tools</a>
+    </div>
+  </div>
+</section>
+
+<!-- section : 2 -->
+<section class="blog-intro">
+  <div class="container">
+    <h2 class="section-heading" data-i18n="blog_intro_heading">Stackly AI Blog</h2>
+    <p class="section-subtext" style="text-align: justify;" data-i18n="blog_intro_text">
+      Explore the latest insights in Artificial Intelligence, Machine Learning, and Business Applications. Stay updated with expert opinions, trends, and innovations shaping the future of AI.Artificial Intelligence (AI) and Machine Learning (ML) are remaining at the forefront of technological transformation, with enterprises and experts alike recognizing their profound impact across sectors. Financial institutions are embracing agentic AI and robotics, projected to contribute nearly $920 billion in annual net benefits and add up to $16 trillion to the S&P 500’s market value—spurred by productivity gains, cost savings, and new revenue opportunities that underscore AI’s economic potential. Business Insider Investopedia Meanwhile, in the enterprise realm, the conversation has shifted: it’s not just about more powerful models, but smarter integration. The “Agentic Mesh” concept envisions AI systems that behave like adaptive, autonomous networks embedded in business workflows, moving beyond isolated tools toward real-time, self-governing intelligence.
+    </p>
+  </div>
+</section>
+
+<!-- section : 3 -->
+<section class="blog-featured">
+  <div class="container featured-grid">
+    <div class="featured-image">
+      <img src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?w=1200" alt="AI Trends 2024">
+    </div>
+    <div class="featured-content">
+      <h3 data-i18n="featured_title">🚀 AI Trends </h3>
+      <p style="text-align: justify;" data-i18n="featured_text1">
+        Discover the most promising AI advancements of 2024 that are reshaping industries worldwide. From generative AI to autonomous systems, explore the future. Artificial Intelligence in 2024 is no longer a futuristic concept but a mainstream driver of innovation across industries. From generative AI tools enhancing creativity to natural language models transforming communication, businesses are rapidly adopting AI to stay competitive. The year is witnessing breakthroughs in explainable AI, ethical frameworks, and real-time decision systems that make AI more transparent and trustworthy. With governments and enterprises investing heavily in research, AI adoption is set to grow faster than ever before.
+      </p>
+      <p style="text-align: justify;" data-i18n="featured_text2">
+        One of the most defining trends is the integration of AI into everyday workflows...
+      </p>
+      <a href="blog1.html" class="btn-read" data-i18n="featured_btn">Read More</a>
+    </div>
+  </div>
+</section>
+
+<!-- section : 4 -->
+<section class="ai-trends-2024">
+  <div class="container">
+    <h2 class="section-heading" data-i18n="innovations_heading">Emerging AI Innovations</h2>
+    <div class="trends-grid">
+      <div class="trend-card">
+        <h3 data-i18n="innovation1_title">🤖 Generative AI Everywhere</h3>
+        <p data-i18n="innovation1_text">AI-powered content creation...</p>
+      </div>
+      <div class="trend-card">
+        <h3 data-i18n="innovation2_title">⚡ Edge AI & Real-Time Processing</h3>
+        <p data-i18n="innovation2_text">AI models are running directly...</p>
+      </div>
+      <div class="trend-card">
+        <h3 data-i18n="innovation3_title">🌍 AI for Sustainability</h3>
+        <p data-i18n="innovation3_text">From energy optimization...</p>
+      </div>
+      <div class="trend-card">
+        <h3 data-i18n="innovation4_title">🛡️ Responsible & Ethical AI</h3>
+        <p data-i18n="innovation4_text">Governments and companies...</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!--  Section : 5 -->
+<section class="blog-grid">
+  <div class="container">
+    <h2 class="section-heading" data-i18n="blog_grid_heading">Latest Articles</h2>
+    <div class="grid-3">
+      <!-- Blog 1 -->
+      <div class="blog-card">
+        <img src="https://images.unsplash.com/photo-1633356122544-f134324a6cee?w=800" alt="AI Trends">
+        <h4 data-i18n="blog1_title">AI Trends 2024</h4>
+        <p data-i18n="blog1_text">Generative AI, automation...</p>
+        <a href="blog1.html" class="btn-read" data-i18n="blog_btn">Read More</a>
+      </div>
+      <!-- Blog 2 -->
+      <div class="blog-card">
+        <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?w=800" alt="Future of ML">
+        <h4 data-i18n="blog2_title">Future of Machine Learning</h4>
+        <p data-i18n="blog2_text">Machine Learning continues...</p>
+        <a href="blog2.html" class="btn-read" data-i18n="blog_btn">Read More</a>
+      </div>
+      <!-- Blog 3 -->
+      <div class="blog-card">
+        <img src="https://images.unsplash.com/photo-1555949963-ff9fe0c870eb?w=800" alt="AI in Business">
+        <h4 data-i18n="blog3_title">AI in Business</h4>
+        <p data-i18n="blog3_text">Learn how AI is transforming...</p>
+        <a href="blog3.html" class="btn-read" data-i18n="blog_btn">Read More</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!--  Section : 6 -->
+<section class="blog-categories">
+  <div class="container">
+    <h2 class="section-heading" data-i18n="categories_heading">Categories</h2>
+    <div class="categories-list">
+      <span data-i18n="category_ai">AI Trends</span>
+      <span data-i18n="category_ml">Machine Learning</span>
+      <span data-i18n="category_biz">Business Applications</span>
+      <span data-i18n="category_future">Future Tech</span>
+      <span data-i18n="category_ds">Data Science</span>
+    </div>
+  </div>
+</section>
+
+<!-- Section : 7 -->
+<section class="contact-banner section-padding">
+  <div class="container">
+    <div class="contact-banner-content">
+      <h2 data-i18n="contact_heading">Get In Touch With Our AI Experts</h2>
+      <p data-i18n="contact_text">Ready to discuss your AI project?...</p>
+      <a href="contact.html" class="btn btn-primary" data-i18n="contact_btn">Contact Us</a>
+    </div>
+  </div>
+</section>
+
+
+
+<!-- Footer -->
+<footer class="footer section-padding" style="background:#000000; color:#fff;">
+  <div class="container">
+    <div class="footer-content" style="display:flex; flex-wrap:wrap; gap:30px; justify-content:space-between;">
+
+      <!-- Logo & About -->
+      <div class="footer-section" style="flex:1 1 250px;">
+        <div class="logo">
+          <img src="assets/images/stackly_logo_transparent.png" alt="logo" style="height: 40px; width: 80px;">
+        </div>
+        <p data-i18n="footerAbout" style="margin-top:10px; text-align:justify;">
+          Leading AI solutions provider, helping businesses transform through intelligent technology and innovative automation systems.
+        </p>
+        <div class="social-links" style="margin-top:10px;">
+          <a href="https://www.facebook.com/" target="_blank"><i class="fab fa-facebook" style="margin-right:10px;"></i></a>
+          <a href="https://twitter.com/" target="_blank"><i class="fab fa-twitter" style="margin-right:10px;"></i></a>
+          <a href="https://www.linkedin.com/" target="_blank"><i class="fab fa-linkedin" style="margin-right:10px;"></i></a>
+          <a href="https://www.instagram.com/" target="_blank"><i class="fab fa-instagram"></i></a>
+        </div>
+      </div>
+
+      <!-- Quick Links -->
+      <div class="footer-section" style="flex:1 1 150px;">
+        <h4 data-i18n="footerQuickLinks">Quick Links</h4>
+        <ul style="list-style:none; padding:0; margin:0;">
+          <li><a href="home.html" data-i18n="linkHome">Home</a></li>
+          <li><a href="home2.html" data-i18n="linkHome2">Home 2</a></li>
+          <li><a href="about.html" data-i18n="linkAbout">About Us</a></li>
+          <li><a href="services.html" data-i18n="linkServices">Services</a></li>
+          <li><a href="blog.html" data-i18n="linkBlog">Blog</a></li>
+          <li><a href="contact.html" data-i18n="linkContact">Contact</a></li>
+        </ul>
+      </div>
+
+      <!-- Services -->
+      <div class="footer-section" style="flex:1 1 150px;">
+        <h4 data-i18n="footerServices">Services</h4>
+        <ul style="list-style:none; padding:0; margin:0;">
+          <li><a href="service1.html" data-i18n="service1">AI Development</a></li>
+          <li><a href="service2.html" data-i18n="service2">Machine Learning</a></li>
+          <li><a href="service3.html" data-i18n="service3">Data Analytics</a></li>
+          <li><a href="service4.html" data-i18n="service4">Automation</a></li>
+          <li><a href="service5.html" data-i18n="service5">AI Consulting</a></li>
+          <li><a href="service6.html" data-i18n="service6">AI Integration</a></li>
+        </ul>
+      </div>
+
+      <!-- Contact Info -->
+      <div class="footer-section" style="flex:1 1 200px;">
+        <h4 data-i18n="footerContact">Contact Info</h4>
+        <ul style="list-style:none; padding:0; margin:0;">
+          <li><i class="fas fa-envelope"></i> contact@stackly.ai</li>
+          <li><i class="fas fa-phone"></i> +1 (555) 123-4567</li>
+          <li><i class="fas fa-map-marker-alt"></i> 123 AI Innovation Drive</li>
+        </ul>
+      </div>
+
+    </div>
+
+    <!-- Bottom Bar -->
+    <div class="footer-bottom" style="text-align:center; margin-top:30px; font-size:14px;">
+      <p data-i18n="footerBottom">&copy; 2025 Stackly. All rights reserved.</p>
+    </div>
+  </div>
+</footer>
+
 <script>
-  // Hamburger toggle
- const hamburger = document.getElementById("hamburger");
-const navMenu = document.getElementById("navMenu");
-const hamburgerMenu = document.getElementById("hamburgerMenu");
+// Translation dictionary
+const translations = {
+  en: {
+    home: "Home",
+    home1: "Home 1",
+    home2: "Home 2",
+    about: "About",
+    services: "Services",
+    allServices: "All Services",
+    service1: "AI Development",
+    service2: "Machine Learning",
+    service3: "Data Analytics",
+    service4: "Automation",
+    service5: "AI Consulting",
+    service6: "AI Integration",
+    blog: "Blog",
+    allPosts: "All Posts",
+    blog1: "AI Trends 2024",
+    blog2: "Future of ML",
+    blog3: "AI in Business",
+    contact: "Contact",
+    login: "Login",
+    logout: "Logout",
 
-// Show/hide menu on hamburger click
-hamburger.addEventListener("click", () => {
-  navMenu.classList.toggle("active");
-  hamburgerMenu.style.display = hamburgerMenu.style.display === "block" ? "none" : "block";
-});
+    footerAbout: "Leading AI solutions provider, helping businesses transform through intelligent technology and innovative automation systems.",
+    footerQuickLinks: "Quick Links",
+    linkHome: "Home",
+    linkHome2: "Home 2",
+    linkAbout: "About Us",
+    linkServices: "Services",
+    linkBlog: "Blog",
+    linkContact: "Contact",
+    footerServices: "Services",
+    service1: "AI Development",
+    service2: "Machine Learning",
+    service3: "Data Analytics",
+    service4: "Automation",
+    service5: "AI Consulting",
+    service6: "AI Integration",
+    footerContact: "Contact Info",
+    footerBottom: "© 2025 Stackly. All rights reserved",
 
-  // Auth link toggle
-  const authLink = document.getElementById("authLink");
-  if(localStorage.getItem("isLoggedIn") === "true"){
-    authLink.innerText = "Logout";
-    authLink.href = "#";
-    authLink.onclick = () => {
-      localStorage.removeItem("isLoggedIn");
-      localStorage.removeItem("currentUser");
-      window.location.href = "index.html";
-    };
-  } else {
-    authLink.innerText = "Login";
-    authLink.href = "index.html";
+    // Hero Section
+    hero_title: "Accelerate Your Journey with AI",
+    hero_subtitle: "Unlock smarter decisions and sustainable growth with AI.",
+    hero_btn: "Explore Tools",
+
+    // Blog Intro
+    blog_intro_heading: "Stackly AI Blog",
+    blog_intro_text: "Explore the latest insights in Artificial Intelligence, Machine Learning, and Business Applications. Stay updated with expert opinions, trends, and innovations shaping the future of AI. Artificial Intelligence (AI) and Machine Learning (ML) are remaining at the forefront of technological transformation, with enterprises and experts alike recognizing their profound impact across sectors. Financial institutions are embracing agentic AI and robotics, projected to contribute nearly $920 billion in annual net benefits and add up to $16 trillion to the S&P 500’s market value—spurred by productivity gains, cost savings, and new revenue opportunities that underscore AI’s economic potential. Meanwhile, in the enterprise realm, the conversation has shifted: it’s not just about more powerful models, but smarter integration. The “Agentic Mesh” concept envisions AI systems that behave like adaptive, autonomous networks embedded in business workflows, moving beyond isolated tools toward real-time, self-governing intelligence.",
+
+    // Featured
+    featured_title: "🚀 AI Trends",
+    featured_text1: "Discover the most promising AI advancements of 2024 that are reshaping industries worldwide. From generative AI to autonomous systems, explore the future. Artificial Intelligence in 2024 is no longer a futuristic concept but a mainstream driver of innovation across industries. From generative AI tools enhancing creativity to natural language models transforming communication, businesses are rapidly adopting AI to stay competitive. The year is witnessing breakthroughs in explainable AI, ethical frameworks, and real-time decision systems that make AI more transparent and trustworthy. With governments and enterprises investing heavily in research, AI adoption is set to grow faster than ever before.",
+    featured_text2: "One of the most defining trends is the integration of AI into everyday workflows. Industries such as healthcare, finance, and manufacturing are leveraging AI for predictive analytics, automation, and personalized services.",
+    featured_btn: "Read More",
+
+    // Emerging Innovations
+    innovations_heading: "Emerging AI Innovations",
+    innovation1_title: "🤖 Generative AI Everywhere",
+    innovation1_text: "AI-powered content creation, from text and design to music and code, is becoming standard across industries.",
+    innovation2_title: "⚡ Edge AI & Real-Time Processing",
+    innovation2_text: "AI models are running directly on devices, enabling faster decision-making without full cloud dependency.",
+    innovation3_title: "🌍 AI for Sustainability",
+    innovation3_text: "From energy optimization to smart agriculture, AI is helping solve critical global challenges responsibly.",
+    innovation4_title: "🛡️ Responsible & Ethical AI",
+    innovation4_text: "Governments and companies are building frameworks for fairness, transparency, and data protection in AI systems.",
+
+    // Blog Grid
+    blog_grid_heading: "Latest Articles",
+    blog1_title: "AI Trends 2024",
+    blog1_text: "Generative AI, automation, and intelligent systems leading global innovation.",
+    blog2_title: "Future of Machine Learning",
+    blog2_text: "Machine Learning continues to evolve with new breakthroughs in automation, optimization, and decision-making.",
+    blog3_title: "AI in Business",
+    blog3_text: "Learn how AI is transforming organizations, from customer experience to predictive analytics and beyond.",
+    blog_btn: "Read More",
+
+    // Categories
+    categories_heading: "Categories",
+    category_ai: "AI Trends",
+    category_ml: "Machine Learning",
+    category_biz: "Business Applications",
+    category_future: "Future Tech",
+    category_ds: "Data Science",
+
+    // Contact Banner
+    contact_heading: "Get In Touch With Our AI Experts",
+    contact_text: "Ready to discuss your AI project? Contact us today for a free consultation.",
+    contact_btn: "Contact Us",
+       
+  },
+  ar: {
+    home: "الصفحة الرئيسية",
+    home1: "الصفحة 1",
+    home2: "الصفحة 2",
+    about: "معلومات عنا",
+    services: "خدمات",
+    allServices: "جميع الخدمات",
+    service1: "تطوير الذكاء الاصطناعي",
+    service2: "تعلم الآلة",
+    service3: "تحليل البيانات",
+    service4: "الأتمتة",
+    service5: "استشارات الذكاء الاصطناعي",
+    service6: "دمج الذكاء الاصطناعي",
+    blog: "مدونة",
+    allPosts: "جميع المقالات",
+    blog1: "اتجاهات الذكاء الاصطناعي 2024",
+    blog2: "مستقبل تعلم الآلة",
+    blog3: "الذكاء الاصطناعي في الأعمال",
+    contact: "اتصل بنا",
+    login: "تسجيل الدخول",
+    logout: "تسجيل الخروج",
+
+    footerAbout: "مزود حلول الذكاء الاصطناعي الرائد، يساعد الشركات على التحول من خلال التكنولوجيا الذكية وأنظمة الأتمتة المبتكرة.",
+    footerQuickLinks: "روابط سريعة",
+    linkHome: "الصفحة الرئيسية",
+    linkHome2: "الصفحة 2",
+    linkAbout: "معلومات عنا",
+    linkServices: "خدمات",
+    linkBlog: "مدونة",
+    linkContact: "اتصل بنا",
+    footerServices: "خدمات",
+    service1: "تطوير الذكاء الاصطناعي",
+    service2: "تعلم الآلة",
+    service3: "تحليل البيانات",
+    service4: "الأتمتة",
+    service5: "استشارات الذكاء الاصطناعي",
+    service6: "دمج الذكاء الاصطناعي",
+    footerContact: "معلومات الاتصال",
+    footerBottom: "© 2025 Stackly. جميع الحقوق محفوظة.",
+
+     // Hero Section
+    hero_title: "سارع في رحلتك مع الذكاء الاصطناعي",
+    hero_subtitle: "افتح آفاق قرارات أذكى ونمو مستدام مع الذكاء الاصطناعي.",
+    hero_btn: "استكشف الأدوات",
+
+    // Blog Intro
+    blog_intro_heading: "مدونة ستاكلي للذكاء الاصطناعي",
+    blog_intro_text: "استكشف أحدث الرؤى في الذكاء الاصطناعي وتعلم الآلة وتطبيقات الأعمال. ابقَ على اطلاع بآراء الخبراء والاتجاهات والابتكارات التي تشكل مستقبل الذكاء الاصطناعي. يظل الذكاء الاصطناعي (AI) وتعلم الآلة (ML) في طليعة التحول التكنولوجي، حيث تدرك المؤسسات والخبراء تأثيرهما العميق عبر القطاعات. تعتمد المؤسسات المالية على الذكاء الاصطناعي الوكيلي والروبوتات، ومن المتوقع أن تساهم بما يقارب 920 مليار دولار من صافي الفوائد السنوية وإضافة ما يصل إلى 16 تريليون دولار إلى قيمة مؤشر S&P 500 السوقية — مدفوعة بمكاسب الإنتاجية وتوفير التكاليف وفرص الإيرادات الجديدة. وفي الوقت نفسه، تحول النقاش في بيئة الأعمال: لم يعد الأمر يتعلق فقط بنماذج أقوى، بل بدمج أذكى. تتصور فكرة “الشبكة الوكيلة” أنظمة ذكاء اصطناعي تتصرف كشبكات تكيفية مستقلة مدمجة في سير العمل التجاري، متجاوزة الأدوات المعزولة نحو ذكاء ذاتي في الوقت الفعلي.",
+
+    // Featured
+    featured_title: "🚀 اتجاهات الذكاء الاصطناعي",
+    featured_text1: "اكتشف أكثر التطورات الواعدة في الذكاء الاصطناعي لعام 2024 والتي تعيد تشكيل الصناعات حول العالم...",
+    featured_text2: "من أبرز الاتجاهات دمج الذكاء الاصطناعي في سير العمل اليومي...",
+    featured_btn: "اقرأ المزيد",
+
+    // Emerging Innovations
+    innovations_heading: "ابتكارات الذكاء الاصطناعي الناشئة",
+    innovation1_title: "🤖 الذكاء الاصطناعي التوليدي في كل مكان",
+    innovation1_text: "أصبح إنشاء المحتوى بالذكاء الاصطناعي — من النصوص والتصميم إلى الموسيقى والبرمجة — معيارًا في جميع الصناعات.",
+    innovation2_title: "⚡ الذكاء الاصطناعي على الحافة والمعالجة الفورية",
+    innovation2_text: "تشغيل النماذج مباشرة على الأجهزة، مما يتيح اتخاذ قرارات أسرع دون الاعتماد الكامل على السحابة.",
+    innovation3_title: "🌍 الذكاء الاصطناعي من أجل الاستدامة",
+    innovation3_text: "من تحسين الطاقة إلى الزراعة الذكية، يساعد الذكاء الاصطناعي في حل التحديات العالمية الكبرى بمسؤولية.",
+    innovation4_title: "🛡️ الذكاء الاصطناعي المسؤول والأخلاقي",
+    innovation4_text: "تضع الحكومات والشركات أطر عمل للعدالة والشفافية وحماية البيانات في أنظمة الذكاء الاصطناعي.",
+
+    // Blog Grid
+    blog_grid_heading: "أحدث المقالات",
+    blog1_title: "اتجاهات الذكاء الاصطناعي 2024",
+    blog1_text: "الذكاء الاصطناعي التوليدي والأتمتة والأنظمة الذكية تقود الابتكار العالمي.",
+    blog2_title: "مستقبل تعلم الآلة",
+    blog2_text: "يستمر تعلم الآلة في التطور مع اختراقات جديدة في الأتمتة والتحسين واتخاذ القرار.",
+    blog3_title: "الذكاء الاصطناعي في الأعمال",
+    blog3_text: "تعرف على كيفية تحويل الذكاء الاصطناعي للمنظمات — من تجربة العملاء إلى التحليلات التنبؤية وما بعدها.",
+    blog_btn: "اقرأ المزيد",
+
+    // Categories
+    categories_heading: "التصنيفات",
+    category_ai: "اتجاهات الذكاء الاصطناعي",
+    category_ml: "تعلم الآلة",
+    category_biz: "تطبيقات الأعمال",
+    category_future: "تقنيات المستقبل",
+    category_ds: "علوم البيانات",
+
+    // Contact Banner
+    contact_heading: "تواصل مع خبرائنا في الذكاء الاصطناعي",
+    contact_text: "هل أنت مستعد لمناقشة مشروعك في الذكاء الاصطناعي؟ اتصل بنا اليوم للحصول على استشارة مجانية.",
+    contact_btn: "اتصل بنا",
+
+     },
+  he: {
+    home: "בית",
+    home1: "דף 1",
+    home2: "דף 2",
+    about: "עלינו",
+    services: "שירותים",
+    allServices: "כל השירותים",
+    service1: "פיתוח בינה מלאכותית",
+    service2: "למידת מכונה",
+    service3: "ניתוח נתונים",
+    service4: "אוטומציה",
+    service5: "ייעוץ בינה מלאכותית",
+    service6: "אינטגרציית בינה מלאכותית",
+    blog: "בלוג",
+    allPosts: "כל הפוסטים",
+    blog1: "מגמות AI 2024",
+    blog2: "עתיד למידת מכונה",
+    blog3: "AI בעסקים",
+    contact: "צור קשר",
+    login: "התחברות",
+    logout: "התנתק",
+
+    footerAbout: "ספק מוביל של פתרונות בינה מלאכותית, המסייע לעסקים להפוך באמצעות טכנולוגיה חכמה ומערכות אוטומציה חדשניות.",
+    footerQuickLinks: "קישורים מהירים",
+    linkHome: "בית",
+    linkHome2: "דף 2",
+    linkAbout: "עלינו",
+    linkServices: "שירותים",
+    linkBlog: "בלוג",
+    linkContact: "צור קשר",
+    footerServices: "שירותים",
+    service1: "פיתוח בינה מלאכותית",
+    service2: "למידת מכונה",
+    service3: "ניתוח נתונים",
+    service4: "אוטומציה",
+    service5: "ייעוץ בינה מלאכותית",
+    service6: "אינטגרציית בינה מלאכותית",
+    footerContact: "פרטי התקשרות",
+    footerBottom: "© 2025 Stackly. כל הזכויות שמורות.",
+
+     // Hero Section
+    hero_title: "האץ את המסע שלך עם בינה מלאכותית",
+    hero_subtitle: "פתח החלטות חכמות יותר וצמיחה בת קיימא עם בינה מלאכותית.",
+    hero_btn: "חקור כלים",
+
+    // Blog Intro
+    blog_intro_heading: "הבלוג של Stackly AI",
+    blog_intro_text: "גלה את התובנות האחרונות בבינה מלאכותית, למידת מכונה ויישומים עסקיים. הישאר מעודכן עם דעות מומחים, מגמות וחדשנות שמעצב את עתיד הבינה המלאכותית...",
+
+    // Featured
+    featured_title: "🚀 מגמות בבינה מלאכותית",
+    featured_text1: "גלה את ההתקדמויות המבטיחות ביותר בבינה מלאכותית לשנת 2024...",
+    featured_text2: "אחת המגמות המגדירות ביותר היא שילוב בינה מלאכותית בזרימות עבודה יומיומיות...",
+    featured_btn: "קרא עוד",
+
+    // Emerging Innovations
+    innovations_heading: "חידושים מתפתחים בבינה מלאכותית",
+    innovation1_title: "🤖 בינה מלאכותית גנרטיבית בכל מקום",
+    innovation1_text: "יצירת תוכן מונעת בינה מלאכותית — מטקסט ועיצוב ועד מוזיקה וקוד — הופכת לסטנדרט בתעשיות.",
+    innovation2_title: "⚡ בינה מלאכותית בקצה ועיבוד בזמן אמת",
+    innovation2_text: "מודלים רצים ישירות על מכשירים, מאפשרים קבלת החלטות מהירה יותר ללא תלות מלאה בענן.",
+    innovation3_title: "🌍 בינה מלאכותית לקיימות",
+    innovation3_text: "מהתייעלות אנרגטית ועד חקלאות חכמה, בינה מלאכותית מסייעת בפתרון אתגרים עולמיים מרכזיים באחריות.",
+    innovation4_title: "🛡️ בינה מלאכותית אחראית ואתית",
+    innovation4_text: "ממשלות וחברות בונות מסגרות לצדק, שקיפות והגנת נתונים במערכות בינה מלאכותית.",
+
+    // Blog Grid
+    blog_grid_heading: "מאמרים אחרונים",
+    blog1_title: "מגמות בבינה מלאכותית 2024",
+    blog1_text: "בינה מלאכותית גנרטיבית, אוטומציה ומערכות חכמות מובילות חדשנות עולמית.",
+    blog2_title: "עתיד למידת מכונה",
+    blog2_text: "למידת מכונה ממשיכה להתפתח עם פריצות דרך חדשות באוטומציה, אופטימיזציה וקבלת החלטות.",
+    blog3_title: "בינה מלאכותית בעסקים",
+    blog3_text: "למד כיצד בינה מלאכותית משנה ארגונים — מחוויית הלקוח ועד לניתוחים חזויים ועוד.",
+    blog_btn: "קרא עוד",
+
+    // Categories
+    categories_heading: "קטגוריות",
+    category_ai: "מגמות בבינה מלאכותית",
+    category_ml: "למידת מכונה",
+    category_biz: "יישומים עסקיים",
+    category_future: "טכנולוגיות עתידיות",
+    category_ds: "מדעי הנתונים",
+
+    // Contact Banner
+    contact_heading: "צור קשר עם המומחים שלנו לבינה מלאכותית",
+    contact_text: "מוכן לדון בפרויקט הבינה המלאכותית שלך? צור קשר איתנו עוד היום לייעוץ חינם.",
+    contact_btn: "צור קשר",
   }
+};
+
+// Function to change language
+function changeLanguage(lang) {
+  document.querySelectorAll("[data-i18n]").forEach(el => {
+    const key = el.getAttribute("data-i18n");
+    if(translations[lang] && translations[lang][key]) {
+      el.innerText = translations[lang][key];
+    }
+  });
+
+  // Handle RTL for Arabic & Hebrew
+  if(lang === "ar" || lang === "he") {
+    document.documentElement.dir = "rtl";
+  } else {
+    document.documentElement.dir = "ltr";
+  }
+}
+
+// Optional: automatically switch to selected language on page load
+document.addEventListener("DOMContentLoaded", () => {
+  const langSelect = document.getElementById("langSelect");
+  changeLanguage(langSelect.value);
+});
+</script>
+
+
+
+<script>
+  // Mobile menu setup
+  const hamburger = document.getElementById("hamburger");
+  const hamburgerMenu = document.getElementById("hamburgerMenu");
+
+  // Show/hide mobile menu on hamburger click
+  hamburger.addEventListener("click", () => {
+    hamburger.classList.toggle("active");
+    hamburgerMenu.classList.toggle("active");
+  });
+
+  // Toggle dropdowns for mobile menu
+  document.querySelectorAll('.mobile-dropdown-parent > span').forEach(link => {
+    link.addEventListener('click', function() {
+      const parentLi = this.parentElement;
+      const dropdown = parentLi.querySelector('.mobile-dropdown');
+      dropdown.classList.toggle('active');
+    });
+  });
+
+  // Desktop dropdown toggle logic
+  document.querySelectorAll('.nav-item.dropdown > .nav-link').forEach(link => {
+    link.addEventListener('click', function(e) {
+      e.preventDefault();
+      document.querySelectorAll('.dropdown-menu').forEach(menu => {
+        if (menu !== this.nextElementSibling) {
+          menu.classList.remove('active');
+        }
+      });
+      const dropdownMenu = this.nextElementSibling;
+      if (dropdownMenu) {
+        dropdownMenu.classList.toggle('active');
+      }
+    });
+  });
+
+  // Redirect on desktop dropdown menu item click
+  document.querySelectorAll('.dropdown-menu a').forEach(link => {
+    link.addEventListener('click', function(e) {
+      const href = this.getAttribute('href');
+      if (href && href !== "#") {
+        window.location.href = href;
+        document.querySelectorAll('.dropdown-menu').forEach(menu => menu.classList.remove('active'));
+      }
+    });
+  });
+
+  // Redirect on normal nav link click
+  document.querySelectorAll('.nav-menu > .nav-item:not(.dropdown) .nav-link').forEach(link => {
+    link.addEventListener('click', function(e) {
+      const href = this.getAttribute('href');
+      if (href && href !== "#") {
+        window.location.href = href;
+      }
+    });
+  });
+
+  // Auth link toggle for desktop and mobile
+  function setupAuthLinks() {
+    const isLoggedIn = localStorage.getItem("isLoggedIn") === "true";
+    const authLinks = [document.getElementById("authLink"), document.getElementById("mobileAuthLink")];
+
+    authLinks.forEach(link => {
+      if (!link) return;
+      if (isLoggedIn) {
+        link.innerText = "Logout";
+        link.href = "#";
+        link.onclick = (e) => {
+          e.preventDefault();
+          localStorage.removeItem("isLoggedIn");
+          localStorage.removeItem("currentUser");
+          window.location.href = "index.html";
+        };
+      } else {
+        link.innerText = "Login";
+        link.href = "index.html";
+        link.onclick = null;
+      }
+    });
+  }
+  setupAuthLinks();
 
   // Theme toggle
   const toggleBtn = document.getElementById('toggleBtn');
   let darkMode = localStorage.getItem('darkMode') === 'true';
 
-  // Apply initial theme
   function applyTheme() {
     if (darkMode) {
       document.body.classList.add('dark-mode');
@@ -155,125 +724,248 @@ hamburger.addEventListener("click", () => {
     localStorage.setItem('darkMode', darkMode);
     applyTheme();
   });
-
-  // Call once to apply the theme on initial load
   applyTheme();
 
-  // Avatar initials
-const avatarCircle = document.querySelector('.avatar-circle');
-const currentUserEmail = localStorage.getItem("currentUser");
-const users = JSON.parse(localStorage.getItem("users")) || {};
-if (currentUserEmail && users[currentUserEmail]) {
-  const firstName = users[currentUserEmail].firstName || "";
-  const lastName = users[currentUserEmail].lastName || "";
-  const initials = (firstName[0] || "").toUpperCase() + (lastName[0] || "").toUpperCase();
-  avatarCircle.innerHTML = `<span style="
-    font-size: 1.2rem;
-    font-weight: bold;
-    color: #23272f;
-    background: transparent;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    height: 100%;
-  ">${initials}</span>`;
-} else {
-  avatarCircle.innerHTML = `<span style="
-    font-size: 1.2rem;
-    font-weight: bold;
-    color: #23272f;
-    background: transparent;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    height: 100%;
-  ">?</span>`;
-}
+  // Avatar initials logic
+  const avatarCircle = document.getElementById('avatarCircle');
+  const avatarInitials = document.getElementById('avatarInitials');
+  const avatarDropdown = document.getElementById('avatarDropdown');
+  const logoutBtn = document.getElementById('logoutBtn');
+  const currentUserEmail = localStorage.getItem("currentUser");
+  const users = JSON.parse(localStorage.getItem("users")) || {};
 
-// Hamburger toggle for mobile
+  if (currentUserEmail && users[currentUserEmail]) {
+    const firstName = users[currentUserEmail].firstName || "";
+    const lastName = users[currentUserEmail].lastName || "";
+    const initials = (firstName[0] || "").toUpperCase() + (lastName[0] || "").toUpperCase();
+    avatarInitials.textContent = initials;
+  } else {
+    avatarInitials.textContent = "?";
+  }
 
+  // Show/hide avatar dropdown on click
+  avatarCircle.addEventListener('click', function(e) {
+    e.stopPropagation();
+    avatarDropdown.style.display = avatarDropdown.style.display === "block" ? "none" : "block";
+  });
+
+  document.addEventListener('click', function(e) {
+    if (!avatarCircle.contains(e.target) && !avatarDropdown.contains(e.target)) {
+      avatarDropdown.style.display = "none";
+    }
+  });
+
+  // Logout action
+  logoutBtn.addEventListener('click', function(e) {
+    e.preventDefault();
+    localStorage.removeItem("isLoggedIn");
+    localStorage.removeItem("currentUser");
+    window.location.href = "index.html";
+  });
 </script>
 
-<!-- ✅ CSS for hamburger -->
 <style>
+  /* Base styles for hamburger icon */
   .hamburger {
     display: none;
     flex-direction: column;
+    justify-content: space-between;
+    width: 24px;
+    height: 18px;
     cursor: pointer;
+    z-index: 1000;
   }
+
   .hamburger span {
-    height: 3px;
-    width: 25px;
-    background: #333;
-    margin: 4px 0;
-    border-radius: 5px;
+    display: block;
+    width: 100%;
+    height: 2px;
+    background-color: #333;
+    transition: all 0.3s ease-in-out;
   }
+
+  .dark-mode .hamburger span {
+    background-color: #fff;
+  }
+
+  /* Hamburger menu animation */
+  .hamburger.active span:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+  }
+
+  .hamburger.active span:nth-child(2) {
+    opacity: 0;
+  }
+
+  .hamburger.active span:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -5px);
+  }
+
+  /* Hide navigation on mobile */
   @media (max-width: 768px) {
     .nav-menu {
       display: none;
-      flex-direction: column;
-      background: #fff;
-      position: absolute;
-      top: 70px;
-      right: 20px;
-      width: 200px;
-      padding: 10px;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.2);
-    }
-    .nav-menu.active {
-      display: flex;
     }
     .hamburger {
       display: flex;
     }
-    .nav-item {
-      margin: 10px 0;
-    }
+  }
+
+  /* Styles for the mobile hamburger menu */
+  .mobile-menu-wrapper {
+    position: relative;
+  }
+
+  .hamburger-menu {
+    display: none;
+    flex-direction: column;
+    background: #23272f;
+    color: #fff;
+    position: absolute;
+    top: 50px;
+    right: 0;
+    width: 220px;
+    border-radius: 8px;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.18);
+    padding: 20px 0;
+    z-index: 9999;
+    list-style: none;
+  }
+
+  .hamburger-menu.active {
+    display: flex;
+  }
+
+  .hamburger-menu li {
+    padding: 10px 24px;
+    border-bottom: 1px solid #333;
+  }
+
+  .hamburger-menu li:last-child {
+    border-bottom: none;
+  }
+
+  .hamburger-menu a,
+  .hamburger-menu span {
+    color: #00f7ff;
+    text-decoration: none;
+    font-size: 1.1rem;
+    display: block;
+    cursor: pointer;
+    font-weight: 500;
+  }
+
+  .hamburger-menu ul {
+    list-style: none;
+    padding-left: 20px;
+    margin-top: 5px;
+  }
+
+  .hamburger-menu li.mobile-dropdown-parent .mobile-dropdown {
+    display: none;
+  }
+
+  .hamburger-menu li.mobile-dropdown-parent .mobile-dropdown.active {
+    display: block;
   }
 
   .toggle-btn {
-  background: #fff;
-  border: none;
-  border-radius: 50%;
-  width: 38px;
-  height: 38px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-left: 16px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
-  cursor: pointer;
-  transition: background 0.2s;
-}
-.toggle-btn:hover {
-  background: #f0f0f0;
-}
-.avatar-circle {
-  width: 38px;
-  height: 38px;
-  border-radius: 50%;
-  overflow: hidden;
-  margin-left: 16px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: #eee;
-}
-.avatar-circle img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-@media (max-width: 768px) {
-  .toggle-btn, .avatar-circle {
-    margin-left: 8px;
-    width: 32px;
-    height: 32px;
+    background: #fff;
+    border: none;
+    border-radius: 50%;
+    width: 38px;
+    height: 38px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 16px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    cursor: pointer;
+    transition: background 0.2s;
   }
-}
+
+  .toggle-btn:hover {
+    background: #f0f0f0;
+  }
+
+  .avatar-circle {
+    position: relative;
+    cursor: pointer;
+    z-index: 1001;
+    overflow: visible;
+  }
+
+  .avatar-circle {
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-left: 16px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #eee;
+    position: relative;
+    cursor: pointer;
+  }
+
+  .avatar-circle img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .avatar-dropdown {
+    display: none;
+    position: absolute;
+    top: 65px;
+    right: 140px;
+    background: #fff;
+    min-width: 100px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.18);
+    border-radius: 8px;
+    z-index: 1002;
+    padding: 4px 0;
+  }
+
+  .avatar-dropdown ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  .avatar-dropdown li {
+    padding: 6px 12px;
+  }
+
+  .avatar-dropdown a {
+    color: #23272f;
+    text-decoration: none;
+    font-size: 0.95rem;
+    display: block;
+    border-radius: 4px;
+    transition: background 0.2s;
+  }
+
+  .avatar-dropdown a:hover {
+    background: #f0f0f0;
+  }
+
+  @media (max-width: 768px) {
+    .toggle-btn,
+    .avatar-circle {
+      margin-left: 8px;
+      width: 32px;
+      height: 32px;
+    }
+  }
+
+  @media (min-width: 769px) {
+    .hamburger-menu {
+      display: none !important;
+    }
+  }
 </style>
 
 <!-- 🔷 Protest home page  -->
@@ -296,25 +988,10 @@ if (currentUserEmail && users[currentUserEmail]) {
 
 
 
-    <!-- 🔷 HERO SECTION START video_code  -->
 
-<!-- 🔷 HERO SECTION START -->
-<section class="ai-hero-section">
-  <video autoplay muted loop playsinline class="ai-hero-bg-video">
-    <source src="https://videos.pexels.com/video-files/33402994/14218773_2560_1440_25fps.mp4" type="video/mp4">
-    Your browser does not support the video tag.
-  </video>
+   
 
-  <div class="ai-hero-overlay">
-    <div class="ai-hero-content">
-      <h1 class="ai-hero-title ai-glow animate-ai-slide-in">Accelerate Your Journey with AI</h1>
-      <p class="ai-hero-paragraph animate-ai-fade-up">
-      Unlock smarter decisions and sustainable growth with AI.
-      </p>
-      <a href="services.html" class="btn btn-primary">Explore Tools</a>
-    </div>
-  </div>
-</section>
+<!-- Section : 1 -->
 
 <style>
   /* Hero Section */
@@ -438,66 +1115,8 @@ if (currentUserEmail && users[currentUserEmail]) {
 <!-- 🔷 HERO SECTION END -->
 
 
-<!-- 🌟 Section 2: Blog Intro -->
-<section class="blog-intro">
-  <div class="container">
-    <h2 class="section-heading">Stackly AI Blog</h2>
-    <p class="section-subtext" style="text-align: justify;">
-      Explore the latest insights in Artificial Intelligence, Machine Learning, and Business Applications. 
-      Stay updated with expert opinions, trends, and innovations shaping the future of AI.Artificial Intelligence (AI) and Machine Learning (ML) are remaining at the forefront of technological transformation, with enterprises and experts alike recognizing their profound impact across sectors. Financial institutions are embracing agentic AI and robotics, projected to contribute nearly $920 billion in annual net benefits and add up to $16 trillion to the S&P 500’s market value—spurred by productivity gains, cost savings, and new revenue opportunities that underscore AI’s economic potential.
-Business Insider
-Investopedia
- Meanwhile, in the enterprise realm, the conversation has shifted: it’s not just about more powerful models, but smarter integration. The “Agentic Mesh” concept envisions AI systems that behave like adaptive, autonomous networks embedded in business workflows, moving beyond isolated tools toward real-time, self-governing intelligence.
-    </p>
-  </div>
-</section>
 
-<!-- 🌟 Section 3: Featured Post -->
-<section class="blog-featured">
-  <div class="container featured-grid">
-    <div class="featured-image">
-      <img src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?w=1200" alt="AI Trends 2024">
-    </div>
-    <div class="featured-content">
-      <h3>🚀 AI Trends </h3>
-      <p style="text-align: justify;">Discover the most promising AI advancements of 2024 that are reshaping industries worldwide. From generative AI to autonomous systems, explore the future.
-        Artificial Intelligence in 2024 is no longer a futuristic concept but a mainstream driver of innovation across industries.
-         From generative AI tools enhancing creativity to natural language models transforming communication, businesses are
-          rapidly adopting AI to stay competitive. The year is witnessing breakthroughs in explainable AI, ethical frameworks, and real-time decision systems that make
-           AI more transparent and trustworthy. With governments and enterprises investing heavily in research, AI adoption is set to grow faster than ever before.
-      </p>
-      <p style="text-align: justify;">One of the most defining trends is the integration of AI into everyday workflows. Industries such as healthcare,
-         finance, and manufacturing are leveraging AI for predictive analytics,
-         automation, and personalized services.</p>
-      <a href="blog1.html" class="btn-read">Read More</a>
-    </div>
-  </div>
-</section>
-
-<!-- 🌟 Section: Key AI Trends 2024 -->
-<section class="ai-trends-2024">
-  <div class="container">
-    <h2 class="section-heading">Emerging AI Innovations </h2>
-    <div class="trends-grid">
-      <div class="trend-card">
-        <h3>🤖 Generative AI Everywhere</h3>
-        <p>AI-powered content creation, from text and design to music and code, is becoming standard across industries.</p>
-      </div>
-      <div class="trend-card">
-        <h3>⚡ Edge AI & Real-Time Processing</h3>
-        <p>AI models are running directly on devices, enabling faster decision-making without full cloud dependency.</p>
-      </div>
-      <div class="trend-card">
-        <h3>🌍 AI for Sustainability</h3>
-        <p>From energy optimization to smart agriculture, AI is helping solve critical global challenges responsibly.</p>
-      </div>
-      <div class="trend-card">
-        <h3>🛡️ Responsible & Ethical AI</h3>
-        <p>Governments and companies are building frameworks for fairness, transparency, and data protection in AI systems.</p>
-      </div>
-    </div>
-  </div>
-</section>
+<!-- section : 4 -->
 
 <style>
 .ai-trends-2024 { background: #edf0ee; padding: 50px 20px; }
@@ -518,64 +1137,6 @@ Investopedia
   .trends-grid { grid-template-columns: 1fr; }
 }
 </style>
-
-
-<!-- 🌟 Section 4: Blog Grid -->
-<section class="blog-grid">
-  <div class="container">
-    <h2 class="section-heading">Latest Articles</h2>
-    <div class="grid-3">
-      <!-- Blog 1 duplicate (so 3 grid cards look filled) -->
-      <div class="blog-card">
-        <img src="https://images.unsplash.com/photo-1633356122544-f134324a6cee?w=800" alt="AI Trends">
-        <h4>AI Trends 2024</h4>
-        <p>Generative AI, automation, and intelligent systems leading global innovation.</p>
-        <a href="blog1.html" class="btn-read">Read More</a>
-      </div>
-      <!-- Blog 2 -->
-      <div class="blog-card">
-        <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?w=800" alt="Future of ML">
-        <h4>Future of Machine Learning</h4>
-        <p>Machine Learning continues to evolve with new breakthroughs in automation, optimization, and decision-making.</p>
-        <a href="blog2.html" class="btn-read">Read More</a>
-      </div>
-      <!-- Blog 3 -->
-      <div class="blog-card">
-        <img src="https://images.unsplash.com/photo-1555949963-ff9fe0c870eb?w=800" alt="AI in Business">
-        <h4>AI in Business</h4>
-        <p>Learn how AI is transforming organizations, from customer experience to predictive analytics and beyond.</p>
-        <a href="blog3.html" class="btn-read">Read More</a>
-      </div>
-      
-    </div>
-  </div>
-</section>
-
-<!-- 🌟 Section 5: Categories -->
-<section class="blog-categories">
-  <div class="container">
-    <h2 class="section-heading">Categories</h2>
-    <div class="categories-list">
-      <span>AI Trends</span>
-      <span>Machine Learning</span>
-      <span>Business Applications</span>
-      <span>Future Tech</span>
-      <span>Data Science</span>
-    </div>
-  </div>
-</section>
-
-   
-<!-- Section 7: Contact Banner -->
-<section class="contact-banner section-padding">
-    <div class="container">
-        <div class="contact-banner-content">
-            <h2>Get In Touch With Our AI Experts</h2>
-            <p>Ready to discuss your AI project? Contact us today for a free consultation.</p>
-            <a href="contact.html" class="btn btn-primary">Contact Us</a>
-        </div>
-    </div>
-</section>
 
 <style>
     .contact-banner {
@@ -670,73 +1231,7 @@ Investopedia
   
 
 
-
-
-
-
-    <!-- Footer -->
-     <footer class="footer">
-  <div class="container">
-    <div class="footer-content">
-      <!-- Logo & About -->
-      <div class="footer-section">
-        <div class="logo">
-          <img src="assets/images/stackly_logo_transparent.png" alt="logo" style="height: 40px; width: 80px;">
-        </div>
-        <p class="text-justify">
-          Leading AI solutions provider, helping businesses transform through intelligent technology and innovative automation systems.
-        </p>
-        <div class="social-links">
-          <a href="https://www.facebook.com/"><i class="fab fa-facebook"></i></a>
-          <a href="https://twitter.com/"><i class="fab fa-twitter"></i></a>
-          <a href="https://www.linkedin.com/"><i class="fab fa-linkedin"></i></a>
-          <a href="https://www.instagram.com/"><i class="fab fa-instagram"></i></a>
-        </div>
-      </div>
-
-      <!-- Quick Links -->
-      <div class="footer-section">
-        <h4>Quick Links</h4>
-        <ul>
-          <li><a href="home.html">Home</a></li>
-          <li><a href="home2.html">Home 2</a></li>
-          <li><a href="about.html">About Us</a></li>
-          <li><a href="services.html">Services</a></li>
-          <li><a href="blog.html">Blog</a></li>
-          <li><a href="contact.html">Contact</a></li>
-        </ul>
-      </div>
-
-      <!-- Services -->
-      <div class="footer-section">
-        <h4>Services</h4>
-        <ul>
-          <li><a href="service1.html">AI Development</a></li>
-          <li><a href="service2.html">Machine Learning</a></li>
-          <li><a href="service3.html">Data Analytics</a></li>
-          <li><a href="service4.html">Automation</a></li>
-          <li><a href="service5.html">AI Consulting</a></li>
-          <li><a href="service6.html">AI Integration</a></li>
-        </ul>
-      </div>
-
-      <!-- Contact Info -->
-      <div class="footer-section">
-        <h4>Contact Info</h4>
-        <ul>
-          <li><i class="fas fa-envelope"></i> contact@stackly.ai</li>
-          <li><i class="fas fa-phone"></i> +1 (555) 123-4567</li>
-          <li><i class="fas fa-map-marker-alt"></i> 123 AI Innovation Drive</li>
-        </ul>
-      </div>
-    </div>
-
-    <!-- Bottom Bar -->
-    <div class="footer-bottom">
-      <p>&copy; 2025 Stackly. All rights reserved.</p>
-    </div>
-  </div>
-</footer>
+    
 
 <style>
 .footer {
