@@ -36,33 +36,45 @@
           <li class="nav-item dropdown">
             <a href="#" class="nav-link"><span data-i18n="services">Services</span> <i class="fas fa-chevron-down"></i></a>
             <ul class="dropdown-menu">
-              <li><a href="services.html"><span data-i18n="all_services">All Services</span></a></li>
-              <li><a href="service1.html"><span data-i18n="ai_development">AI Development</span></a></li>
-              <li><a href="service2.html"><span data-i18n="machine_learning">Machine Learning</span></a></li>
-              <li><a href="service3.html"><span data-i18n="data_analytics">Data Analytics</span></a></li>
-              <li><a href="service4.html"><span data-i18n="automation">Automation</span></a></li>
-              <li><a href="service5.html"><span data-i18n="ai_consulting">AI Consulting</span></a></li>
-              <li><a href="service6.html"><span data-i18n="ai_integration">AI Integration</span></a></li>
+              <li><a href="services.html"><span data-i18n="allServices">All Services</span></a></li>
+              <li><a href="service1.html"><span data-i18n="service1">AI Development</span></a></li>
+              <li><a href="service2.html"><span data-i18n="service2">Machine Learning</span></a></li>
+              <li><a href="service3.html"><span data-i18n="service3">Data Analytics</span></a></li>
+              <li><a href="service4.html"><span data-i18n="service4">Automation</span></a></li>
+              <li><a href="service5.html"><span data-i18n="service5">AI Consulting</span></a></li>
+              <li><a href="service6.html"><span data-i18n="service6">AI Integration</span></a></li>
             </ul>
           </li>
           <li class="nav-item dropdown">
             <a href="#" class="nav-link"><span data-i18n="blog">Blog</span> <i class="fas fa-chevron-down"></i></a>
             <ul class="dropdown-menu">
-              <li><a href="blog.html"><span data-i18n="all_posts">All Posts</span></a></li>
-              <li><a href="blog1.html"><span data-i18n="ai_trends_2024">AI Trends 2024</span></a></li>
-              <li><a href="blog2.html"><span data-i18n="future_of_ml">Future of ML</span></a></li>
-              <li><a href="blog3.html"><span data-i18n="ai_in_business">AI in Business</span></a></li>
+              <li><a href="blog.html"><span data-i18n="allPosts">All Posts</span></a></li>
+              <li><a href="blog1.html"><span data-i18n="blog1">AI Trends 2024</span></a></li>
+              <li><a href="blog2.html"><span data-i18n="blog2">Future of ML</span></a></li>
+              <li><a href="blog3.html"><span data-i18n="blog3">AI in Business</span></a></li>
             </ul>
           </li>
           <li class="nav-item"><a href="contact.html" class="nav-link"><span data-i18n="contact">Contact</span></a></li>
-          <li class="nav-item"><a href="index.html" class="nav-link" id="authLink"><span data-i18n="login">Login</span></a></li>
+          
         </ul>
+        
+        
+
         <div class="hamburger" id="hamburger" aria-label="Open menu" tabindex="0">
           <span></span>
           <span></span>
           <span></span>
         </div>
       </nav>
+
+      <div class="lang-switcher">
+        <label for="langSelect"></label>
+        <select id="langSelect" onchange="changeLanguage(this.value)">
+          <option value="en">English</option>
+          <option value="ar">Arabic</option>
+          <option value="he">Hebrew</option>
+        </select>
+      </div>
 
       <div class="mobile-menu-wrapper">
         <ul class="hamburger-menu" id="hamburgerMenu">
@@ -96,18 +108,11 @@
             </ul>
           </li>
           <li><a href="contact.html"><span data-i18n="contact">Contact</span></a></li>
-          <li><a href="index.html" id="mobileAuthLink"><span data-i18n="login">Login</span></a></li>
+       
         </ul>
       </div>
 
-      <div class="lang-switcher">
-        <label for="langSelect">Language:</label>
-        <select id="langSelect" onchange="changeLanguage(this.value)">
-          <option value="en">English</option>
-          <option value="ar">Arabic</option>
-          <option value="he">Hebrew</option>
-        </select>
-      </div>
+      
 
       <button id="toggleBtn" class="toggle-btn" title="Toggle Theme">
         <i class="fas fa-moon"></i>
@@ -124,6 +129,7 @@
     </div>
   </div>
 </header>
+
 
 <!-- section : 1 -->
 <section class="ai-hero-section">
@@ -190,6 +196,50 @@
     </div>
   </div>
 </section>
+
+<section class="ai-extra-services">
+  <div class="ai-services-container">
+    <div class="ai-services-grid">
+      <!-- Card 4 -->
+      <div class="ai-service-card">
+        <img src="https://i.pinimg.com/1200x/1a/c3/d2/1ac3d20c84f7717f653c02f975465785.jpg" alt="Process Automation" class="ai-service-image">
+        <div class="ai-service-content">
+          <h3 data-i18n="service4_title">Process Automation</h3>
+          <p data-i18n="service4_desc">
+            Intelligent automation solutions to streamline repetitive tasks, reduce human error, and boost efficiency through robotic process automation and workflow optimization.
+          </p>
+          <a href="service4.html" class="ai-service-btn" data-i18n="learn_more">Learn More</a>
+        </div>
+      </div>
+
+      <!-- Card 5 -->
+      <div class="ai-service-card">
+        <img src="https://i.pinimg.com/736x/02/12/8d/02128d436fc0315388ce2f0d51d87070.jpg" alt="AI Consulting" class="ai-service-image">
+        <div class="ai-service-content">
+          <h3 data-i18n="service5_title">AI Consulting</h3>
+          <p data-i18n="service5_desc">
+            Strategic consulting to identify opportunities, create implementation roadmaps, and guide AI adoption for maximum impact and business growth.
+          </p>
+          <a href="service5.html" class="ai-service-btn" data-i18n="learn_more">Learn More</a>
+        </div>
+      </div>
+
+      <!-- Card 6 -->
+      <div class="ai-service-card">
+        <img src="https://i.pinimg.com/736x/4d/a5/f5/4da5f598c9e7d585aa4d086db953378c.jpg" alt="AI Integration" class="ai-service-image">
+        <div class="ai-service-content">
+          <h3 data-i18n="service6_title">AI Integration</h3>
+          <p data-i18n="service6_desc">
+            Smooth integration of AI into your business processes, ensuring minimal disruption while maximizing efficiency and scalability across operations.
+          </p>
+          <a href="service6.html" class="ai-service-btn" data-i18n="learn_more">Learn More</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
 
 <!-- Section : 3 -->
 <section class="process-flow">
@@ -321,71 +371,6 @@
 </section>
 
 
-<!-- Footer -->
-<footer class="footer section-padding" style="background:#000000; color:#fff;">
-  <div class="container">
-    <div class="footer-content" style="display:flex; flex-wrap:wrap; gap:30px; justify-content:space-between;">
-
-      <!-- Logo & About -->
-      <div class="footer-section" style="flex:1 1 250px;">
-        <div class="logo">
-          <img src="assets/images/stackly_logo_transparent.png" alt="logo" style="height: 40px; width: 80px;">
-        </div>
-        <p data-i18n="footerAbout" style="margin-top:10px; text-align:justify;">
-          Leading AI solutions provider, helping businesses transform through intelligent technology and innovative automation systems.
-        </p>
-        <div class="social-links" style="margin-top:10px;">
-          <a href="https://www.facebook.com/" target="_blank"><i class="fab fa-facebook" style="margin-right:10px;"></i></a>
-          <a href="https://twitter.com/" target="_blank"><i class="fab fa-twitter" style="margin-right:10px;"></i></a>
-          <a href="https://www.linkedin.com/" target="_blank"><i class="fab fa-linkedin" style="margin-right:10px;"></i></a>
-          <a href="https://www.instagram.com/" target="_blank"><i class="fab fa-instagram"></i></a>
-        </div>
-      </div>
-
-      <!-- Quick Links -->
-      <div class="footer-section" style="flex:1 1 150px;">
-        <h4 data-i18n="footerQuickLinks">Quick Links</h4>
-        <ul style="list-style:none; padding:0; margin:0;">
-          <li><a href="home.html" data-i18n="linkHome">Home</a></li>
-          <li><a href="home2.html" data-i18n="linkHome2">Home 2</a></li>
-          <li><a href="about.html" data-i18n="linkAbout">About Us</a></li>
-          <li><a href="services.html" data-i18n="linkServices">Services</a></li>
-          <li><a href="blog.html" data-i18n="linkBlog">Blog</a></li>
-          <li><a href="contact.html" data-i18n="linkContact">Contact</a></li>
-        </ul>
-      </div>
-
-      <!-- Services -->
-      <div class="footer-section" style="flex:1 1 150px;">
-        <h4 data-i18n="footerServices">Services</h4>
-        <ul style="list-style:none; padding:0; margin:0;">
-          <li><a href="service1.html" data-i18n="service1">AI Development</a></li>
-          <li><a href="service2.html" data-i18n="service2">Machine Learning</a></li>
-          <li><a href="service3.html" data-i18n="service3">Data Analytics</a></li>
-          <li><a href="service4.html" data-i18n="service4">Automation</a></li>
-          <li><a href="service5.html" data-i18n="service5">AI Consulting</a></li>
-          <li><a href="service6.html" data-i18n="service6">AI Integration</a></li>
-        </ul>
-      </div>
-
-      <!-- Contact Info -->
-      <div class="footer-section" style="flex:1 1 200px;">
-        <h4 data-i18n="footerContact">Contact Info</h4>
-        <ul style="list-style:none; padding:0; margin:0;">
-          <li><i class="fas fa-envelope"></i> contact@stackly.ai</li>
-          <li><i class="fas fa-phone"></i> +1 (555) 123-4567</li>
-          <li><i class="fas fa-map-marker-alt"></i> 123 AI Innovation Drive</li>
-        </ul>
-      </div>
-
-    </div>
-
-    <!-- Bottom Bar -->
-    <div class="footer-bottom" style="text-align:center; margin-top:30px; font-size:14px;">
-      <p data-i18n="footerBottom">&copy; 2025 Stackly. All rights reserved.</p>
-    </div>
-  </div>
-</footer>
 
 
 
@@ -449,6 +434,13 @@ const translations = {
     service3_title: "Data Analytics",
     service3_desc: "Transform raw data into actionable insights with comprehensive analysis and visualization, enabling data-driven strategies and smarter decision-making.",
     service3_btn: "Learn More",
+    "service4_title": "Process Automation",
+    "service4_desc": "Intelligent automation solutions to streamline repetitive tasks, reduce human error, and boost efficiency through robotic process automation and workflow optimization.",
+    "service5_title": "AI Consulting",
+    "service5_desc": "Strategic consulting to identify opportunities, create implementation roadmaps, and guide AI adoption for maximum impact and business growth.",
+    "service6_title": "AI Integration",
+    "service6_desc": "Smooth integration of AI into your business processes, ensuring minimal disruption while maximizing efficiency and scalability across operations.",
+    "learn_more": "Learn More",
 
     // Section 3: Process
     process_heading: "Our Service Delivery Process",
@@ -547,6 +539,14 @@ const translations = {
     service3_desc: "تحويل البيانات الخام إلى رؤى قابلة للتنفيذ من خلال تحليل شامل وتصوير بيانات متقدم، مما يمكّن استراتيجيات قائمة على البيانات واتخاذ قرارات أذكى.",
     service3_btn: "تعرف أكثر",
 
+    "service4_title": "أتمتة العمليات",
+    "service4_desc": "حلول أتمتة ذكية لتبسيط المهام المتكررة، وتقليل الأخطاء البشرية، وزيادة الكفاءة من خلال الأتمتة الروبوتية للعمليات وتحسين سير العمل.",
+    "service5_title": "استشارات الذكاء الاصطناعي",
+    "service5_desc": "استشارات استراتيجية لتحديد الفرص، وإنشاء خطط التنفيذ، وتوجيه اعتماد الذكاء الاصطناعي لتحقيق أقصى تأثير ونمو للأعمال.",
+    "service6_title": "تكامل الذكاء الاصطناعي",
+    "service6_desc": "تكامل سلس للذكاء الاصطناعي في عمليات عملك، مع ضمان الحد الأدنى من التعطيل وزيادة الكفاءة وقابلية التوسع في العمليات.",
+    "learn_more": "اعرف المزيد",
+
     process_heading: "عملية تقديم خدمتنا",
     process_paragraph: "نضمن تنفيذ الذكاء الاصطناعي بسلاسة من خلال عملية منظمة وفعالة، توجهك من الاستشارة إلى التحسين المستمر.",
     process_step1_title: "اكتشاف وتحليل",
@@ -626,7 +626,7 @@ const translations = {
     footerContact: "פרטי התקשרות",
     footerBottom: "© 2025 Stackly. כל הזכויות שמורות.",
 
-     hero_title: "פתרונות בינה מלאכותית למחר חכם יותר",
+    hero_title: "פתרונות בינה מלאכותית למחר חכם יותר",
     hero_paragraph: "שינוי עסקים באמצעות חידושי AI חכמים ומוכנים לעתיד.",
     hero_btn: "צור קשר",
 
@@ -641,6 +641,14 @@ const translations = {
     service3_title: "ניתוח נתונים",
     service3_desc: "המרת נתונים גולמיים לתובנות מעשיות באמצעות ניתוח מקיף והמחשה, המאפשרת קבלת החלטות מבוססת נתונים.",
     service3_btn: "למד עוד",
+
+    "service4_title": "אוטומציה של תהליכים",
+    "service4_desc": "פתרונות אוטומציה חכמים להקל על משימות חוזרות, לצמצם טעויות אנוש ולהגביר יעילות באמצעות אוטומציה רובוטית של תהליכים ואופטימיזציית זרימות עבודה.",
+    "service5_title": "ייעוץ בינה מלאכותית",
+    "service5_desc": "ייעוץ אסטרטגי לזיהוי הזדמנויות, יצירת מפת דרכים ליישום והכוונה באימוץ בינה מלאכותית להשגת מקסימום השפעה וצמיחה עסקית.",
+    "service6_title": "שילוב בינה מלאכותית",
+    "service6_desc": "שילוב חלק של בינה מלאכותית בתהליכי העבודה שלך, תוך שמירה על הפרעה מינימלית והגדלת היעילות והיכולת להתרחב.",
+    "learn_more": "למידע נוסף",
 
     process_heading: "תהליך אספקת השירות שלנו",
     process_paragraph: "אנו מבטיחים יישום AI חלק באמצעות תהליך מובנה ויעיל, שמנחה אותך מהייעוץ ועד לאופטימיזציה מתמשכת.",
@@ -1662,7 +1670,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
   
-  <!-- Section : 5-->
+<!-- Section : 5-->
 
 <style>
 /* Section Base */
@@ -1835,6 +1843,75 @@ document.addEventListener("DOMContentLoaded", () => {
 
     <!-- Footer -->
     
+<footer class="footer section-padding" style="background:#000000; color:#fff;">
+  <div class="container">
+    <div class="footer-content" style="display:flex; flex-wrap:wrap; gap:30px; justify-content:space-between;">
+
+      <!-- Logo & About -->
+      <div class="footer-section footer-section1" style="flex:1 1 250px;">
+        <div class="logo">
+          <img src="assets/images/stackly_logo_transparent.png" alt="logo" style="height: 40px; width: 80px;">
+        </div>
+        <p data-i18n="footerAbout" style="margin-top:10px; text-align:justify;">
+          Leading AI solutions provider, helping businesses transform through intelligent technology and innovative automation systems.
+        </p>
+        <div class="social-links" style="margin-top:10px;">
+          <a href="https://www.facebook.com/" target="_blank"><i class="fab fa-facebook" style="margin-right:10px;"></i></a>
+          <a href="https://twitter.com/" target="_blank"><i class="fab fa-twitter" style="margin-right:10px;"></i></a>
+          <a href="https://www.linkedin.com/" target="_blank"><i class="fab fa-linkedin" style="margin-right:10px;"></i></a>
+          <a href="https://www.instagram.com/" target="_blank"><i class="fab fa-instagram"></i></a>
+        </div>
+      </div>
+
+      <!-- Quick Links -->
+      <div class="footer-section" style="flex:1 1 150px;">
+        <h4 data-i18n="footerQuickLinks">Quick Links</h4>
+        <ul style="list-style:none; padding:0; margin:0;">
+          <li><a href="home.html" data-i18n="linkHome">Home</a></li>
+          <li><a href="home2.html" data-i18n="linkHome2">Home 2</a></li>
+          <li><a href="about.html" data-i18n="linkAbout">About Us</a></li>
+          <li><a href="services.html" data-i18n="linkServices">Services</a></li>
+          <li><a href="blog.html" data-i18n="linkBlog">Blog</a></li>
+          <li><a href="contact.html" data-i18n="linkContact">Contact</a></li>
+        </ul>
+      </div>
+
+      <!-- Services -->
+      <div class="footer-section" style="flex:1 1 150px;">
+        <h4 data-i18n="footerServices">Services</h4>
+        <ul style="list-style:none; padding:0; margin:0;">
+          <li><a href="service1.html" data-i18n="service1">AI Development</a></li>
+          <li><a href="service2.html" data-i18n="service2">Machine Learning</a></li>
+          <li><a href="service3.html" data-i18n="service3">Data Analytics</a></li>
+          <li><a href="service4.html" data-i18n="service4">Automation</a></li>
+          <li><a href="service5.html" data-i18n="service5">AI Consulting</a></li>
+          <li><a href="service6.html" data-i18n="service6">AI Integration</a></li>
+        </ul>
+      </div>
+
+      <!-- Contact Info -->
+      <div class="footer-section" style="flex:1 1 200px;">
+        <h4 data-i18n="footerContact">Contact Info</h4>
+        <ul style="list-style:none; padding:0; margin:0;">
+          <li><i class="fas fa-envelope"></i> contact@stackly.ai</li>
+          <li><i class="fas fa-phone"></i> +1 (555) 123-4567</li>
+          <li><i class="fas fa-map-marker-alt"></i> 123 AI Innovation Drive</li>
+        </ul>
+      </div>
+
+    </div>
+
+    <!-- Bottom Bar -->
+    <div class="footer-bottom" style="text-align:center; margin-top:30px; font-size:14px;">
+      <p data-i18n="footerBottom">&copy; 2025 Stackly. All rights reserved.</p>
+    </div>
+  </div>
+</footer>
+
+
+    
+
+<!-- Footer -->
 
 <style>
 .footer {
@@ -1843,6 +1920,11 @@ document.addEventListener("DOMContentLoaded", () => {
   padding: 50px 20px 20px;
   font-family: Arial, sans-serif;
 }
+
+.footer-section1 {
+  margin-inline-end: 100px; /* works in both LTR & RTL */
+}
+
 
 .footer .footer-content {
   display: grid;
@@ -1913,8 +1995,12 @@ document.addEventListener("DOMContentLoaded", () => {
   .footer .social-links {
     margin-top: 15px;
   }
+  .footer-section1 {
+  margin-inline-end: 0px; /* works in both LTR & RTL */
+}
 }
 </style>
+
 
 
     <script src="assets/js/script.js"></script>

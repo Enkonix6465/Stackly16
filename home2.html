@@ -20,6 +20,7 @@
 <div id="content" style="display:none;"></div>
 
      <!-- Sticky Header -->
+      
 <header class="header">
   <div class="container">
     <div class="nav-wrapper">
@@ -40,33 +41,45 @@
           <li class="nav-item dropdown">
             <a href="#" class="nav-link"><span data-i18n="services">Services</span> <i class="fas fa-chevron-down"></i></a>
             <ul class="dropdown-menu">
-              <li><a href="services.html"><span data-i18n="all_services">All Services</span></a></li>
-              <li><a href="service1.html"><span data-i18n="ai_development">AI Development</span></a></li>
-              <li><a href="service2.html"><span data-i18n="machine_learning">Machine Learning</span></a></li>
-              <li><a href="service3.html"><span data-i18n="data_analytics">Data Analytics</span></a></li>
-              <li><a href="service4.html"><span data-i18n="automation">Automation</span></a></li>
-              <li><a href="service5.html"><span data-i18n="ai_consulting">AI Consulting</span></a></li>
-              <li><a href="service6.html"><span data-i18n="ai_integration">AI Integration</span></a></li>
+              <li><a href="services.html"><span data-i18n="allServices">All Services</span></a></li>
+              <li><a href="service1.html"><span data-i18n="service1">AI Development</span></a></li>
+              <li><a href="service2.html"><span data-i18n="service2">Machine Learning</span></a></li>
+              <li><a href="service3.html"><span data-i18n="service3">Data Analytics</span></a></li>
+              <li><a href="service4.html"><span data-i18n="service4">Automation</span></a></li>
+              <li><a href="service5.html"><span data-i18n="service5">AI Consulting</span></a></li>
+              <li><a href="service6.html"><span data-i18n="service6">AI Integration</span></a></li>
             </ul>
           </li>
           <li class="nav-item dropdown">
             <a href="#" class="nav-link"><span data-i18n="blog">Blog</span> <i class="fas fa-chevron-down"></i></a>
             <ul class="dropdown-menu">
-              <li><a href="blog.html"><span data-i18n="all_posts">All Posts</span></a></li>
-              <li><a href="blog1.html"><span data-i18n="ai_trends_2024">AI Trends 2024</span></a></li>
-              <li><a href="blog2.html"><span data-i18n="future_of_ml">Future of ML</span></a></li>
-              <li><a href="blog3.html"><span data-i18n="ai_in_business">AI in Business</span></a></li>
+              <li><a href="blog.html"><span data-i18n="allPosts">All Posts</span></a></li>
+              <li><a href="blog1.html"><span data-i18n="blog1">AI Trends 2024</span></a></li>
+              <li><a href="blog2.html"><span data-i18n="blog2">Future of ML</span></a></li>
+              <li><a href="blog3.html"><span data-i18n="blog3">AI in Business</span></a></li>
             </ul>
           </li>
           <li class="nav-item"><a href="contact.html" class="nav-link"><span data-i18n="contact">Contact</span></a></li>
           
         </ul>
+        
+        
+
         <div class="hamburger" id="hamburger" aria-label="Open menu" tabindex="0">
           <span></span>
           <span></span>
           <span></span>
         </div>
       </nav>
+
+      <div class="lang-switcher">
+        <label for="langSelect"></label>
+        <select id="langSelect" onchange="changeLanguage(this.value)">
+          <option value="en">English</option>
+          <option value="ar">Arabic</option>
+          <option value="he">Hebrew</option>
+        </select>
+      </div>
 
       <div class="mobile-menu-wrapper">
         <ul class="hamburger-menu" id="hamburgerMenu">
@@ -100,18 +113,11 @@
             </ul>
           </li>
           <li><a href="contact.html"><span data-i18n="contact">Contact</span></a></li>
-          <li><a href="index.html" id="mobileAuthLink"><span data-i18n="login">Login</span></a></li>
+       
         </ul>
       </div>
 
-      <div class="lang-switcher">
-        <label for="langSelect">Language:</label>
-        <select id="langSelect" onchange="changeLanguage(this.value)">
-          <option value="en">English</option>
-          <option value="ar">Arabic</option>
-          <option value="he">Hebrew</option>
-        </select>
-      </div>
+      
 
       <button id="toggleBtn" class="toggle-btn" title="Toggle Theme">
         <i class="fas fa-moon"></i>
@@ -357,71 +363,6 @@
 </section>
 
 
-<!-- Footer -->
-<footer class="footer section-padding" style="background:#000000; color:#fff;">
-  <div class="container">
-    <div class="footer-content" style="display:flex; flex-wrap:wrap; gap:30px; justify-content:space-between;">
-
-      <!-- Logo & About -->
-      <div class="footer-section" style="flex:1 1 250px;">
-        <div class="logo">
-          <img src="assets/images/stackly_logo_transparent.png" alt="logo" style="height: 40px; width: 80px;">
-        </div>
-        <p data-i18n="footerAbout" style="margin-top:10px; text-align:justify;">
-          Leading AI solutions provider, helping businesses transform through intelligent technology and innovative automation systems.
-        </p>
-        <div class="social-links" style="margin-top:10px;">
-          <a href="https://www.facebook.com/" target="_blank"><i class="fab fa-facebook" style="margin-right:10px;"></i></a>
-          <a href="https://twitter.com/" target="_blank"><i class="fab fa-twitter" style="margin-right:10px;"></i></a>
-          <a href="https://www.linkedin.com/" target="_blank"><i class="fab fa-linkedin" style="margin-right:10px;"></i></a>
-          <a href="https://www.instagram.com/" target="_blank"><i class="fab fa-instagram"></i></a>
-        </div>
-      </div>
-
-      <!-- Quick Links -->
-      <div class="footer-section" style="flex:1 1 150px;">
-        <h4 data-i18n="footerQuickLinks">Quick Links</h4>
-        <ul style="list-style:none; padding:0; margin:0;">
-          <li><a href="home.html" data-i18n="linkHome">Home</a></li>
-          <li><a href="home2.html" data-i18n="linkHome2">Home 2</a></li>
-          <li><a href="about.html" data-i18n="linkAbout">About Us</a></li>
-          <li><a href="services.html" data-i18n="linkServices">Services</a></li>
-          <li><a href="blog.html" data-i18n="linkBlog">Blog</a></li>
-          <li><a href="contact.html" data-i18n="linkContact">Contact</a></li>
-        </ul>
-      </div>
-
-      <!-- Services -->
-      <div class="footer-section" style="flex:1 1 150px;">
-        <h4 data-i18n="footerServices">Services</h4>
-        <ul style="list-style:none; padding:0; margin:0;">
-          <li><a href="service1.html" data-i18n="service1">AI Development</a></li>
-          <li><a href="service2.html" data-i18n="service2">Machine Learning</a></li>
-          <li><a href="service3.html" data-i18n="service3">Data Analytics</a></li>
-          <li><a href="service4.html" data-i18n="service4">Automation</a></li>
-          <li><a href="service5.html" data-i18n="service5">AI Consulting</a></li>
-          <li><a href="service6.html" data-i18n="service6">AI Integration</a></li>
-        </ul>
-      </div>
-
-      <!-- Contact Info -->
-      <div class="footer-section" style="flex:1 1 200px;">
-        <h4 data-i18n="footerContact">Contact Info</h4>
-        <ul style="list-style:none; padding:0; margin:0;">
-          <li><i class="fas fa-envelope"></i> contact@stackly.ai</li>
-          <li><i class="fas fa-phone"></i> +1 (555) 123-4567</li>
-          <li><i class="fas fa-map-marker-alt"></i> 123 AI Innovation Drive</li>
-        </ul>
-      </div>
-
-    </div>
-
-    <!-- Bottom Bar -->
-    <div class="footer-bottom" style="text-align:center; margin-top:30px; font-size:14px;">
-      <p data-i18n="footerBottom">&copy; 2025 Stackly. All rights reserved.</p>
-    </div>
-  </div>
-</footer>
 
 
 <script>
@@ -1981,7 +1922,75 @@ document.addEventListener("DOMContentLoaded", () => {
     
 
     
- <!-- Footer -->
+ <footer class="footer section-padding" style="background:#000000; color:#fff;">
+  <div class="container">
+    <div class="footer-content" style="display:flex; flex-wrap:wrap; gap:30px; justify-content:space-between;">
+
+      <!-- Logo & About -->
+      <div class="footer-section footer-section1" style="flex:1 1 250px;">
+        <div class="logo">
+          <img src="assets/images/stackly_logo_transparent.png" alt="logo" style="height: 40px; width: 80px;">
+        </div>
+        <p data-i18n="footerAbout" style="margin-top:10px; text-align:justify;">
+          Leading AI solutions provider, helping businesses transform through intelligent technology and innovative automation systems.
+        </p>
+        <div class="social-links" style="margin-top:10px;">
+          <a href="https://www.facebook.com/" target="_blank"><i class="fab fa-facebook" style="margin-right:10px;"></i></a>
+          <a href="https://twitter.com/" target="_blank"><i class="fab fa-twitter" style="margin-right:10px;"></i></a>
+          <a href="https://www.linkedin.com/" target="_blank"><i class="fab fa-linkedin" style="margin-right:10px;"></i></a>
+          <a href="https://www.instagram.com/" target="_blank"><i class="fab fa-instagram"></i></a>
+        </div>
+      </div>
+
+      <!-- Quick Links -->
+      <div class="footer-section" style="flex:1 1 150px;">
+        <h4 data-i18n="footerQuickLinks">Quick Links</h4>
+        <ul style="list-style:none; padding:0; margin:0;">
+          <li><a href="home.html" data-i18n="linkHome">Home</a></li>
+          <li><a href="home2.html" data-i18n="linkHome2">Home 2</a></li>
+          <li><a href="about.html" data-i18n="linkAbout">About Us</a></li>
+          <li><a href="services.html" data-i18n="linkServices">Services</a></li>
+          <li><a href="blog.html" data-i18n="linkBlog">Blog</a></li>
+          <li><a href="contact.html" data-i18n="linkContact">Contact</a></li>
+        </ul>
+      </div>
+
+      <!-- Services -->
+      <div class="footer-section" style="flex:1 1 150px;">
+        <h4 data-i18n="footerServices">Services</h4>
+        <ul style="list-style:none; padding:0; margin:0;">
+          <li><a href="service1.html" data-i18n="service1">AI Development</a></li>
+          <li><a href="service2.html" data-i18n="service2">Machine Learning</a></li>
+          <li><a href="service3.html" data-i18n="service3">Data Analytics</a></li>
+          <li><a href="service4.html" data-i18n="service4">Automation</a></li>
+          <li><a href="service5.html" data-i18n="service5">AI Consulting</a></li>
+          <li><a href="service6.html" data-i18n="service6">AI Integration</a></li>
+        </ul>
+      </div>
+
+      <!-- Contact Info -->
+      <div class="footer-section" style="flex:1 1 200px;">
+        <h4 data-i18n="footerContact">Contact Info</h4>
+        <ul style="list-style:none; padding:0; margin:0;">
+          <li><i class="fas fa-envelope"></i> contact@stackly.ai</li>
+          <li><i class="fas fa-phone"></i> +1 (555) 123-4567</li>
+          <li><i class="fas fa-map-marker-alt"></i> 123 AI Innovation Drive</li>
+        </ul>
+      </div>
+
+    </div>
+
+    <!-- Bottom Bar -->
+    <div class="footer-bottom" style="text-align:center; margin-top:30px; font-size:14px;">
+      <p data-i18n="footerBottom">&copy; 2025 Stackly. All rights reserved.</p>
+    </div>
+  </div>
+</footer>
+
+
+    
+
+<!-- Footer -->
 
 <style>
 .footer {
@@ -1990,6 +1999,11 @@ document.addEventListener("DOMContentLoaded", () => {
   padding: 50px 20px 20px;
   font-family: Arial, sans-serif;
 }
+
+.footer-section1 {
+  margin-inline-end: 100px; /* works in both LTR & RTL */
+}
+
 
 .footer .footer-content {
   display: grid;
@@ -2060,9 +2074,11 @@ document.addEventListener("DOMContentLoaded", () => {
   .footer .social-links {
     margin-top: 15px;
   }
+  .footer-section1 {
+  margin-inline-end: 0px; /* works in both LTR & RTL */
+}
 }
 </style>
-
 
     <script src="assets/js/script.js"></script>
 </body>
